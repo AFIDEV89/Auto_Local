@@ -1,0 +1,185 @@
+.cart-items-wrapper {
+	padding: 40px 0;
+
+	.cart-items-details {
+		.heading {
+			font-size: 14px;
+			color: #22262a;
+			font-weight: bold;
+			margin: 0;
+			text-transform: uppercase;
+		}
+
+		.text {
+			font-size: 14px;
+			margin: 0;
+			white-space: nowrap;
+		}
+
+		.plus-minus {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-right: 2rem;
+
+			svg {
+				padding: 5px 6px;
+				font-size: 12px;
+				border-radius: 50%;
+				cursor: pointer;
+				border: 1px solid #c2c2c2;
+			}
+
+			.value {
+				font-weight: 400;
+				color: #262626;
+				padding: 3px 6px;
+				width: 46px;
+				text-align: center;
+				border: 1px solid #c2c2c2;
+				border-radius: 2px;
+				margin: 0 8px;
+			}
+		}
+
+		.unit-price {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.del-icon {
+				margin-right: 20px;
+				cursor: pointer;
+			}
+		}
+
+		.cart-summary {
+			background: #f5f7ff;
+			padding: 1rem 1.5rem;
+			border-radius: 8px;
+			margin: 0;
+
+			@media (max-width: 576px) {
+				margin-top: 1rem;
+				padding: 1rem;
+			}
+
+			.title {
+				font-size: 16px;
+				font-weight: 600;
+				margin-bottom: 8px;
+			}
+
+			.est-tax {
+				display: flex;
+				justify-content: space-between;
+
+				>p {
+					margin: 0;
+					font-size: 14px;
+					font-weight: 500;
+				}
+			}
+
+			.text {
+				color: #666666;
+				font-size: 14px;
+			}
+
+			.shipping {
+				display: flex;
+				justify-content: space-between;
+				font-size: 14px;
+			}
+
+			.rate {
+				color: #a2a6b0;
+				font-size: 12px;
+			}
+
+			.charges {
+				display: flex;
+				justify-content: space-between;
+				font-weight: 600;
+				font-size: 14px;
+			}
+
+			.proceed-btn {
+				background: #0156ff;
+				border-radius: 100px;
+				color: #fff;
+				font-weight: 600;
+				width: 100%;
+				padding: 12px;
+				margin: 24px 0px 16px 0px;
+				font-size: 14px;
+			}
+		}
+
+		.delivery-box {
+			.selector {
+				margin-top: 2rem;
+
+				.input-box {
+					display: flex;
+					align-items: center;
+
+					@media (max-width: 576px) {
+						flex-wrap: wrap;
+					}
+
+					.txt {
+						width: 34%;
+						margin-bottom: 0;
+
+						span {
+							color: #ea1818;
+						}
+
+						@media (max-width: 576px) {
+							width: 100%;
+						}
+					}
+				}
+
+
+				.choose-select {
+					width: 280px;
+
+					@media (max-width: 576px) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+.advantages {
+	background: #f5f7ff;
+	padding: 60px 0px;
+
+	.card {
+		border: none;
+		background: transparent;
+		text-align: center;
+		display: block;
+
+		img {
+			margin-bottom: 20px;
+		}
+
+		h4 {
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: 12px;
+		}
+
+		p {
+			font-size: 15px;
+			font-weight: 400;
+			opacity: 0.7;
+			padding: 0px 16%;
+		}
+	}
+}
