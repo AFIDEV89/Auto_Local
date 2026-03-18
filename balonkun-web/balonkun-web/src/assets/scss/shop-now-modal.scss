@@ -1,0 +1,41 @@
+.premium-automotive-modal {
+  .modal-content {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .modal-dialog {
+    max-width: 900px !important;
+    margin: 1.75rem auto;
+    
+    @media (max-width: 768px) {
+      margin: 1rem;
+      max-width: 100% !important;
+    }
+  }
+
+  /* Custom styling for the phone input to match automotive dashboard look */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .phone-input-container {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #ffb200;
+      transition: width 0.3s ease;
+    }
+    &:focus-within::after {
+      width: 100%;
+    }
+  }
+}

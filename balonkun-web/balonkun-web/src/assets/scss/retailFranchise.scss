@@ -1,0 +1,25 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css");
+
+.mapWrapper {
+    margin: 1.5rem 0 3rem 0;
+
+    .leaflet-container {
+        height: 700px;
+        overflow: hidden;
+    }
+
+    .storeName {
+        color: #000;
+        font-weight: bold;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            color: #ffb606;
+        }
+    }
+
+    .storeAddress {
+        color: #666;
+    }
+}
+

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description"
+    content="Seat Cover and Accessories: Buy Exclusive Car Accessories at AutoForm Stores. Shop a Wide Range of Seat Covers and Accessories at the AutoFormIndia Brand Store."
+    data-react-helmet="true" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="content-language" content="EN">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:site_name" content="AutoFormIndia">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta name="distribution" content="GLOBAL">
+  <meta name="application-name" content="AutoFormIndia">
+  <meta name="resource-type" content="document">
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ffb200",
+            "brand-green": "#2D4739",
+            "background-light": "#ffffff",
+            "background-off": "#f8f7f5",
+            "background-dark": "#1A1A1A",
+          },
+          keyframes: {
+            shimmer: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(200%)' },
+            }
+          },
+          animation: {
+            shimmer: 'shimmer 2.5s infinite linear',
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"],
+            "body": ["Space Grotesk", "sans-serif"],
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    /* Material Symbols — required CSS for icon rendering */
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-feature-settings: 'liga';
+    }
+    [class*="material-symbols"], [class*="material-icons"] {
+      font-family: 'Material Symbols Outlined' !important;
+    }
+
+    /* Animated Filling Underline */
+    .nav-link-underline {
+      position: relative;
+      text-decoration: none !important;
+    }
+    .nav-link-underline::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--primary);
+      transform: scaleX(0);
+      transition: transform 0.3s ease-out;
+    }
+    .nav-link-underline:hover::after {
+      transform: scaleX(1);
+    }
+
+    :root {
+      --canvas: #f3f1eb;
+      --surface: #ffffff;
+      --surface-soft: #f8f7f3;
+      --ink: #151d19;
+      --muted: #5f6c63;
+      --accent: #ffb200;
+      --accent-deep: #d49006;
+      --brand: #2d4739;
+      --line: #e8e4db;
+      --shadow-soft: 0 12px 35px -18px rgba(22, 31, 26, 0.34);
+      --shadow-strong: 0 24px 56px -24px rgba(18, 28, 23, 0.42);
+    }
+
+    .theme-premium {
+      background:
+        radial-gradient(1100px 560px at -10% -20%, rgba(255, 178, 0, 0.18), transparent 60%),
+        radial-gradient(900px 460px at 110% 5%, rgba(45, 71, 57, 0.12), transparent 60%),
+        var(--canvas);
+      color: var(--ink);
+      scroll-behavior: smooth;
+    }
+
+    .js-reveal {
+      opacity: 0;
+      transform: translateY(28px) scale(0.985);
+      transition: opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--reveal-delay, 0ms);
+      will-change: transform, opacity;
+    }
+
+    .js-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(34px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up {
+      animation: fadeInUp 0.95s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .finder-panel::before {
+      content: "";
+      position: absolute;
+      left: 1px;
+      right: 1px;
+      top: 0;
+      height: 4px;
+      background: #ffb200;
+      border-top-left-radius: 1.5rem;
+      border-top-right-radius: 1.5rem;
+    }
+
+    /* Handle transitions for categories */
+    .cat-transition {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+  </style>
+
+  <title>
+    Autoform India | Premium Car Seat Covers & Accessories
+  </title>
+  <meta property="og:title" content="Autoform India | Premium Car Seat Covers & Accessories" />
+  <meta property="og:description" content="Buy 2 Wheeler and 4 Wheelers Seat Covers and Accessories from Autofrom Brand Store | Shop Best Quality 2 Wheeler Accessories | Car Accessories Near Me" />
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "AutoFormIndia",
+        "alternateName": "AutoFormIndia",
+        "url": "https://www.autoformindia.com"
+    }
+</script>
+
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "https://www.autoformindia.com/",
+        "name": "AutoFormIndia",
+        "logo": "https://www.autoformindia.com/favicon.ico",
+        "sameAs" : [
+            "https://www.facebook.com/AutoformIndia/",
+            "https://twitter.com/autoformindia",
+            "https://www.instagram.com/autoformindia/",
+            "https://www.youtube.com/autoformindia",
+            "https://wa.me/7217014601"
+        ]
+    }
+</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_ANALYTICS_ID%"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date());
+
+    gtag('config', '%REACT_APP_ANALYTICS_ID%');
+  </script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
+</html>

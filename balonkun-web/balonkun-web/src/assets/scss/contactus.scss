@@ -1,0 +1,56 @@
+.contactUsWrapper {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .content {
+        background-color: #eee;
+        border-radius: 4px;
+        padding: 1rem;
+    }
+
+    .title {
+        font-weight: bold;
+    }
+
+
+    .contact {
+
+
+        .info {
+            display: flex;
+            align-items: baseline;
+            color: #666;
+    
+            svg {
+                font-size: 12px;
+                margin-right: 1rem;
+            }
+    
+            p {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .form {
+        @media (max-width: 768px) {
+            margin-top: 1rem;
+        }
+
+        .form-elements {
+            display: flex;
+            flex-direction: column;
+
+            & > div {
+                margin-bottom: 1rem;
+            }
+
+            button{
+                width: 120px;
+            }
+        }
+    }
+
+
+}

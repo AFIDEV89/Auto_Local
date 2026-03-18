@@ -1,0 +1,39 @@
+/* Rating Form Specific Styles */
+.rating-form-container {
+  background: white;
+  width: 100%;
+}
+
+.rating-input {
+  width: 100%;
+  background: #f8fafc;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 16px;
+  font-size: 0.875rem;
+  color: #1e293b;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.rating-input:focus {
+  background: white;
+  border-color: #ffb200;
+  box-shadow: 0 0 0 4px rgba(255, 178, 0, 0.1);
+}
+
+.rating-input:disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}

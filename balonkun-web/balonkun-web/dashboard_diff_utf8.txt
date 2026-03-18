@@ -1,0 +1,42 @@
+﻿diff --git a/src/views/dashboard/index.js b/src/views/dashboard/index.js
+index 787dca4..d5a3b7f 100644
+--- a/src/views/dashboard/index.js
++++ b/src/views/dashboard/index.js
+@@ -17,18 +17,18 @@ import SocialUpdatesDesktop from "./components/social-updates/SocialUpdatesDeskt
+ 
+ const vehicleTypeList = [
+ 	{
+-	  id: 2,
+-	  name: "4W",
+-	  display: "4 Wheelers"
++		id: 2,
++		name: "4W",
++		display: "4 Wheelers"
+ 	},
+ 	{
+-	  id: 1,
+-	  name: "2W",
+-	  display: "2 Wheelers"
++		id: 1,
++		name: "2W",
++		display: "2 Wheelers"
+ 	}
+-  ]
++]
+ 
+-function Dashboard({ categoryList }) {
++const Dashboard = ({ categoryList }) => {
+ 	const isMobile = useMediaQuery('(max-width:767px)');
+ 	const dispatch = useDispatch();
+ 	const navigate = useNavigate();
+@@ -74,8 +74,9 @@ function Dashboard({ categoryList }) {
+ 	return (
+ 		<>
+ 			<Banner bannerList={bannerList} />
+-			{isMobile ? <SelectVehicle /> : <SelectDesktopVehicle />}
++			{/* <CategoryCircles categories={categoryList} /> */}
+ 			<ProductSlider
++
+ 				onClickProduct={handleProductOnClick}
+ 				onCreateCartProduct={createCartProduct}
+ 				title="Trending Products"

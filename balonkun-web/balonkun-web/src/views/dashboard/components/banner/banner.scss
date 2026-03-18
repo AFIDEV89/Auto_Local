@@ -1,0 +1,114 @@
+.banner-2 {
+  overflow: hidden;
+  margin: 0;
+  height: 65vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  .slide {
+    height: 100vh;
+    border-radius: 0;
+    margin: 0;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 500ms ease-in-out;
+
+    @media (max-width:768px) {
+      height: 100%;
+    }
+  }
+
+  .legend {
+    top: 30%;
+    left: 10%;
+    color: #fff;
+    margin-left: 0;
+    position: absolute;
+    opacity: 1;
+    font-size: 46px;
+    max-width: 46%;
+    text-align: left;
+    line-height: 60px;
+    font-weight: 700;
+
+    @media (max-width: 768px) {
+      left: 6%;
+      top: 20%;
+      max-width: 100%;
+      font-size: 44px;
+      line-height: 54px;
+    }
+
+    @media (max-width: 576px) {
+      top: 15%;
+      left: 4%;
+      max-width: 100%;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  .skeleton-loader {
+    width: 100%;
+    height: 100%;
+    background: #e0e0e0;
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200px 0;
+    }
+    100% {
+      background-position: 200px 0;
+    }
+  }
+
+  .shop-now-btn {
+    background: linear-gradient(135deg, #F9EC7D 0%, #F5B100 100%);
+    color: #1E1E1E;
+    padding: 11px 22px 11px 22px;
+    border-radius: 100px;
+    border: none;
+    font-weight: 700;
+    line-height: 20px;
+    opacity: 0;
+    text-transform: uppercase;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+
+    @media (max-width: 768px) {
+      top: 60%;
+      left: 8%;
+    }
+
+    @media (max-width: 576px) {
+      top: 40%;
+      left: 4%;
+    }
+  }
+
+}
+
+.banner-2 .slide.active {
+  flex: 10;
+}
+
+.banner-2 .slide.active .legend {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.banner-2 .slide.active .shop-now-btn {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}

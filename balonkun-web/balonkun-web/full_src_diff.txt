@@ -1,0 +1,756 @@
+﻿diff --git a/src/assets/images/balonkun-logo.png b/src/assets/images/balonkun-logo.png
+index 615bc0e..d9c3e61 100644
+Binary files a/src/assets/images/balonkun-logo.png and b/src/assets/images/balonkun-logo.png differ
+diff --git a/src/assets/scss/nav-bar.scss b/src/assets/scss/nav-bar.scss
+index fda16b6..6218587 100644
+--- a/src/assets/scss/nav-bar.scss
++++ b/src/assets/scss/nav-bar.scss
+@@ -275,7 +275,7 @@ $themeYellowColor: #ffb606;
+ 				}
+ 
+ 				.dropdown-menu {
+-					min-width: 95px !important;
++					min-width: 95px;
+ 					padding: 0 !important;
+ 					z-index: 99999;
+ 					background-color: #ffb606;
+@@ -404,4 +404,45 @@ $themeYellowColor: #ffb606;
+ 			}
+ 		}
+ 	}
++}
++
++
++.megaMenu {
++	min-width: 425px !important;
++}
++
++.submenu-wrapper {
++	position: relative;
++}
++
++.submenu-toggle {
++	display: flex;
++	justify-content: space-between;
++	align-items: center;
++}
++
++.submenu {
++	position: absolute;
++	top: 0;
++	left: 100%;
++	background: white;
++	border: 1px solid #ccc;
++	min-width: 180px;
++	z-index: 1000;
++	padding: 0;
++	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
++}
++
++.submenu .dropdown-item {
++	padding: 8px 16px;
++	text-align: left !important;
++	white-space: nowrap;
++}
++
++@media (max-width: 768px) {
++	.submenu {
++		top: 45px;
++		left: 25%;
++		min-width: 215px;
++	}
+ }
+\ No newline at end of file
+diff --git a/src/router/index.js b/src/router/index.js
+index c6d28f8..02ea1ce 100644
+--- a/src/router/index.js
++++ b/src/router/index.js
+@@ -22,13 +22,13 @@ function AppRouter() {
+ 
+ 	useEffect(() => {
+ 		const timer = setTimeout(() => {
+-            setIsLoading(false);
+-        }, 500);
++			setIsLoading(false);
++		}, 500);
+ 
+-        return () => clearTimeout(timer);
++		return () => clearTimeout(timer);
+ 	}, [pathname]);
+ 
+-	if(isMaintenanceMode) {
++	if (isMaintenanceMode) {
+ 		return <MaintenancePage />
+ 	}
+ 
+@@ -44,9 +44,9 @@ function AppRouter() {
+ 							<Component categoryList={categoryList} />
+ 						</Suspense>)
+ 
+-						const element = isPrivate ? ( <PrivateRoute isLogin={isLogin}>
+-								{LoaderWrapper}
+-							</PrivateRoute>
++						const element = isPrivate ? (<PrivateRoute isLogin={isLogin}>
++							{LoaderWrapper}
++						</PrivateRoute>
+ 						) : LoaderWrapper
+ 
+ 						return (<Route
+diff --git a/src/views/Refund/index.js b/src/views/Refund/index.js
+index c208238..66cab9e 100644
+--- a/src/views/Refund/index.js
++++ b/src/views/Refund/index.js
+@@ -11,7 +11,7 @@ const RefundPage = () => {
+         <h1>Refund, Return & Exchange</h1>
+         <div className="aboutusInternal">
+           <p>The refund, return and exchange policies are only valid for products which are purchased from
+-            Autoform e-commerce website (www.autoformindia.com) and being used in India.</p>
++            Autoform e-commerce website (autoformindia.com) and being used in India.</p>
+           <p>The company offers the provision of Exchange in case the customer is not satisfied with the product.</p>
+           <p><b>In case the customer experiences one of the following situations:</b></p>
+           <ul>
+diff --git a/src/views/T&C/index.js b/src/views/T&C/index.js
+index c6c4094..82d470b 100644
+--- a/src/views/T&C/index.js
++++ b/src/views/T&C/index.js
+@@ -21,11 +21,11 @@ const TermsAndConditions = () => {
+ 
+         <p><i>This Agreement is issued on this website in compliance with the Rule 3(1) of the Information
+           Technology (Intermediaries Guidelines) Rules, 2011.The rule states that for the usage/access of the
+-          www.autoformindia.com the rules and regulations, privacy policy and user agreement should be
++          autoformindia.com the rules and regulations, privacy policy and user agreement should be
+           published on the website</i>
+         </p>
+ 
+-        <p>Please read this terms and conditions of use agreement carefully. By using this website (www.autoformindia.com) or the services provided through this website you, i.e. Guest or registered user or purchaser (ΓÇ£userΓÇ¥), agree to be bound by all of the terms and conditions of this agreement, which also includes the amendments made in such terms and conditions from time to time.</p>
++        <p>Please read this terms and conditions of use agreement carefully. By using this website (autoformindia.com) or the services provided through this website you, i.e. Guest or registered user or purchaser (ΓÇ£userΓÇ¥), agree to be bound by all of the terms and conditions of this agreement, which also includes the amendments made in such terms and conditions from time to time.</p>
+         
+         <p>
+           Disclaimer: Please note that the information presented on this website is for general information purpose only. Autoform India makes endeavours to keep all the details or information correct and up to date but in no way makes any representations or warranty of any kind, express or implied, about the suitability or availability of any product represented on this website or through the information, pictures or related graphics contained on this website for any purpose whatsoever. Autoform India further clarifies that the pictorial representations of the products are for information and marketing purposes only and nor orders or transactions for sale or purchase of such products are accepted through this website or any portal associated with this website.
+@@ -39,7 +39,7 @@ const TermsAndConditions = () => {
+ 
+       <div className="tncInternal">
+         <h3>Website Interface</h3>
+-        <p>The domain is www.autoformindia.com which is managed and operated by ΓÇ£ThreeZeroIncΓÇ¥. The terms ΓÇ£WeΓÇ¥ ΓÇ£UsΓÇ¥ ΓÇ£OurΓÇ¥ shall denote ΓÇ£ThreeZeroIncΓÇ¥. We provide www.autoformindia.com, all information which includes information available to the user (hereinafter referred to as ΓÇ£YouΓÇ¥) in accordance with the terms and condition applicable.</p>
++        <p>The domain is autoformindia.com which is managed and operated by ΓÇ£ThreeZeroIncΓÇ¥. The terms ΓÇ£WeΓÇ¥ ΓÇ£UsΓÇ¥ ΓÇ£OurΓÇ¥ shall denote ΓÇ£ThreeZeroIncΓÇ¥. We provide autoformindia.com, all information which includes information available to the user (hereinafter referred to as ΓÇ£YouΓÇ¥) in accordance with the terms and condition applicable.</p>
+         <p>Any access, browsing or in other respect using the website shall mean that you have agreed to the entire terms and conditions of use applicable to you.</p>
+         <p>When you visit or purchase any product from our website it will mean that you are engaged in our ΓÇ£ServiceΓÇ¥ and in turn you are bound by this ΓÇ£Terms and Conditions of Use AgreementΓÇ¥ (hereinafter referred to as ΓÇ£termsΓÇ¥).These terms are applicable on all users including browsers, vendors, customers, merchants, and/ or contributors of content.</p>
+         <div className="empty"></div>
+@@ -158,7 +158,7 @@ const TermsAndConditions = () => {
+         <p>When the users access the domain of Autoform, they also use the services of third party, in such cases the user will be governed by the policies of the third party. We will not be liable for any loss or damages in connection to the third partyΓÇÖs website.</p>
+         <p>We also use the service of the third parties for advertisement. It does not signify that these third parties are affiliated with Autoform or they act on behalf of Autoform. The user should examine such information before relying on it as provided by the third party.</p>
+         <p>We will not be liable for loss or damages incurred by the user if he relied on the wrong information provided by the third party.</p>
+-        <p>The company Autoform India is the owner of the www.autoformindia.com.Any rights pertaining to Intellectual Property are reserved by Autoform. Further, the content displayed on this website is owned by Autoform.</p>
++        <p>The company Autoform India is the owner of the autoformindia.com.Any rights pertaining to Intellectual Property are reserved by Autoform. Further, the content displayed on this website is owned by Autoform.</p>
+         <div className="empty"></div>
+       </div>
+ 
+@@ -221,7 +221,7 @@ const TermsAndConditions = () => {
+       <div className="tncInternal-last">
+         <h3>Disclaimer to Third Party Rights</h3>
+         <br />
+-        <p>www.autoformindia.com is a proprietary web portal of the company ΓÇÿAutoform IndiaΓÇÖ that operates as an independent manufacturer & merchant of customised automobile accessories and merchandise compatible with various automobile brands. The display of trade names, designs, make, model, sub-model, variants, marque, shapes or images of any automobile or brand on its website or any affiliated webpage thereof, shall in no way imply any association or affiliation with or endorsement from the respective automobiles and / or brands and the purpose of such display shall only be to facilitate marketing and sale of such customised automobile accessories and merchandise to the visitors.</p>
++        <p>autoformindia.com is a proprietary web portal of the company ΓÇÿAutoform IndiaΓÇÖ that operates as an independent manufacturer & merchant of customised automobile accessories and merchandise compatible with various automobile brands. The display of trade names, designs, make, model, sub-model, variants, marque, shapes or images of any automobile or brand on its website or any affiliated webpage thereof, shall in no way imply any association or affiliation with or endorsement from the respective automobiles and / or brands and the purpose of such display shall only be to facilitate marketing and sale of such customised automobile accessories and merchandise to the visitors.</p>
+         <p>The rights to intellectual property contained in such display shall belong to their respective owners with no claim whatsoever of Autoform India.</p>
+         <p>In addition, the proprietary products of Autoform India marketed and sold on this website are independently designed and manufactured without being influenced, endorsed or sponsored by any automobile manufacturer or brand.ΓÇ¥</p>
+         <p>By using this website or making purchases from this website you agree to be bound by all of the terms and conditions of this agreement.</p>
+diff --git a/src/views/blog/BlogCategory.jsx b/src/views/blog/BlogCategory.jsx
+index 808306d..6af6a9d 100644
+--- a/src/views/blog/BlogCategory.jsx
++++ b/src/views/blog/BlogCategory.jsx
+@@ -77,7 +77,7 @@ const BlogCategory = () => {
+                                     "@type": "ListItem",
+                                     "position": 1,
+                                     "item": {
+-                                        "@id": "https://www.autoformindia.com",
++                                        "@id": "https://autoformindia.com",
+                                         "name": "Home"
+                                     }
+                                 },
+@@ -86,7 +86,7 @@ const BlogCategory = () => {
+                                     "position": 2,
+                                     "item": {
+                                         "name": "Blogs",
+-                                        "@id": "https://www.autoformindia.com/blogs"
++                                        "@id": "https://autoformindia.com/blogs"
+                                     }
+                                 },
+                                 {
+diff --git a/src/views/blog/index.js b/src/views/blog/index.js
+index a59c453..95766d7 100644
+--- a/src/views/blog/index.js
++++ b/src/views/blog/index.js
+@@ -58,7 +58,7 @@ const Blog = () => {
+                                     "position": 1,
+ 									"item": {
+ 										"name": "Home",
+-										"@id": "https://www.autoformindia.com"
++										"@id": "https://autoformindia.com"
+ 									}
+                                 },
+                                 {
+@@ -66,7 +66,7 @@ const Blog = () => {
+                                     "position": 2,
+ 									"item": {
+ 										"name": "Blogs",
+-										"@id": "https://www.autoformindia.com/blogs"
++										"@id": "https://autoformindia.com/blogs"
+ 									}
+                                 },
+                                 {
+@@ -74,7 +74,7 @@ const Blog = () => {
+                                     "position": 3,
+ 									"item": {
+ 										"name": "${blogCategory}",
+-										"@id": "${`https://www.autoformindia.com/blogs/category/${blog.blog_category.id}`}"
++										"@id": "${`https://autoformindia.com/blogs/category/${blog.blog_category.id}`}"
+ 									}
+ 								},
+ 								{
+@@ -82,7 +82,7 @@ const Blog = () => {
+                                     "position": 4,
+ 									"item": {
+ 										"name": "${blog.title}",
+-										"@id": "https://www.autoformindia.com/blog/${getPageId()}"
++										"@id": "https://autoformindia.com/blog/${getPageId()}"
+                                     }
+ 								}
+                             ]
+@@ -94,7 +94,7 @@ const Blog = () => {
+ 			</Row>
+ 			<Row>
+ 				<Col xs={12} xl={8}>
+-					{blog && <article itemscope="" itemtype="https://schema.org/BlogPosting" itemid={`https://www.autoformindia.com/blog/${getPageId()}`}>
++					{blog && <article itemscope="" itemtype="https://schema.org/BlogPosting" itemid={`https://autoformindia.com/blog/${getPageId()}`}>
+ 
+ 						<header>
+ 							<h1 itemprop="name" className="blog-title">{blog.title}</h1>
+diff --git a/src/views/dashboard/components/nav-bar/Components/NavContent.jsx b/src/views/dashboard/components/nav-bar/Components/NavContent.jsx
+index b533616..562109f 100644
+--- a/src/views/dashboard/components/nav-bar/Components/NavContent.jsx
++++ b/src/views/dashboard/components/nav-bar/Components/NavContent.jsx
+@@ -18,7 +18,14 @@ const NavContent = ({ onClose }) => {
+   const isMobile = useMediaQuery("(max-width:767px)");
+   const [categories, setCategories] = React.useState([]);
+   const [subCategories, setSubCategories] = React.useState([]);
+-
++  const [dropdownOpen, setDropdownOpen] = React.useState(false);
++  const [submenuOpen, setSubmenuOpen] = React.useState(false);
++  const [dropdownTwoOpen, setDropdownTwoOpen] = React.useState(false);
++  const [submenuTwoOpen, setSubmenuTwoOpen] = React.useState(false);
++  const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
++  const toggleSubmenu = () => setSubmenuOpen(!submenuOpen);
++  const toggleDropdownTwo = () => setDropdownTwoOpen(!dropdownTwoOpen);
++  const toggleSubmenuTwo = () => setSubmenuTwoOpen(!submenuTwoOpen);
+   useEffect(() => {
+     getCategories();
+     getSubCategories();
+@@ -47,120 +54,328 @@ const NavContent = ({ onClose }) => {
+     <div className="navContent">
+       <Nav navbar>
+         {categories.map((cat, index) => {
+-            // Check if the category is "Seat Covers" and skip it
+-            if (cat.name === "Seat Covers") {
+-              return (
+-                <NavItem>
+-                  <Dropdown toggle={() => {}}>
+-                    <DropdownToggle
+-                      data-toggle="dropdown"
++          // Check if the category is "Seat Covers" and skip it
++          if (cat.name === "Seat Covers") {
++            return (
++              <NavItem>
++                <Dropdown toggle={() => { }}>
++                  <DropdownToggle
++                    data-toggle="dropdown"
++                    tag={Link}
++                    to="/products"
++                    className="nav-link-drop"
++                    nav
++                  >
++                    Seat Covers
++                  </DropdownToggle>
++                  <DropdownMenu>
++                    <DropdownItem
++                      onClick={onClose}
+                       tag={Link}
+-                      to="/products"
+-                      className="nav-link-drop"
+-                      nav
++                      to="/car-seat-covers"
++                      style={isMobile ? { width: 100 } : null}
+                     >
+-                      Seat Covers
+-                    </DropdownToggle>
+-                    <DropdownMenu>
+-                      <DropdownItem
+-                        onClick={onClose}
+-                        tag={Link}
+-                        to="/car-seat-covers"
+-                        style={isMobile ? { width: 100 } : null}
++                      <div
++                        style={{
++                          display: "flex",
++                          justifyContent: "space-around",
++                          alignItems: "center",
++                        }}
+                       >
+-                        <div
+-                          style={{
+-                            display: "flex",
+-                            justifyContent: "space-around",
+-                            alignItems: "center",
+-                          }}
+-                        >
+-                          <img
+-                            src={FourWheeler}
+-                            alt="four-wheeler"
+-                            height={20}
+-                            width={20}
+-                          />{" "}
+-                          4W
++                        <img
++                          src={FourWheeler}
++                          alt="four-wheeler"
++                          height={20}
++                          width={20}
++                        />{" "}
++                        4W
++                      </div>
++                    </DropdownItem>
++                    <DropdownItem
++                      divider
++                      className="divider"
++                      style={isMobile ? { width: 100 } : null}
++                    />
++                    <DropdownItem
++                      onClick={onClose}
++                      tag={Link}
++                      to="/two-wheeler-seat-covers"
++                      style={isMobile ? { width: 100 } : null}
++                    >
++                      <div
++                        style={{
++                          display: "flex",
++                          justifyContent: "space-around",
++                          alignItems: "center",
++                        }}
++                      >
++                        <img
++                          src={TwoWheeler}
++                          alt="two-wheeler"
++                          height={20}
++                          width={20}
++                        />{" "}
++                        2W
++                      </div>
++                    </DropdownItem>
++                  </DropdownMenu>
++                </Dropdown>
++              </NavItem>
++            );
++          }
++          const filteredSubCategories = subCategories.filter(
++            (subCat) => subCat.category_id === cat.id
++          );
++          if (cat.name === "Accessories") {
++            return (
++              <NavItem key={index} style={index === categories.length - 1 ? { padding: 0 } : {}} >
++                <Dropdown toggle={() => { }}>
++                  {cat.id && cat.id != 11 && <DropdownToggle
++                    data-toggle="dropdown"
++                    tag={Link}
++                    to={{
++                      pathname: "/products",
++                      search: `?category=${cat.id}`,
++                    }}
++                    className="nav-link-drop"
++                    nav
++                  >
++                    {cat.name}
++                  </DropdownToggle>}
++                  {cat.id && cat.id == 11 && <DropdownToggle
++                    data-toggle="dropdown"
++                    tag={Link}
++                    to={{
++                      pathname: "/car-accessories"
++                    }}
++                    className="nav-link-drop"
++                    nav
++                  >
++                    {cat.name}
++                  </DropdownToggle>}
++
++                  <DropdownMenu>
++                    <div
++                      className="submenu-wrapper"
++                      {...(isMobile
++                        ? {
++                          onClick: () => setSubmenuTwoOpen(prev => !prev),
++                        }
++                        : {
++                          onMouseEnter: () => setSubmenuTwoOpen(true),
++                          onMouseLeave: () => setSubmenuTwoOpen(false),
++                        })
++                      }
++                    >
++                      <DropdownItem className="submenu-toggle" style={{
++                        display: "flex",
++                        justifyContent: "space-around",
++                        alignItems: "center",
++                      }}>
++                        <img
++                          src={FourWheeler}
++                          alt="four-wheeler"
++                          height={20}
++                          width={20}
++                          style={{ marginRight: "8px" }}
++                        />{" "}
++                        4W Accessories Γû╕
++                      </DropdownItem>
++                      {submenuTwoOpen && (
++                        <div className="submenu">
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/car-care" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Car Care</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/comfort-accessories" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Comfort Accessories</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/mobile-accessories" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Mobile Accessories</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/organisers" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Organisers</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/padded-seat-cover" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Padded Seat Cover</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/steering-covers" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Steering Covers</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/tissue-boxes" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Tissue Boxes</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/utilities" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Utilities</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/ev-accessories" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >EV Accessories</DropdownItem>
++
+                         </div>
++                      )}
++                    </div>
++
++                    <div
++                      className="submenu-wrapper"
++                      {...(isMobile
++                        ? {
++                          onClick: () => setSubmenuOpen(prev => !prev),
++                        }
++                        : {
++                          onMouseEnter: () => setSubmenuOpen(true),
++                          onMouseLeave: () => setSubmenuOpen(false),
++                        })
++                      }
++                    >
++                      <DropdownItem className="submenu-toggle" style={{
++                        display: "flex",
++                        justifyContent: "space-around",
++                        alignItems: "center",
++                      }}>
++                        <img
++                          src={TwoWheeler}
++                          alt="two-wheeler"
++                          height={20}
++                          width={20}
++                          style={{ marginRight: "8px" }}
++                        />
++                        2W Accessories Γû╕
+                       </DropdownItem>
++                      {submenuOpen && (
++                        <div className="submenu">
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/bike-body-covers" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Bike Body Covers</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/scooty-body-covers" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Scooty Body Covers</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/tank-covers" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Tank Covers</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/mobile-holders" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Mobile Holders</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/bags" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Bags</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/microfibre-cleaning-cloth" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Microfibre Cleaning Cloth</DropdownItem>
++                          <DropdownItem
++                            onClick={onClose}
++                            tag={Link}
++                            to={{ pathname: "/bungee-ropes" }}
++                            style={isMobile ? { width: 100 } : null}
++                          >Bungee Ropes</DropdownItem>
++
++                        </div>
++                      )}
++                    </div>
++                  </DropdownMenu>
++                </Dropdown>
++              </NavItem>
++            );
++          } else {
++            return (
++              <NavItem key={index} style={index === categories.length - 1 ? { padding: 0 } : {}} >
++                <Dropdown toggle={() => { }}>
++                  {cat.id && cat.id != 11 && <DropdownToggle
++                    data-toggle="dropdown"
++                    tag={Link}
++                    to={{
++                      pathname: "/products",
++                      search: `?category=${cat.id}`,
++                    }}
++                    className="nav-link-drop"
++                    nav
++                  >
++                    {cat.name}
++                  </DropdownToggle>}
++                  {cat.id && cat.id == 11 && <DropdownToggle
++                    data-toggle="dropdown"
++                    tag={Link}
++                    to={{
++                      pathname: "/car-accessories"
++                    }}
++                    className="nav-link-drop"
++                    nav
++                  >
++                    {cat.name}
++                  </DropdownToggle>}
++
++                  <DropdownMenu style={{ minWidth: "200px" }}>
++                    {filteredSubCategories.map((subCat, subIndex) => (
+                       <DropdownItem
+-                        divider
+-                        className="divider"
+-                        style={isMobile ? { width: 100 } : null}
+-                      />
+-                      <DropdownItem
++                        key={subIndex}
+                         onClick={onClose}
+                         tag={Link}
+-                        to="/two-wheeler-seat-covers"
++                        to={{
++                          pathname: "/" + subCat.canonical,
++                          search: ``,
++                        }}
+                         style={isMobile ? { width: 100 } : null}
+                       >
+                         <div
+                           style={{
+                             display: "flex",
+-                            justifyContent: "space-around",
+-                            alignItems: "center",
++                            justifyContent: "center",
++                            alignItems: "center"
+                           }}
+                         >
+-                          <img
+-                            src={TwoWheeler}
+-                            alt="two-wheeler"
+-                            height={20}
+-                            width={20}
+-                          />{" "}
+-                          2W
++                          {subCat.name}
+                         </div>
+                       </DropdownItem>
+-                    </DropdownMenu>
+-                  </Dropdown>
+-                </NavItem>
+-              );
+-            }
+-          const filteredSubCategories = subCategories.filter(
+-            (subCat) => subCat.category_id === cat.id
+-          );
+-          return (
+-            <NavItem key={index} style={index === categories.length - 1 ? { padding: 0 } : {}} >
+-              <Dropdown toggle={() => {}}>
+-                <DropdownToggle
+-                  data-toggle="dropdown"
+-                  tag={Link}
+-                  to={{
+-                    pathname: "/products",
+-                    search: `?category=${cat.id}`,
+-                  }}
+-                  className="nav-link-drop"
+-                  nav
+-                >
+-                  {cat.name}
+-                </DropdownToggle>
+-                <DropdownMenu style={{ minWidth: "200px" }}>
+-                  {filteredSubCategories.map((subCat, subIndex) => (
+-                    <DropdownItem
+-                      key={subIndex}
+-                      onClick={onClose}
+-                      tag={Link}
+-                      to={{
+-                        pathname: "/"+subCat.canonical,
+-                        search: ``,
+-                      }}
+-                      style={isMobile ? { width: 100 } : null}
+-                    >
+-                      <div
+-                        style={{
+-                          display: "flex",
+-                          justifyContent: "center",
+-                          alignItems: "center"
+-                        }}
+-                      >
+-                        {subCat.name}
+-                      </div>
+-                    </DropdownItem>
+-                  ))}
+-                </DropdownMenu>
+-              </Dropdown>
+-            </NavItem>
+-          );
++                    ))}
++                  </DropdownMenu>
++                </Dropdown>
++              </NavItem>
++            );
++          }
+         })}
+         {Object.values(NAVBAR_LIST).map((nav, index) => {
+           return (
+diff --git a/src/views/dashboard/components/nav-bar/index.jsx b/src/views/dashboard/components/nav-bar/index.jsx
+index 36eb8bc..bc8fc57 100644
+--- a/src/views/dashboard/components/nav-bar/index.jsx
++++ b/src/views/dashboard/components/nav-bar/index.jsx
+@@ -84,7 +84,7 @@ const NavBar = () => {
+         </div>
+       }
+ 
+-      <SearchDialog 
++      <SearchDialog
+         open={isSearchDialogOpen}
+         setIsSearchDialogOpen={setIsSearchDialogOpen}
+         handleClose={handleCloseSearchDialog}
+diff --git a/src/views/dashboard/index.js b/src/views/dashboard/index.js
+index 787dca4..d5a3b7f 100644
+--- a/src/views/dashboard/index.js
++++ b/src/views/dashboard/index.js
+@@ -17,18 +17,18 @@ import SocialUpdatesDesktop from "./components/social-updates/SocialUpdatesDeskt
+ 
+ const vehicleTypeList = [
+ 	{
+-	  id: 2,
+-	  name: "4W",
+-	  display: "4 Wheelers"
++		id: 2,
++		name: "4W",
++		display: "4 Wheelers"
+ 	},
+ 	{
+-	  id: 1,
+-	  name: "2W",
+-	  display: "2 Wheelers"
++		id: 1,
++		name: "2W",
++		display: "2 Wheelers"
+ 	}
+-  ]
++]
+ 
+-function Dashboard({ categoryList }) {
++const Dashboard = ({ categoryList }) => {
+ 	const isMobile = useMediaQuery('(max-width:767px)');
+ 	const dispatch = useDispatch();
+ 	const navigate = useNavigate();
+@@ -74,8 +74,9 @@ function Dashboard({ categoryList }) {
+ 	return (
+ 		<>
+ 			<Banner bannerList={bannerList} />
+-			{isMobile ? <SelectVehicle /> : <SelectDesktopVehicle />}
++			{/* <CategoryCircles categories={categoryList} /> */}
+ 			<ProductSlider
++
+ 				onClickProduct={handleProductOnClick}
+ 				onCreateCartProduct={createCartProduct}
+ 				title="Trending Products"
+diff --git a/src/views/privacyPolicy/contactus.js b/src/views/privacyPolicy/contactus.js
+index 2f7eab9..5ecd9c9 100644
+--- a/src/views/privacyPolicy/contactus.js
++++ b/src/views/privacyPolicy/contactus.js
+@@ -7,7 +7,7 @@ const ContactUs = () => {
+         information below.
+       </p>
+       <p>
+-        <a href='https://www.autoformindia.com'>https://www.autoformindia.com/</a>
++        <a href='https://autoformindia.com'>https://autoformindia.com/</a>
+       </p>
+       <p>D-135 F/F, Sector 63, Noida - 201301 India</p>
+       <div className="empty"></div>
+diff --git a/src/views/product/detail/Component.jsx b/src/views/product/detail/Component.jsx
+index d9b2bb9..3d1ca04 100644
+--- a/src/views/product/detail/Component.jsx
++++ b/src/views/product/detail/Component.jsx
+@@ -110,8 +110,8 @@ const DetailComponent = ({
+ 
+ 			<Helmet>
+ 				{product?.seo_title && <title>{product.seo_title}</title>}
+-				{product?.seo_description && <meta name='description' content={product.seo_description} />}
+-				{product?.seo_canonical && <link rel="canonical" href={"/product/" + product.seo_canonical} />}
++				{product?.seo_description && <meta name='description' content={product.seo_description} data-react-helmet="true" />}
++				{product?.seo_canonical && <link rel="canonical" href={"/product/" + product.seo_canonical} data-react-helmet="true" />}
+ 				<script type="application/ld+json">{`
+ 					{
+ 						"@context": "http://schema.org",

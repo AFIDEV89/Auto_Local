@@ -1,0 +1,15 @@
+﻿diff --git a/src/views/product/detail/Component.jsx b/src/views/product/detail/Component.jsx
+index d9b2bb9..3d1ca04 100644
+--- a/src/views/product/detail/Component.jsx
++++ b/src/views/product/detail/Component.jsx
+@@ -110,8 +110,8 @@ const DetailComponent = ({
+ 
+ 			<Helmet>
+ 				{product?.seo_title && <title>{product.seo_title}</title>}
+-				{product?.seo_description && <meta name='description' content={product.seo_description} />}
+-				{product?.seo_canonical && <link rel="canonical" href={"/product/" + product.seo_canonical} />}
++				{product?.seo_description && <meta name='description' content={product.seo_description} data-react-helmet="true" />}
++				{product?.seo_canonical && <link rel="canonical" href={"/product/" + product.seo_canonical} data-react-helmet="true" />}
+ 				<script type="application/ld+json">{`
+ 					{
+ 						"@context": "http://schema.org",

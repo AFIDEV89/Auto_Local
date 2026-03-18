@@ -1,0 +1,24 @@
+.refundWrapper {
+  padding: 90px;
+  @media (max-width: 768px) {
+    padding: 10px !important;
+  }
+  font-size: 14px;
+  .refundInternal {
+    padding-top: 3px;
+    background-color: rgb(238, 235, 235);
+    color: rgb(87, 84, 84);
+    h1 {
+      font-weight: bolder;
+      text-align: center;
+    }
+    li {
+      padding: 1rem;
+    }
+    // border-bottom: 5px solid black;
+  }
+  .empty {
+    background-color: white;
+    height: 2rem;
+  }
+}

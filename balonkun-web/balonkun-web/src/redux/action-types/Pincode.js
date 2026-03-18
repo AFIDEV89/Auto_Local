@@ -1,0 +1,1 @@
+export const SET_PINCODE = "SET_PINCODE";
