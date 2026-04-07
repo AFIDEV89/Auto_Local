@@ -1,0 +1,96 @@
+name: Autoform Staging Deployment
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  deploy-web:
+    name: Build & Deploy Web Staging S3
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies & Build Web
+        run: |
+          cd balonkun-web/balonkun-web
+          npm install --legacy-peer-deps
+          npm run build
+        env:
+          REACT_APP_API_BASE_URL: ${{ secrets.DEV_API_URL }}
+          REACT_APP_API_KEY: ${{ secrets.API_KEY }}
+          REACT_APP_USER_TYPE: user
+          CI: false
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
+
+      - name: Deploy to Staging Web S3 Bucket
+        run: |
+          cd balonkun-web/balonkun-web/build
+          aws s3 sync . s3://staging-autoform-web --delete
+
+  deploy-admin:
+    name: Build & Deploy Admin Staging S3
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies & Build Admin
+        run: |
+          cd autoform-admin-dev
+          npm install --legacy-peer-deps
+          npm run build
+        env:
+          REACT_APP_API_BASE_URL: ${{ secrets.DEV_API_URL }}
+          REACT_APP_API_KEY: ${{ secrets.API_KEY }}
+          REACT_APP_USER_TYPE: admin
+          CI: false
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
+
+      - name: Deploy to Staging Admin S3 Bucket
+        run: |
+          cd autoform-admin-dev/build
+          aws s3 sync . s3://staging-autoformadmin --delete
+
+  deploy-backend:
+    name: Deploy Backend Staging API
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Execute Node Deployment (EC2 SSH)
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.STAGING_EC2_HOST_IP }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
+          script: |
+            cd /path/to/your/staging/backend/folder
+            git pull origin staging
+            npm install
+            pm2 restart index
