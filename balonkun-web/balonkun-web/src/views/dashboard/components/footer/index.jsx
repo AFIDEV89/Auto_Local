@@ -52,7 +52,7 @@ const Footer = () => {
 							<img 
 								src={newLogo} 
 								alt="AutoForm" 
-								style={{ height: '60px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} 
+								style={{ height: '60px', objectFit: 'contain' }} 
 							/>
 						</div>
 						<p className="footer-desc">
