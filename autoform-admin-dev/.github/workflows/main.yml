@@ -1,0 +1,64 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - dev
+  workflow_dispatch: # 👈 This adds the manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '14'  # Match your local Node.js version
+
+      - name: Create .env file
+        run: |
+          echo "REACT_APP_API_BASE_URL=${{ secrets.REACT_APP_API_BASE_URL }}" >> .env
+          echo "REACT_APP_S3_BUCKET_NAME=${{vars.REACT_APP_S3_BUCKET_NAME }}" >> .env
+          echo "REACT_APP_S3_DIRECTORY_NAME=${{ vars.REACT_APP_S3_DIRECTORY_NAME }}" >> .env
+          echo "REACT_APP_S3_REGION=${{ vars.REACT_APP_S3_REGION }}" >> .env
+          echo "REACT_APP_S3_URL=${{ vars.REACT_APP_S3_URL }}" >> .env
+          echo "REACT_APP_S3_ACCESS_KEY=${{ secrets.REACT_APP_S3_ACCESS_KEY }}" >> .env
+          echo "REACT_APP_S3_SECRET_KEY=${{ secrets.REACT_APP_S3_SECRET_KEY }}" >> .env
+          echo "REACT_APP_API_KEY=${{ secrets.REACT_APP_API_KEY }}" >> .env
+          echo "REACT_APP_USER_TYPE=${{ vars.REACT_APP_USER_TYPE }}" >> .env
+      - name: Show .env contents
+        run: cat .env
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build app
+        run: npm run build
+        continue-on-error: true
+
+      - name: Show full build folder structure
+        run: tree build
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }} # e.g., us-east-1
+
+      - name: Deploy to S3 (Dev)
+        run: |
+          aws s3 sync ./build/ s3://${{ secrets.AWS_S3_BUCKET_DEV }} --delete
+          aws s3 cp s3://${{ secrets.AWS_S3_BUCKET_DEV }}/index.html s3://${{ secrets.AWS_S3_BUCKET_DEV }}/index.html --metadata-directive REPLACE --content-type text/html --cache-control 'max-age=300'
+          aws s3 cp s3://${{ secrets.AWS_S3_BUCKET_DEV }}/static s3://${{ secrets.AWS_S3_BUCKET_DEV }}/static --recursive --metadata-directive REPLACE --cache-control 'max-age=31536000'
+          #Optional Cloudfront invalidation for dev.
+
+
+      # Optional: Deploy step (modify based on your deployment method)
+      # - name: Deploy to Hosting
+      #   run: |
+      #     echo "Deploying..."
+      #     # Add deployment script here
+

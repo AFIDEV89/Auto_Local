@@ -1,0 +1,237 @@
+import React, { useEffect } from "react";
+import {
+  Button,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Divider,
+  Grid,
+  IconButton,
+  Stack,
+  TextField,
+  Tooltip,
+  Dialog,
+  MenuItem,
+} from "@mui/material";
+
+import API from "../../../../api/axios";
+
+// third-party
+import LoadingButton from "@mui/lab/LoadingButton";
+
+// project imports
+import { gridSpacing } from "store/constant";
+
+// assets
+import DeleteIcon from "@mui/icons-material/Delete";
+import { successAlert, apiErrorHandler, errorAlert } from "../../../helpers";
+
+const AddBrandData = ({
+  event,
+  handleDelete,
+  handleCloseModal,
+  reloadApi,
+  editBrand = {},
+  open,
+}) => {
+  const isCreating = !event;
+
+  const [title, setTitle] = React.useState(null);
+  const [loading, setLoading] = React.useState(false);
+  const [vehicleType, setVehicleTYpe] = React.useState(editBrand?.vehicle_type?.id  || '');
+
+  
+  let vehicleTypes= [{
+    id:1,name:'2w',
+  },{
+    id:2,name:'4w',
+  }]
+
+  const handleClearState = () => {
+    setTitle("");
+  };
+
+  const handleSubmit = async () => {
+    setLoading(true);
+    try {
+      let payload = {
+        name: title,
+        vehicle_type_id:vehicleType
+      };
+
+      const response = await API.post("brand/create", payload);
+      if (response && response.data && response.data.data) {
+        handleCloseModal();
+        reloadApi();
+
+        setTimeout(() => {
+          successAlert("Brand added successfully.");
+        }, 200);
+      } else {
+        errorAlert(response.data.message);
+      }
+      setLoading(false);
+      handleClearState();
+    } catch (error) {
+      setLoading(false);
+      handleClearState();
+      apiErrorHandler("Something went wrong while adding the Brand");
+    }
+  };
+
+  const handleEditSubmit = async () => {
+    setLoading(true);
+    try {
+      let payload = {
+        name: title,
+        id:editBrand.id,
+        vehicle_type_id:vehicleType
+      };
+
+      const response = await API.put(`brand/update`, payload);
+      if (
+        response &&
+        response.data &&
+        (response.data.statusCode === 200 || response.data.statusCode === 204)
+      ) {
+        handleCloseModal();
+        reloadApi();
+        handleClearState();
+        setTimeout(() => {
+          successAlert("Blog updated successfully.");
+        }, 200);
+      } else if (response.data) {
+        errorAlert(response.data.message);
+      }
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      apiErrorHandler(error, "Something went wrong while updating the Brand");
+    }
+  };
+
+  const isEdit = editBrand && editBrand?.id;
+
+  useEffect(() => {
+    if (editBrand && editBrand?.id) {
+      setTitle(editBrand?.name || "");
+    }
+  }, [editBrand, editBrand.id]);
+
+  return (
+    <div>
+      <Dialog
+        maxWidth="sm"
+        fullWidth
+        onClose={handleCloseModal}
+        open={open}
+        sx={{ "& .MuiDialog-paper": { p: 0 } }}
+      >
+        <DialogTitle>
+          {isEdit ? "Edit Brand Data" : "Add Brand Data"}
+        </DialogTitle>
+        <Divider />
+        <DialogContent sx={{ p: 3 }}>
+          <Grid container spacing={gridSpacing}>
+            <Grid item xs={12}>
+              <div style={{ paddingBottom: "10px" }}>
+                <label className="form-label">Brand Name*</label>
+              </div>
+
+              <TextField
+                fullWidth
+                label="Brand Name"
+                value={title}
+                inputProps={{ maxLength: 100 }}
+                onChange={(e) => {
+                  setTitle(e.target.value);
+                }}
+              />
+            </Grid>
+          </Grid>
+          <Grid container spacing={gridSpacing}>
+            <Grid item xs={12}>
+              <div style={{ paddingBottom: "10px" }}>
+                <label className="form-label">Vehicle Type*</label>
+              </div>
+
+ 
+
+            <TextField
+                  id="standard-select-currency"
+                  select
+                  label="Vehicle Type*"
+                  name="vehicle_type"
+                  fullWidth
+                  value={vehicleType}
+                  onChange={(event) => {
+                    console.log('event',event.target.value)
+                    setVehicleTYpe(event.target.value)
+                  }}
+                >
+                   {vehicleTypes &&
+                    vehicleTypes.length > 0 &&
+                    vehicleTypes.map((option) => (
+                      <MenuItem key={option?.id} value={option?.id}>
+                        {option?.name}
+                      </MenuItem>
+                    ))} 
+                </TextField>
+
+            </Grid>
+          </Grid> 
+        </DialogContent>
+
+        <DialogActions sx={{ p: 3 }}>
+          <Grid container justifyContent="space-between" alignItems="center">
+            <Grid item>
+              {!isCreating && (
+                <Tooltip title="Delete Event">
+                  <IconButton
+                    onClick={() => handleDelete(event?.id)}
+                    size="large"
+                  >
+                    <DeleteIcon color="error" />
+                  </IconButton>
+                </Tooltip>
+              )}
+            </Grid>
+
+            <Grid item>
+              <Stack direction="row" spacing={2} alignItems="center">
+                <Button
+                  type="button"
+                  variant="outlined"
+                  onClick={handleCloseModal}
+                >
+                  Cancel
+                </Button>
+
+                <LoadingButton
+                  size="medium"
+                  type="submit"
+                  onClick={() => {
+                    if (isEdit) {
+                      handleEditSubmit();
+                    } else {
+                      handleSubmit();
+                    }
+                  }}
+                  loading={loading}
+                  loadingPosition="center"
+                  // startIcon={<SaveIcon />}
+                  variant="contained"
+                  disabled={!title}
+                >
+                  {isEdit ? "Update Brand" : "Add Brand"}
+                </LoadingButton>
+              </Stack>
+            </Grid>
+          </Grid>
+        </DialogActions>
+      </Dialog>
+    </div>
+  );
+};
+
+export default AddBrandData;

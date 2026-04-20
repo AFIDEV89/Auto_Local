@@ -1,0 +1,176 @@
+=== ALL 4W MAKES & THEIR MODELS ===
+
+📦 Citroen (Brand ID: 16) — 2 models
+   └── C3 (Model ID: 49)
+   └── C5 (Model ID: 303)
+
+📦 Audi (Brand ID: 44) — 0 models
+   └── (No models)
+
+📦 BMW (Brand ID: 45) — 0 models
+   └── (No models)
+
+📦 Chevrolet (Brand ID: 24) — 6 models
+   └── AVEO (Model ID: 148)
+   └── Beat (Model ID: 154)
+   └── CRUZE (Model ID: 149)
+   └── OPTRA (Model ID: 146)
+   └── SAIL (Model ID: 150)
+   └── SPARK (Model ID: 156)
+
+📦 Datsun (Brand ID: 12) — 2 models
+   └── Go Plus (Model ID: 169)
+   └── Redi Go (Model ID: 168)
+
+📦 Ford (Brand ID: 8) — 9 models
+   └── Aspire (Model ID: 174)
+   └── ECO SPORT (Model ID: 175)
+   └── ENVEAVOUR (Model ID: 176)
+   └── FIESTA (Model ID: 177)
+   └── FIGO (Model ID: 22)
+   └── FIGO 12 (Model ID: 20)
+   └── FIGO 15 (Model ID: 21)
+   └── FREESTYLE (Model ID: 18)
+   └── O FIGO (Model ID: 19)
+
+📦 HONDA (Brand ID: 10) — 11 models
+   └── Accord (Model ID: 249)
+   └── Amaze (Model ID: 202)
+   └── Brio (Model ID: 276)
+   └── Brio (Model ID: 248)
+   └── City (Model ID: 306)
+   └── City (Model ID: 200)
+   └── CIVIC (Model ID: 25)
+   └── CRV (Model ID: 274)
+   └── Elevate (Model ID: 201)
+   └── HONDA (Model ID: 742)
+   └── WRV (Model ID: 247)
+
+📦 Hyundai (Brand ID: 1) — 19 models
+   └── Alcazar (Model ID: 12)
+   └── Alcazar 6 (Model ID: 44)
+   └── Aura (Model ID: 6)
+   └── Creta (Model ID: 10)
+   └── Elantra (Model ID: 211)
+   └── EON (Model ID: 188)
+   └── EXTER (Model ID: 189)
+   └── Exter (Model ID: 245)
+   └── I-10 Grand (Model ID: 207)
+   └── I-10 NIOS (Model ID: 304)
+   └── i10 Nios (Model ID: 5)
+   └── I20 (Model ID: 190)
+   └── Ioniq (Model ID: 212)
+   └── Kona Electric (Model ID: 208)
+   └── SANTA FE (Model ID: 270)
+   └── Santro (Model ID: 1)
+   └── TUCSON (Model ID: 192)
+   └── Venue (Model ID: 3)
+   └── VERNA (Model ID: 191)
+
+📦 ISUZU (Brand ID: 31) — 1 models
+   └── DMAX-VCROSS (Model ID: 198)
+
+📦 Jeep (Brand ID: 15) — 2 models
+   └── Compas (Model ID: 305)
+   └── Compass (Model ID: 46)
+
+📦 KIA (Brand ID: 3) — 1 models
+   └── SELTOS (Model ID: 4)
+
+📦 MG (Brand ID: 14) — 6 models
+   └── Astor (Model ID: 164)
+   └── COMET (Model ID: 165)
+   └── Gloster (Model ID: 166)
+   └── Gloster1 (Model ID: 13)
+   └── HECTOR (Model ID: 41)
+   └── ZS EV (Model ID: 45)
+
+📦 Mahindra (Brand ID: 2) — 17 models
+   └── Alturas (Model ID: 206)
+   └── Bolero (Model ID: 196)
+   └── Bolero Neo (Model ID: 203)
+   └── MARAZZO (Model ID: 16)
+   └── MARAZZO 8 (Model ID: 17)
+   └── Rexton (Model ID: 36)
+   └── Scorpio (Model ID: 14)
+   └── Scorpio N (Model ID: 205)
+   └── SCR 7 T1 21(S3) (Model ID: 33)
+   └── SCR 7 T1 21(S5) (Model ID: 34)
+   └── SCR 7 T3 REF 21 (Model ID: 35)
+   └── Thar (Model ID: 157)
+   └── XUV 300 (Model ID: 2)
+   └── Xuv 400 (Model ID: 204)
+   └── XUV 500 (Model ID: 195)
+   └── XUV 700 (Model ID: 194)
+   └── XYLO (Model ID: 197)
+
+📦 Mercedes-Benz (Brand ID: 40) — 0 models
+   └── (No models)
+
+📦 Nissan (Brand ID: 9) — 5 models
+   └── KICKS (Model ID: 23)
+   └── MAGNITE (Model ID: 30)
+   └── Micra (Model ID: 171)
+   └── SUNNY (Model ID: 173)
+   └── TERRANO (Model ID: 172)
+
+📦 Renault (Brand ID: 5) — 6 models
+   └── CAPTUR (Model ID: 40)
+   └── CLIMBER (Model ID: 185)
+   └── DUSTER (Model ID: 186)
+   └── KIGER (Model ID: 11)
+   └── KWID (Model ID: 187)
+   └── TRIBER (Model ID: 26)
+
+📦 Skoda (Brand ID: 13) — 7 models
+   └── FABIA (Model ID: 160)
+   └── KUSHAQ (Model ID: 39)
+   └── Laura (Model ID: 167)
+   └── Octavia (Model ID: 161)
+   └── Rapid (Model ID: 159)
+   └── SLAVIA (Model ID: 162)
+   └── SUPERB (Model ID: 163)
+
+📦 TATA (Brand ID: 4) — 13 models
+   └── Altroz (Model ID: 7)
+   └── HARRIER (Model ID: 24)
+   └── HEXA (Model ID: 29)
+   └── NEXON (Model ID: 193)
+   └── Nexon1 (Model ID: 47)
+   └── PUNCH (Model ID: 31)
+   └── SAFARI (Model ID: 43)
+   └── SAFARI 211 (Model ID: 42)
+   └── Tiago (Model ID: 8)
+   └── TIAGO-1 (Model ID: 27)
+   └── Tigor (Model ID: 9)
+   └── TIGOR211 (Model ID: 28)
+   └── Zest (Model ID: 277)
+
+📦 Toyota (Brand ID: 6) — 18 models
+   └── Altis (Model ID: 236)
+   └── Camry (Model ID: 243)
+   └── COROLA (Model ID: 240)
+   └── Etios (Model ID: 242)
+   └── FORTUNER (Model ID: 182)
+   └── Glanza (Model ID: 15)
+   └── Glanza 23 (Model ID: 37)
+   └── HILUX (Model ID: 183)
+   └── HYCROSS (Model ID: 178)
+   └── HYRYDER (Model ID: 179)
+   └── Innova (Model ID: 238)
+   └── Innova Crysta (Model ID: 38)
+   └── LAND CRUSER ZX (Model ID: 239)
+   └── LIVA (Model ID: 180)
+   └── RUMION (Model ID: 184)
+   └── URBAN CRUISER (Model ID: 181)
+   └── VELFIRE (Model ID: 241)
+   └── Yaris (Model ID: 237)
+
+📦 Universal (Brand ID: 38) — 1 models
+   └── Universal (Model ID: 199)
+
+📦 VW (Brand ID: 11) — 3 models
+   └── Polo (Model ID: 48)
+   └── TAIGUN (Model ID: 32)
+   └── VIRTUS (Model ID: 170)
+

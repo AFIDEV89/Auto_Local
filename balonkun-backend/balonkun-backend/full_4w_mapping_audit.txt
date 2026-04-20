@@ -1,0 +1,132 @@
+=== FULL 4W SEAT COVER MAPPING AUDIT ===
+Total Seat Cover Products: 9666
+
+
+============================================================
+📦 BRAND: Hyundai (ID: 1) — 0 models in DB
+   Products mentioning "Hyundai" in name: 1293
+   ✅ Correctly linked (brand_id=1): 1293
+   🟡 Generic (no model match): 1293
+
+============================================================
+📦 BRAND: Mahindra (ID: 2) — 0 models in DB
+   Products mentioning "Mahindra" in name: 877
+   ✅ Correctly linked (brand_id=2): 877
+   🟡 Generic (no model match): 877
+
+============================================================
+📦 BRAND: KIA (ID: 3) — 0 models in DB
+   Products mentioning "KIA" in name: 0
+   ✅ Correctly linked (brand_id=3): 0
+
+============================================================
+📦 BRAND: TATA (ID: 4) — 0 models in DB
+   Products mentioning "TATA" in name: 964
+   ✅ Correctly linked (brand_id=4): 964
+   🟡 Generic (no model match): 964
+
+============================================================
+📦 BRAND: Renault (ID: 5) — 0 models in DB
+   Products mentioning "Renault" in name: 613
+   ✅ Correctly linked (brand_id=5): 613
+   🟡 Generic (no model match): 613
+
+============================================================
+📦 BRAND: Toyota (ID: 6) — 0 models in DB
+   Products mentioning "Toyota" in name: 1014
+   ✅ Correctly linked (brand_id=6): 1014
+   🟡 Generic (no model match): 1014
+
+============================================================
+📦 BRAND: Ford (ID: 8) — 0 models in DB
+   Products mentioning "Ford" in name: 768
+   ✅ Correctly linked (brand_id=8): 768
+   🟡 Generic (no model match): 768
+
+============================================================
+📦 BRAND: Nissan (ID: 9) — 0 models in DB
+   Products mentioning "Nissan" in name: 456
+   ✅ Correctly linked (brand_id=9): 456
+   🟡 Generic (no model match): 456
+
+============================================================
+📦 BRAND: HONDA (ID: 10) — 0 models in DB
+   Products mentioning "HONDA" in name: 568
+   ✅ Correctly linked (brand_id=10): 432
+   ❌ Wrong brand_id: 136
+   🟡 Generic (no model match): 568
+
+============================================================
+📦 BRAND: VW (ID: 11) — 0 models in DB
+   Products mentioning "VW" in name: 280
+   ✅ Correctly linked (brand_id=11): 280
+   🟡 Generic (no model match): 280
+
+============================================================
+📦 BRAND: Datsun (ID: 12) — 0 models in DB
+   Products mentioning "Datsun" in name: 203
+   ✅ Correctly linked (brand_id=12): 203
+   🟡 Generic (no model match): 203
+
+============================================================
+📦 BRAND: Skoda (ID: 13) — 0 models in DB
+   Products mentioning "Skoda" in name: 567
+   ✅ Correctly linked (brand_id=13): 567
+   🟡 Generic (no model match): 567
+
+============================================================
+📦 BRAND: MG (ID: 14) — 0 models in DB
+   Products mentioning "MG" in name: 266
+   ✅ Correctly linked (brand_id=14): 266
+   🟡 Generic (no model match): 266
+
+============================================================
+📦 BRAND: Jeep (ID: 15) — 0 models in DB
+   Products mentioning "Jeep" in name: 106
+   ✅ Correctly linked (brand_id=15): 106
+   🟡 Generic (no model match): 106
+
+============================================================
+📦 BRAND: Citroen (ID: 16) — 0 models in DB
+   Products mentioning "Citroen" in name: 0
+   ✅ Correctly linked (brand_id=16): 0
+
+============================================================
+📦 BRAND: Chevrolet (ID: 24) — 0 models in DB
+   Products mentioning "Chevrolet" in name: 374
+   ✅ Correctly linked (brand_id=24): 374
+   🟡 Generic (no model match): 374
+
+============================================================
+📦 BRAND: ISUZU (ID: 31) — 0 models in DB
+   Products mentioning "ISUZU" in name: 133
+   ✅ Correctly linked (brand_id=31): 133
+   🟡 Generic (no model match): 133
+
+============================================================
+📦 BRAND: Universal (ID: 38) — 0 models in DB
+   Products mentioning "Universal" in name: 0
+   ✅ Correctly linked (brand_id=38): 0
+
+============================================================
+📦 BRAND: Mercedes-Benz (ID: 40) — 0 models in DB
+   Products mentioning "Mercedes-Benz" in name: 0
+   ✅ Correctly linked (brand_id=40): 0
+
+============================================================
+📦 BRAND: Audi (ID: 44) — 0 models in DB
+   Products mentioning "Audi" in name: 0
+   ✅ Correctly linked (brand_id=44): 0
+
+============================================================
+📦 BRAND: BMW (ID: 45) — 0 models in DB
+   Products mentioning "BMW" in name: 0
+   ✅ Correctly linked (brand_id=45): 0
+
+============================================================
+
+📊 SUMMARY:
+   Total Products with correct vehicle_details: 0
+   Total Products UNMAPPED (name has brand+model but no link): 0
+   Total Products with WRONG brand_id: 136
+   Products not matching ANY 4W brand by name: 1184

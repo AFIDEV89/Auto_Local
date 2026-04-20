@@ -1,0 +1,13 @@
+.descpDiv {
+    display: flex;
+}
+
+.editBtn {
+    width: 10%;
+    margin: 10px;
+}
+
+
+.descriptionCk {
+    width: 90%;
+}

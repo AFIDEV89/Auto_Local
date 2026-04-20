@@ -1,0 +1,2934 @@
+=== HONDA DEEP AUDIT REPORT ===
+
+BRAND: HONDA (ID: 10) - Type: 4W (Car)
+MODELS (11):
+  - [ID: 25] CIVIC
+  - [ID: 200] City 
+  - [ID: 201] Elevate
+  - [ID: 202] Amaze 
+  - [ID: 247] WRV 
+  - [ID: 248] Brio 
+  - [ID: 249] Accord 
+  - [ID: 274] CRV
+  - [ID: 276] Brio
+  - [ID: 306] City
+  - [ID: 742] HONDA
+
+BRAND: honda (ID: 37) - Type: 2W (Bike)
+MODELS (71):
+  - [ID: 78] Shine OLD
+  - [ID: 79] C.B. Shine BS6
+  - [ID: 80] Shine SP BS4
+  - [ID: 81] SP 125 BS6
+  - [ID: 82] Dream Yuga
+  - [ID: 83] Livo (Old)
+  - [ID: 84] Activa (I)
+  - [ID: 85] Activa 3G
+  - [ID: 86] Activa 6G
+  - [ID: 87] Activa 125 BS4
+  - [ID: 88] Activa 125 BS6
+  - [ID: 89] Grazia BS4
+  - [ID: 90] Grazia BS6
+  - [ID: 91] Dio BS4
+  - [ID: 92] Dio 110
+  - [ID: 93] Aviator
+  - [ID: 94] Unicorn BS4
+  - [ID: 95] Unicorn 160
+  - [ID: 96] Unicorn BS6 150
+  - [ID: 97] Navi
+  - [ID: 141] Shine OLD(with big kan & loopy)
+  - [ID: 142] C.B. Shine BS4
+  - [ID: 143] Shine SP BS4(Curve at tank)
+  - [ID: 144] SP 125 BS6(Full Round loopy)
+  - [ID: 145] Dio 110 (New)
+  - [ID: 258] CD110 BS6
+  - [ID: 260] DIO 125 BS6 
+  - [ID: 262] Hornet 
+  - [ID: 264] LIVO BS6
+  - [ID: 480] SHINE 100CC BS6
+  - [ID: 481] SP 160 BS6
+  - [ID: 482] UNICORN BS4 150
+  - [ID: 483] LIVO OLD
+  - [ID: 484] HORNET SINGLE SEAT
+  - [ID: 485] X-BLADE
+  - [ID: 486] ACTIVA 4G
+  - [ID: 487] ACTIVA 5G
+  - [ID: 488] DIO 110 NEW
+  - [ID: 489] DIO BS6
+  - [ID: 490] DIO 125 BS6
+  - [ID: 513] SHINE OLD PLUS
+  - [ID: 514] C.B. SHINE BS4 PLUS
+  - [ID: 515] C.B. SHINE BS6 PLUS
+  - [ID: 516] SHINE SP BS4 PLUS
+  - [ID: 517] SP 125 BS6 PLUS
+  - [ID: 518] SHINE 100CC BS6 PLUS
+  - [ID: 519] SP 160 BS6 PLUS
+  - [ID: 520] UNICORN BS4 150 PLUS
+  - [ID: 521] UNICORN 160 PLUS
+  - [ID: 522] UNICORN BS6 150 PLUS
+  - [ID: 523] DREAM YUGA PLUS
+  - [ID: 524] LIVO OLD PLUS
+  - [ID: 525] LIVO BS6 PLUS
+  - [ID: 526] CD110 BS6 PLUS
+  - [ID: 527] NAVI PLUS
+  - [ID: 528] HORNET SINGLE SEAT PLUS
+  - [ID: 529] X-BLADE PLUS
+  - [ID: 530] ACTIVA (I) PLUS
+  - [ID: 531] ACTIVA 3G PLUS
+  - [ID: 532] ACTIVA 4G PLUS
+  - [ID: 533] ACTIVA 5G PLUS
+  - [ID: 534] ACTIVA 6G PLUS
+  - [ID: 535] ACTIVA 125 BS4 PLUS
+  - [ID: 536] ACTIVA 125 BS6 PLUS
+  - [ID: 537] GRAZIA BS4 PLUS
+  - [ID: 538] GRAZIA BS6 PLUS
+  - [ID: 539] DIO BS4 PLUS
+  - [ID: 540] DIO 110 NEW PLUS
+  - [ID: 541] DIO BS6 PLUS
+  - [ID: 542] DIO 125 BS6 PLUS
+  - [ID: 543] AVIATOR PLUS
+
+TOTAL PRODUCTS CONTAINING 'HONDA': 568
+
+DETAILED PRODUCT LIST:
+--------------------------------------------------
+[Prod ID: 2301] Name: Honda CIVIC Amaze+ Artificial Leather Seat Covers (Black/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2302] Name: Honda CIVIC Amaze Duo + Artificial Leather Seat Covers (Black/Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2303] Name: Honda CIVIC E1 Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2304] Name: Honda CIVIC E2 Artificial Leather Seat Covers (Tan/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2305] Name: Honda CIVIC E4 Artificial Leather Seat Covers (Black/Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2306] Name: Honda CIVIC E5 Artificial Leather Seat Covers (Beige/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2307] Name: Honda CIVIC Q2 Artificial Leather Seat Covers (Black/Red )
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2308] Name: Honda CIVIC D3 Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2309] Name: Honda CIVIC D3 Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2310] Name: Honda CIVIC D3 Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2311] Name: Honda CIVIC D3 Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2312] Name: Honda CIVIC D3 Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2313] Name: Honda CIVIC D3 Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2314] Name: Honda CIVIC D3 Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2315] Name: Honda CIVIC D3 Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2316] Name: Honda CIVIC D5 Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2317] Name: Honda CIVIC D5 Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2318] Name: Honda CIVIC D5 Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2319] Name: Honda CIVIC D5 Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2320] Name: Honda CIVIC D5 Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2321] Name: Honda CIVIC D5 Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2322] Name: Honda CIVIC D5 Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2323] Name: Honda CIVIC D5 Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2324] Name: Honda CIVIC D5 Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2325] Name: Honda CIVIC NAVIGATION+ Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2326] Name: Honda CIVIC NAVIGATION+ Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2327] Name: Honda CIVIC NAVIGATION+ Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2328] Name: Honda CIVIC NAVIGATION+ Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2329] Name: Honda CIVIC NAVIGATION+ Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2330] Name: Honda CIVIC NAVIGATION+ Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2331] Name: Honda CIVIC NAVIGATION+ Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2332] Name: Honda CIVIC NAVIGATION+ Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2333] Name: Honda CIVIC NAVIGATION+ Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2334] Name: Honda CIVIC NAVIGATION+ Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2335] Name: Honda CIVIC U-ARROW Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2336] Name: Honda CIVIC U-ARROW Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2337] Name: Honda CIVIC U-ARROW Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2338] Name: Honda CIVIC U-ARROW Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2339] Name: Honda CIVIC U-ARROW Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2340] Name: Honda CIVIC U-ARROW Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2341] Name: Honda CIVIC U-ARROW Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2342] Name: Honda CIVIC U-ARROW Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2343] Name: Honda CIVIC U-ARROW Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2344] Name: Honda CIVIC U-VOLT Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2345] Name: Honda CIVIC U-VOLT Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2346] Name: Honda CIVIC U-VOLT Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2347] Name: Honda CIVIC U-VOLT Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2348] Name: Honda CIVIC U-VOLT Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2349] Name: Honda CIVIC U-VOLT Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2350] Name: Honda CIVIC U-VOLT Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2351] Name: Honda CIVIC U-VOLT Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2352] Name: Honda CIVIC U-VOLT Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2353] Name: Honda CIVIC U-BLADE Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2354] Name: Honda CIVIC U-BLADE Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2355] Name: Honda CIVIC U-BLADE Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2356] Name: Honda CIVIC U-BLADE Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2357] Name: Honda CIVIC U-BLADE Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2358] Name: Honda CIVIC U-BLADE Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2359] Name: Honda CIVIC U-BLADE Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2360] Name: Honda CIVIC U-BLADE Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2361] Name: Honda CIVIC U-BLADE Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2362] Name: Honda CIVIC U-HIGHWAY Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2363] Name: Honda CIVIC U-HIGHWAY Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2364] Name: Honda CIVIC U-HIGHWAY Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2365] Name: Honda CIVIC U-HIGHWAY Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2366] Name: Honda CIVIC U-HIGHWAY Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2367] Name: Honda CIVIC U-HIGHWAY Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2368] Name: Honda CIVIC U-HIGHWAY Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2369] Name: Honda CIVIC U-HIGHWAY Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2370] Name: Honda CIVIC U-HIGHWAY Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2371] Name: Honda CIVIC U-IMPRESS Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2372] Name: Honda CIVIC U-IMPRESS Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2373] Name: Honda CIVIC U-IMPRESS Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2374] Name: Honda CIVIC U-IMPRESS Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2375] Name: Honda CIVIC U-IMPRESS Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2376] Name: Honda CIVIC U-IMPRESS Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2377] Name: Honda CIVIC U-IMPRESS Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2378] Name: Honda CIVIC U-IMPRESS Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2379] Name: Honda CIVIC U-IMPRESS Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2380] Name: Honda CIVIC U-LADDER Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2381] Name: Honda CIVIC U-LADDER Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2382] Name: Honda CIVIC U-LADDER Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2383] Name: Honda CIVIC U-LADDER Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2384] Name: Honda CIVIC U-LADDER Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2385] Name: Honda CIVIC U-LADDER Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2386] Name: Honda CIVIC U-LADDER Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2387] Name: Honda CIVIC U-LADDER Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2388] Name: Honda CIVIC U-LADDER Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2389] Name: Honda CIVIC XCLUSIVE Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2390] Name: Honda CIVIC XCLUSIVE Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2391] Name: Honda CIVIC XCLUSIVE Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2392] Name: Honda CIVIC XCLUSIVE Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2393] Name: Honda CIVIC XCLUSIVE Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2394] Name: Honda CIVIC XCLUSIVE Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2395] Name: Honda CIVIC XCLUSIVE Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2396] Name: Honda CIVIC XCLUSIVE Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2397] Name: Honda CIVIC XCLUSIVE Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2398] Name: Honda CIVIC XCLUSIVE+ Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2399] Name: Honda CIVIC XCLUSIVE+ Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2400] Name: Honda CIVIC XCLUSIVE+ Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2401] Name: Honda CIVIC XCLUSIVE+ Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2402] Name: Honda CIVIC XCLUSIVE+ Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2403] Name: Honda CIVIC XCLUSIVE+ Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2404] Name: Honda CIVIC XCLUSIVE+ Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2405] Name: Honda CIVIC XCLUSIVE+ Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2406] Name: Honda CIVIC XCLUSIVE+ Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2407] Name: Honda CIVIC U-FOCUS Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2408] Name: Honda CIVIC U-FOCUS Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2409] Name: Honda CIVIC U-FOCUS Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2410] Name: Honda CIVIC U-FOCUS Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2411] Name: Honda CIVIC U-FOCUS Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2412] Name: Honda CIVIC U-FOCUS Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2413] Name: Honda CIVIC U-FOCUS Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2414] Name: Honda CIVIC U-FOCUS Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 2415] Name: Honda CIVIC U-FOCUS Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 233
+
+[Prod ID: 8069] Name: Honda City Amaze+ Artificial Leather Seat Covers (Black/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 657
+
+[Prod ID: 8070] Name: Honda City Amaze Duo + Artificial Leather Seat Covers (Black/Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 657
+
+[Prod ID: 8071] Name: Honda City E1 Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8072] Name: Honda City E2 Artificial Leather Seat Covers (Tan/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8073] Name: Honda City E4 Artificial Leather Seat Covers (Black/Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8074] Name: Honda City E5 Artificial Leather Seat Covers (Beige/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8075] Name: Honda City Q2 Artificial Leather Seat Covers (Black/Red )
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8076] Name: Honda City D3 Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8077] Name: Honda City D3 Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8078] Name: Honda City D3 Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8079] Name: Honda City D3 Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8080] Name: Honda City D3 Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8081] Name: Honda City D3 Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8082] Name: Honda City D3 Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8083] Name: Honda City D3 Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8084] Name: Honda City D5 Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8085] Name: Honda City D5 Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8086] Name: Honda City D5 Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8087] Name: Honda City D5 Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8088] Name: Honda City D5 Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8089] Name: Honda City D5 Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8090] Name: Honda City D5 Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8091] Name: Honda City D5 Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8092] Name: Honda City D5 Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8093] Name: Honda City H-CROSS Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8094] Name: Honda City H-CROSS Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8095] Name: Honda City H-CROSS Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8096] Name: Honda City H-CROSS Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8097] Name: Honda City H-CROSS Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8098] Name: Honda City H-CROSS Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8099] Name: Honda City H-CROSS Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8100] Name: Honda City H-CROSS Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8101] Name: Honda City H-CROSS Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8102] Name: Honda City NAVIGATION+ Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8103] Name: Honda City NAVIGATION+ Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8104] Name: Honda City NAVIGATION+ Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8105] Name: Honda City NAVIGATION+ Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8106] Name: Honda City NAVIGATION+ Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8107] Name: Honda City NAVIGATION+ Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8108] Name: Honda City NAVIGATION+ Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8109] Name: Honda City NAVIGATION+ Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8110] Name: Honda City NAVIGATION+ Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8111] Name: Honda City NAVIGATION+ Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8112] Name: Honda City U-ARROW Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8113] Name: Honda City U-ARROW Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8114] Name: Honda City U-ARROW Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8115] Name: Honda City U-ARROW Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8116] Name: Honda City U-ARROW Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8117] Name: Honda City U-ARROW Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8118] Name: Honda City U-ARROW Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8119] Name: Honda City U-ARROW Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8120] Name: Honda City U-ARROW Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8121] Name: Honda City U-VOLT Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8122] Name: Honda City U-VOLT Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8123] Name: Honda City U-VOLT Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8124] Name: Honda City U-VOLT Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8125] Name: Honda City U-VOLT Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8126] Name: Honda City U-VOLT Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8127] Name: Honda City U-VOLT Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8128] Name: Honda City U-VOLT Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8129] Name: Honda City U-VOLT Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8130] Name: Honda City U-BLADE Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8131] Name: Honda City U-BLADE Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8132] Name: Honda City U-BLADE Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8133] Name: Honda City U-BLADE Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8134] Name: Honda City U-BLADE Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8135] Name: Honda City U-BLADE Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8136] Name: Honda City U-BLADE Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8137] Name: Honda City U-BLADE Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8138] Name: Honda City U-BLADE Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8139] Name: Honda City U-HIGHWAY Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8140] Name: Honda City U-HIGHWAY Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8141] Name: Honda City U-HIGHWAY Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8142] Name: Honda City U-HIGHWAY Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8143] Name: Honda City U-HIGHWAY Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8144] Name: Honda City U-HIGHWAY Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8145] Name: Honda City U-HIGHWAY Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8146] Name: Honda City U-HIGHWAY Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8147] Name: Honda City U-HIGHWAY Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8148] Name: Honda City U-IMPRESS Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8149] Name: Honda City U-IMPRESS Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8150] Name: Honda City U-IMPRESS Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8151] Name: Honda City U-IMPRESS Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8152] Name: Honda City U-IMPRESS Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8153] Name: Honda City U-IMPRESS Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8154] Name: Honda City U-IMPRESS Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8155] Name: Honda City U-IMPRESS Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8156] Name: Honda City U-IMPRESS Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8157] Name: Honda City U-LADDER Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8158] Name: Honda City U-LADDER Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8159] Name: Honda City U-LADDER Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8160] Name: Honda City U-LADDER Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8161] Name: Honda City U-LADDER Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8162] Name: Honda City U-LADDER Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8163] Name: Honda City U-LADDER Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8164] Name: Honda City U-LADDER Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8165] Name: Honda City U-LADDER Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8166] Name: Honda City XCLUSIVE Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8167] Name: Honda City XCLUSIVE Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8168] Name: Honda City XCLUSIVE Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8169] Name: Honda City XCLUSIVE Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8170] Name: Honda City XCLUSIVE Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8171] Name: Honda City XCLUSIVE Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8172] Name: Honda City XCLUSIVE Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8173] Name: Honda City XCLUSIVE Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8174] Name: Honda City XCLUSIVE Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8175] Name: Honda City XCLUSIVE+ Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8176] Name: Honda City XCLUSIVE+ Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8177] Name: Honda City XCLUSIVE+ Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8178] Name: Honda City XCLUSIVE+ Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8179] Name: Honda City XCLUSIVE+ Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8180] Name: Honda City XCLUSIVE+ Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8181] Name: Honda City XCLUSIVE+ Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8182] Name: Honda City XCLUSIVE+ Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8183] Name: Honda City XCLUSIVE+ Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8184] Name: Honda City U-FOCUS Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8185] Name: Honda City U-FOCUS Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8186] Name: Honda City U-FOCUS Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8187] Name: Honda City U-FOCUS Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8188] Name: Honda City U-FOCUS Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8189] Name: Honda City U-FOCUS Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8190] Name: Honda City U-FOCUS Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8191] Name: Honda City U-FOCUS Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8192] Name: Honda City U-FOCUS Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 636
+
+[Prod ID: 8193] Name: Honda Elevate Amaze+ Artificial Leather Seat Covers (Black/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8194] Name: Honda Elevate Amaze Duo + Artificial Leather Seat Covers (Black/Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8195] Name: Honda Elevate E1 Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8196] Name: Honda Elevate E2 Artificial Leather Seat Covers (Tan/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8197] Name: Honda Elevate E4 Artificial Leather Seat Covers (Black/Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8198] Name: Honda Elevate E5 Artificial Leather Seat Covers (Beige/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8199] Name: Honda Elevate Q2 Artificial Leather Seat Covers (Black/Red )
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8200] Name: Honda Elevate D3 Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8201] Name: Honda Elevate D3 Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8202] Name: Honda Elevate D3 Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8203] Name: Honda Elevate D3 Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8204] Name: Honda Elevate D3 Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8205] Name: Honda Elevate D3 Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8206] Name: Honda Elevate D3 Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8207] Name: Honda Elevate D3 Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8208] Name: Honda Elevate H-CROSS Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8209] Name: Honda Elevate H-CROSS Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8210] Name: Honda Elevate H-CROSS Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8211] Name: Honda Elevate H-CROSS Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8212] Name: Honda Elevate H-CROSS Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8213] Name: Honda Elevate H-CROSS Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8214] Name: Honda Elevate H-CROSS Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8215] Name: Honda Elevate H-CROSS Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8216] Name: Honda Elevate H-CROSS Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8217] Name: Honda Elevate U-HIGHWAY Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8218] Name: Honda Elevate U-HIGHWAY Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8219] Name: Honda Elevate U-HIGHWAY Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8220] Name: Honda Elevate U-HIGHWAY Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8221] Name: Honda Elevate U-HIGHWAY Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8222] Name: Honda Elevate U-HIGHWAY Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8223] Name: Honda Elevate U-HIGHWAY Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8224] Name: Honda Elevate U-HIGHWAY Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8225] Name: Honda Elevate U-HIGHWAY Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8226] Name: Honda Elevate U-IMPRESS Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8227] Name: Honda Elevate U-IMPRESS Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8228] Name: Honda Elevate U-IMPRESS Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8229] Name: Honda Elevate U-IMPRESS Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8230] Name: Honda Elevate U-IMPRESS Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8231] Name: Honda Elevate U-IMPRESS Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8232] Name: Honda Elevate U-IMPRESS Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8233] Name: Honda Elevate U-IMPRESS Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8234] Name: Honda Elevate U-IMPRESS Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8235] Name: Honda Elevate XCLUSIVE Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8236] Name: Honda Elevate XCLUSIVE Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8237] Name: Honda Elevate XCLUSIVE Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8238] Name: Honda Elevate XCLUSIVE Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8239] Name: Honda Elevate XCLUSIVE Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8240] Name: Honda Elevate XCLUSIVE Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8241] Name: Honda Elevate XCLUSIVE Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8242] Name: Honda Elevate XCLUSIVE Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8243] Name: Honda Elevate XCLUSIVE Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8244] Name: Honda Elevate XCLUSIVE+ Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8245] Name: Honda Elevate XCLUSIVE+ Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8246] Name: Honda Elevate XCLUSIVE+ Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8247] Name: Honda Elevate XCLUSIVE+ Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8248] Name: Honda Elevate XCLUSIVE+ Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8249] Name: Honda Elevate XCLUSIVE+ Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8250] Name: Honda Elevate XCLUSIVE+ Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8251] Name: Honda Elevate XCLUSIVE+ Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8252] Name: Honda Elevate XCLUSIVE+ Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8253] Name: Honda Elevate U-FOCUS Artificial Leather Seat Covers (Black/Silver)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8254] Name: Honda Elevate U-FOCUS Artificial Leather Seat Covers (Black/Red)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8255] Name: Honda Elevate U-FOCUS Artificial Leather Seat Covers (Black /Tan)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8256] Name: Honda Elevate U-FOCUS Artificial Leather Seat Covers (Brown/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8257] Name: Honda Elevate U-FOCUS Artificial Leather Seat Covers (Nutmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8258] Name: Honda Elevate U-FOCUS Artificial Leather Seat Covers (Black /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8259] Name: Honda Elevate U-FOCUS Artificial Leather Seat Covers (Blue /Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8260] Name: Honda Elevate U-FOCUS Artificial Leather Seat Covers (Burgundy/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8261] Name: Honda Elevate U-FOCUS Artificial Leather Seat Covers (Vmeg/Black)
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 246
+
+[Prod ID: 8409] Name: BIG WING HONDA CB 350 RS SINGLE SEAT U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8410] Name: BIG WING HONDA CB 350 DUAL SEAT U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8413] Name: BIG WING HONDA CB 350 RS SINGLE SEAT U-DRIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8414] Name: BIG WING HONDA CB 350 DUAL SEAT U-DRIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8416] Name: BIG WING HONDA CB 350 RS SINGLE SEAT U-CROSS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8417] Name: BIG WING HONDA CB 350 DUAL SEAT U-CROSS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8573] Name: HONDA SHINE OLD U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 137
+
+[Prod ID: 8574] Name: HONDA C.B. SHINE BS4 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 201
+
+[Prod ID: 8575] Name: HONDA C.B. SHINE BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 138
+
+[Prod ID: 8576] Name: HONDA SHINE SP BS4 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 139
+
+[Prod ID: 8577] Name: HONDA SP 125 BS6 U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8578] Name: HONDA SHINE 100CC BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 438
+
+[Prod ID: 8579] Name: HONDA SP 160 BS6 U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8580] Name: HONDA UNICORN BS4 150 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 440
+
+[Prod ID: 8581] Name: HONDA UNICORN 160 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 154
+
+[Prod ID: 8582] Name: HONDA UNICORN BS6 150 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 155
+
+[Prod ID: 8583] Name: HONDA DREAM YUGA U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 141
+
+[Prod ID: 8584] Name: HONDA LIVO OLD U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8585] Name: HONDA LIVO BS6 U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8586] Name: HONDA CD110 BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 446
+
+[Prod ID: 8587] Name: HONDA NAVI U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8588] Name: HONDA HORNET SINGLE SEAT U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8589] Name: HONDA X-BLADE U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8590] Name: HONDA ACTIVA (I) U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 143
+
+[Prod ID: 8591] Name: HONDA ACTIVA 3G U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 144
+
+[Prod ID: 8592] Name: HONDA ACTIVA 4G U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 452
+
+[Prod ID: 8593] Name: HONDA ACTIVA 5G U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 453
+
+[Prod ID: 8594] Name: HONDA ACTIVA 6G U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 145
+
+[Prod ID: 8595] Name: HONDA ACTIVA 125 BS4 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 146
+
+[Prod ID: 8596] Name: HONDA ACTIVA 125 BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 147
+
+[Prod ID: 8597] Name: HONDA GRAZIA BS4 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 148
+
+[Prod ID: 8598] Name: HONDA GRAZIA BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 149
+
+[Prod ID: 8599] Name: HONDA DIO BS4 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 150
+
+[Prod ID: 8600] Name: HONDA DIO 110 NEW U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 460
+
+[Prod ID: 8601] Name: HONDA DIO BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 461
+
+[Prod ID: 8602] Name: HONDA DIO 125 BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 462
+
+[Prod ID: 8603] Name: HONDA AVIATOR U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8604] Name: HONDA SHINE OLD U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 137
+
+[Prod ID: 8605] Name: HONDA C.B. SHINE BS4 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 201
+
+[Prod ID: 8606] Name: HONDA C.B. SHINE BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 138
+
+[Prod ID: 8607] Name: HONDA SHINE SP BS4 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 139
+
+[Prod ID: 8608] Name: HONDA SP 125 BS6 U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8609] Name: HONDA SHINE 100CC BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 438
+
+[Prod ID: 8610] Name: HONDA SP 160 BS6 U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8611] Name: HONDA UNICORN BS4 150 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 440
+
+[Prod ID: 8612] Name: HONDA UNICORN 160 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 154
+
+[Prod ID: 8613] Name: HONDA UNICORN BS6 150 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 155
+
+[Prod ID: 8614] Name: HONDA DREAM YUGA U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 141
+
+[Prod ID: 8615] Name: HONDA LIVO OLD U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8616] Name: HONDA LIVO BS6 U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8617] Name: HONDA CD110 BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 446
+
+[Prod ID: 8618] Name: HONDA NAVI U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8619] Name: HONDA HORNET SINGLE SEAT U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8620] Name: HONDA X-BLADE U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8621] Name: HONDA ACTIVA (I) U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 143
+
+[Prod ID: 8622] Name: HONDA ACTIVA 3G U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 144
+
+[Prod ID: 8623] Name: HONDA ACTIVA 4G U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 452
+
+[Prod ID: 8624] Name: HONDA ACTIVA 5G U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 453
+
+[Prod ID: 8625] Name: HONDA ACTIVA 6G U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 145
+
+[Prod ID: 8626] Name: HONDA ACTIVA 125 BS4 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 146
+
+[Prod ID: 8627] Name: HONDA ACTIVA 125 BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 147
+
+[Prod ID: 8628] Name: HONDA GRAZIA BS4 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 148
+
+[Prod ID: 8629] Name: HONDA GRAZIA BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 149
+
+[Prod ID: 8630] Name: HONDA DIO BS4 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 150
+
+[Prod ID: 8631] Name: HONDA DIO 110 NEW U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 460
+
+[Prod ID: 8632] Name: HONDA DIO BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 461
+
+[Prod ID: 8633] Name: HONDA DIO 125 BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 462
+
+[Prod ID: 8634] Name: HONDA AVIATOR U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8635] Name: HONDA SHINE OLD U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 137
+
+[Prod ID: 8636] Name: HONDA C.B. SHINE BS4 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 201
+
+[Prod ID: 8637] Name: HONDA C.B. SHINE BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 138
+
+[Prod ID: 8638] Name: HONDA SHINE SP BS4 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 139
+
+[Prod ID: 8639] Name: HONDA SP 125 BS6 U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8640] Name: HONDA SHINE 100CC BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 438
+
+[Prod ID: 8641] Name: HONDA SP 160 BS6 U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8642] Name: HONDA UNICORN BS4 150 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 440
+
+[Prod ID: 8643] Name: HONDA UNICORN 160 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 154
+
+[Prod ID: 8644] Name: HONDA UNICORN BS6 150 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 155
+
+[Prod ID: 8645] Name: HONDA DREAM YUGA U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 141
+
+[Prod ID: 8646] Name: HONDA LIVO OLD U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8647] Name: HONDA LIVO BS6 U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8648] Name: HONDA CD110 BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 446
+
+[Prod ID: 8649] Name: HONDA NAVI U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8650] Name: HONDA HORNET SINGLE SEAT U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8651] Name: HONDA X-BLADE U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8652] Name: HONDA ACTIVA (I) U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 143
+
+[Prod ID: 8653] Name: HONDA ACTIVA 3G U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 144
+
+[Prod ID: 8654] Name: HONDA ACTIVA 4G U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 452
+
+[Prod ID: 8655] Name: HONDA ACTIVA 5G U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 453
+
+[Prod ID: 8656] Name: HONDA ACTIVA 6G U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 145
+
+[Prod ID: 8657] Name: HONDA ACTIVA 125 BS4 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 146
+
+[Prod ID: 8658] Name: HONDA ACTIVA 125 BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 147
+
+[Prod ID: 8659] Name: HONDA GRAZIA BS4 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 148
+
+[Prod ID: 8660] Name: HONDA GRAZIA BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 149
+
+[Prod ID: 8661] Name: HONDA DIO BS4 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 150
+
+[Prod ID: 8662] Name: HONDA DIO 110 NEW U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 460
+
+[Prod ID: 8663] Name: HONDA DIO BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 461
+
+[Prod ID: 8664] Name: HONDA DIO 125 BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 462
+
+[Prod ID: 8665] Name: HONDA AVIATOR U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8666] Name: HONDA SHINE OLD U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 137
+
+[Prod ID: 8667] Name: HONDA C.B. SHINE BS4 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 201
+
+[Prod ID: 8668] Name: HONDA C.B. SHINE BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 138
+
+[Prod ID: 8669] Name: HONDA SHINE SP BS4 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 139
+
+[Prod ID: 8670] Name: HONDA SP 125 BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8671] Name: HONDA SHINE 100CC BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 438
+
+[Prod ID: 8672] Name: HONDA SP 160 BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8673] Name: HONDA UNICORN BS4 150 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 440
+
+[Prod ID: 8674] Name: HONDA UNICORN 160 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 154
+
+[Prod ID: 8675] Name: HONDA UNICORN BS6 150 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 155
+
+[Prod ID: 8676] Name: HONDA DREAM YUGA U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 141
+
+[Prod ID: 8677] Name: HONDA LIVO OLD U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8678] Name: HONDA LIVO BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8679] Name: HONDA CD110 BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 446
+
+[Prod ID: 8680] Name: HONDA NAVI U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8681] Name: HONDA HORNET SINGLE SEAT U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8682] Name: HONDA X-BLADE U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 8683] Name: HONDA ACTIVA (I) U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 143
+
+[Prod ID: 8684] Name: HONDA ACTIVA 3G U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 144
+
+[Prod ID: 8685] Name: HONDA ACTIVA 4G U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 452
+
+[Prod ID: 8686] Name: HONDA ACTIVA 5G U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 453
+
+[Prod ID: 8687] Name: HONDA ACTIVA 6G U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 145
+
+[Prod ID: 8688] Name: HONDA ACTIVA 125 BS4 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 146
+
+[Prod ID: 8689] Name: HONDA ACTIVA 125 BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 147
+
+[Prod ID: 8690] Name: HONDA GRAZIA BS4 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 148
+
+[Prod ID: 8691] Name: HONDA GRAZIA BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 149
+
+[Prod ID: 8692] Name: HONDA DIO BS4 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 150
+
+[Prod ID: 8693] Name: HONDA DIO 110 NEW U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 460
+
+[Prod ID: 8694] Name: HONDA DIO BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 461
+
+[Prod ID: 8695] Name: HONDA DIO 125 BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 462
+
+[Prod ID: 8696] Name: HONDA AVIATOR U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9415] Name: BIG WING HONDA CB 350 RS SINGLE SEAT U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9416] Name: BIG WING HONDA CB 350 DUAL SEAT U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9419] Name: BIG WING HONDA CB 350 RS SINGLE SEAT U-DRIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9420] Name: BIG WING HONDA CB 350 DUAL SEAT U-DRIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9422] Name: BIG WING HONDA CB 350 RS SINGLE SEAT U-CROSS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9423] Name: BIG WING HONDA CB 350 DUAL SEAT U-CROSS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9579] Name: HONDA SHINE OLD U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 433
+
+[Prod ID: 9580] Name: HONDA C.B. SHINE BS4 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 434
+
+[Prod ID: 9581] Name: HONDA C.B. SHINE BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 435
+
+[Prod ID: 9582] Name: HONDA SHINE SP BS4 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 436
+
+[Prod ID: 9583] Name: HONDA SP 125 BS6 U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9584] Name: HONDA SHINE 100CC BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 438
+
+[Prod ID: 9585] Name: HONDA SP 160 BS6 U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9586] Name: HONDA UNICORN BS4 150 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 440
+
+[Prod ID: 9587] Name: HONDA UNICORN 160 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 441
+
+[Prod ID: 9588] Name: HONDA UNICORN BS6 150 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 442
+
+[Prod ID: 9589] Name: HONDA DREAM YUGA U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 443
+
+[Prod ID: 9590] Name: HONDA LIVO OLD U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9591] Name: HONDA LIVO BS6 U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9592] Name: HONDA CD110 BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 446
+
+[Prod ID: 9593] Name: HONDA NAVI U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9594] Name: HONDA HORNET SINGLE SEAT U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9595] Name: HONDA X-BLADE U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9596] Name: HONDA ACTIVA (I) U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 450
+
+[Prod ID: 9597] Name: HONDA ACTIVA 3G U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 451
+
+[Prod ID: 9598] Name: HONDA ACTIVA 4G U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 452
+
+[Prod ID: 9599] Name: HONDA ACTIVA 5G U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 453
+
+[Prod ID: 9600] Name: HONDA ACTIVA 6G U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 454
+
+[Prod ID: 9601] Name: HONDA ACTIVA 125 BS4 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 455
+
+[Prod ID: 9602] Name: HONDA ACTIVA 125 BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 456
+
+[Prod ID: 9603] Name: HONDA GRAZIA BS4 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 457
+
+[Prod ID: 9604] Name: HONDA GRAZIA BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 458
+
+[Prod ID: 9605] Name: HONDA DIO BS4 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 459
+
+[Prod ID: 9606] Name: HONDA DIO 110 NEW U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 460
+
+[Prod ID: 9607] Name: HONDA DIO BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 461
+
+[Prod ID: 9608] Name: HONDA DIO 125 BS6 U-IMPRESS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 462
+
+[Prod ID: 9609] Name: HONDA AVIATOR U-IMPRESS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9610] Name: HONDA SHINE OLD U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 433
+
+[Prod ID: 9611] Name: HONDA C.B. SHINE BS4 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 434
+
+[Prod ID: 9612] Name: HONDA C.B. SHINE BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 435
+
+[Prod ID: 9613] Name: HONDA SHINE SP BS4 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 436
+
+[Prod ID: 9614] Name: HONDA SP 125 BS6 U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9615] Name: HONDA SHINE 100CC BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 438
+
+[Prod ID: 9616] Name: HONDA SP 160 BS6 U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9617] Name: HONDA UNICORN BS4 150 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 440
+
+[Prod ID: 9618] Name: HONDA UNICORN 160 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 441
+
+[Prod ID: 9619] Name: HONDA UNICORN BS6 150 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 442
+
+[Prod ID: 9620] Name: HONDA DREAM YUGA U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 443
+
+[Prod ID: 9621] Name: HONDA LIVO OLD U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9622] Name: HONDA LIVO BS6 U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9623] Name: HONDA CD110 BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 446
+
+[Prod ID: 9624] Name: HONDA NAVI U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9625] Name: HONDA HORNET SINGLE SEAT U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9626] Name: HONDA X-BLADE U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9627] Name: HONDA ACTIVA (I) U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 450
+
+[Prod ID: 9628] Name: HONDA ACTIVA 3G U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 451
+
+[Prod ID: 9629] Name: HONDA ACTIVA 4G U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 452
+
+[Prod ID: 9630] Name: HONDA ACTIVA 5G U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 453
+
+[Prod ID: 9631] Name: HONDA ACTIVA 6G U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 454
+
+[Prod ID: 9632] Name: HONDA ACTIVA 125 BS4 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 455
+
+[Prod ID: 9633] Name: HONDA ACTIVA 125 BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 456
+
+[Prod ID: 9634] Name: HONDA GRAZIA BS4 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 457
+
+[Prod ID: 9635] Name: HONDA GRAZIA BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 458
+
+[Prod ID: 9636] Name: HONDA DIO BS4 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 459
+
+[Prod ID: 9637] Name: HONDA DIO 110 NEW U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 460
+
+[Prod ID: 9638] Name: HONDA DIO BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 461
+
+[Prod ID: 9639] Name: HONDA DIO 125 BS6 U-SPORTZ Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 462
+
+[Prod ID: 9640] Name: HONDA AVIATOR U-SPORTZ Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9641] Name: HONDA SHINE OLD U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 433
+
+[Prod ID: 9642] Name: HONDA C.B. SHINE BS4 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 434
+
+[Prod ID: 9643] Name: HONDA C.B. SHINE BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 435
+
+[Prod ID: 9644] Name: HONDA SHINE SP BS4 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 436
+
+[Prod ID: 9645] Name: HONDA SP 125 BS6 U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9646] Name: HONDA SHINE 100CC BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 438
+
+[Prod ID: 9647] Name: HONDA SP 160 BS6 U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9648] Name: HONDA UNICORN BS4 150 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 440
+
+[Prod ID: 9649] Name: HONDA UNICORN 160 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 441
+
+[Prod ID: 9650] Name: HONDA UNICORN BS6 150 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 442
+
+[Prod ID: 9651] Name: HONDA DREAM YUGA U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 443
+
+[Prod ID: 9652] Name: HONDA LIVO OLD U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9653] Name: HONDA LIVO BS6 U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9654] Name: HONDA CD110 BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 446
+
+[Prod ID: 9655] Name: HONDA NAVI U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9656] Name: HONDA HORNET SINGLE SEAT U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9657] Name: HONDA X-BLADE U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9658] Name: HONDA ACTIVA (I) U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 450
+
+[Prod ID: 9659] Name: HONDA ACTIVA 3G U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 451
+
+[Prod ID: 9660] Name: HONDA ACTIVA 4G U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 452
+
+[Prod ID: 9661] Name: HONDA ACTIVA 5G U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 453
+
+[Prod ID: 9662] Name: HONDA ACTIVA 6G U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 454
+
+[Prod ID: 9663] Name: HONDA ACTIVA 125 BS4 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 455
+
+[Prod ID: 9664] Name: HONDA ACTIVA 125 BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 456
+
+[Prod ID: 9665] Name: HONDA GRAZIA BS4 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 457
+
+[Prod ID: 9666] Name: HONDA GRAZIA BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 458
+
+[Prod ID: 9667] Name: HONDA DIO BS4 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 459
+
+[Prod ID: 9668] Name: HONDA DIO 110 NEW U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 460
+
+[Prod ID: 9669] Name: HONDA DIO BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 461
+
+[Prod ID: 9670] Name: HONDA DIO 125 BS6 U-ACTIVE Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 462
+
+[Prod ID: 9671] Name: HONDA AVIATOR U-ACTIVE Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9672] Name: HONDA SHINE OLD U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 465
+
+[Prod ID: 9673] Name: HONDA C.B. SHINE BS4 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 466
+
+[Prod ID: 9674] Name: HONDA C.B. SHINE BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 467
+
+[Prod ID: 9675] Name: HONDA SHINE SP BS4 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 468
+
+[Prod ID: 9676] Name: HONDA SP 125 BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9677] Name: HONDA SHINE 100CC BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 470
+
+[Prod ID: 9678] Name: HONDA SP 160 BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9679] Name: HONDA UNICORN BS4 150 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 472
+
+[Prod ID: 9680] Name: HONDA UNICORN 160 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 473
+
+[Prod ID: 9681] Name: HONDA UNICORN BS6 150 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 474
+
+[Prod ID: 9682] Name: HONDA DREAM YUGA U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 475
+
+[Prod ID: 9683] Name: HONDA LIVO OLD U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9684] Name: HONDA LIVO BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9685] Name: HONDA CD110 BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 478
+
+[Prod ID: 9686] Name: HONDA NAVI U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9687] Name: HONDA HORNET SINGLE SEAT U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9688] Name: HONDA X-BLADE U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
+[Prod ID: 9689] Name: HONDA ACTIVA (I) U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 482
+
+[Prod ID: 9690] Name: HONDA ACTIVA 3G U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 483
+
+[Prod ID: 9691] Name: HONDA ACTIVA 4G U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 484
+
+[Prod ID: 9692] Name: HONDA ACTIVA 5G U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 485
+
+[Prod ID: 9693] Name: HONDA ACTIVA 6G U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 486
+
+[Prod ID: 9694] Name: HONDA ACTIVA 125 BS4 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 487
+
+[Prod ID: 9695] Name: HONDA ACTIVA 125 BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 488
+
+[Prod ID: 9696] Name: HONDA GRAZIA BS4 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 489
+
+[Prod ID: 9697] Name: HONDA GRAZIA BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 490
+
+[Prod ID: 9698] Name: HONDA DIO BS4 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 491
+
+[Prod ID: 9699] Name: HONDA DIO 110 NEW U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 492
+
+[Prod ID: 9700] Name: HONDA DIO BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 493
+
+[Prod ID: 9701] Name: HONDA DIO 125 BS6 U-ACTIVE PLUS Seat Covers
+   -> Current Brand: honda (37)
+   -> Current Vehicle Type ID: 1
+   -> Current VD: 494
+
+[Prod ID: 9702] Name: HONDA AVIATOR U-ACTIVE PLUS Seat Covers
+   -> Current Brand: HONDA (10)
+   -> Current Vehicle Type ID: 2
+   -> Current VD: 640
+
