@@ -46,7 +46,7 @@ jobs:
       - name: Deploy to Live Web S3 Bucket
         run: |
           cd balonkun-web/balonkun-web/build
-          aws s3 sync . s3://autoform-web --delete
+          aws s3 sync . s3://autoformfrontenddev --delete
 
   deploy-admin:
     name: Build & Deploy Admin S3
