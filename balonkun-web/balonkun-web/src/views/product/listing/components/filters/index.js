@@ -95,7 +95,13 @@ const Filters = ({
                 <COMPONENT
                   options={options}
                   placeholder={listItem.title}
-                  onSelectedFilters={(option) => onSelectedFilters(listItem.title, option.map(x => x.value))}
+                  onSelectedFilters={(option) => {
+                    let selectedValues = option.map(x => x.value);
+                    if (listItem.title === "Vehicle Types" && selectedValues.length > 1) {
+                      selectedValues = [selectedValues[selectedValues.length - 1]];
+                    }
+                    onSelectedFilters(listItem.title, selectedValues)
+                  }}
                   defaultSelectedValues={defaultSelectedValues}
                   styles={styles}
                   isDisabled={disabledFilters(listItem.title, selectedProductCategory)}

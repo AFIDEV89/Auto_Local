@@ -1,24 +1,54 @@
 import React from "react";
-import { Button, Modal, ModalBody, ModalHeader } from "reactstrap";
+import { Button, Modal, ModalBody } from "reactstrap";
 import { postDataApi } from "../../../services/ApiCaller";
 import { errorAlert, successAlert } from "../../../utils";
 import { howItWorks, logo } from "@assets/images";
+import * as services from "../../../services/my-cart/MyCart";
 import "@assets/scss/shop-now-modal.scss";
+import { store } from '@redux/store';
 
 const ShopNowModal = React.memo(({ isOpen, toggleModal, product }) => {
   const [number, setNumber] = React.useState("");
   const [error, setError] = React.useState("");
   
   const handleSubmit = async () => {
-    //integrate api here
     if (!validatePhoneNumber(number)) {
       return;
     }
     try {
+      // Fetch current cart items to include in lead snapshot
+      let cartItems = [];
+      const userToken = store?.getState()?.user?.token;
+      
+      if (userToken) {
+        try {
+          const cartResponse = await services.getCartProductList();
+          if (cartResponse?.data?.data) {
+            cartItems = cartResponse.data.data;
+          }
+        } catch (cartError) {
+          console.warn("Could not fetch cart items for lead:", cartError);
+        }
+      }
+
       const response = await postDataApi({
         path: "/lead",
         data: {
           contact_no: number,
+          product_id: product?.id,
+          cart_snapshot: {
+            current_product: {
+              id: product?.id,
+              name: product?.name,
+              price: product?.discounted_price || product?.original_price
+            },
+            cart_items: cartItems.map(item => ({
+              id: item.product_id,
+              name: item.product?.name,
+              quantity: item.quantity,
+              price: item.product?.discounted_price || item.product?.original_price
+            }))
+          }
         },
       });
       if (response) {
@@ -26,22 +56,36 @@ const ShopNowModal = React.memo(({ isOpen, toggleModal, product }) => {
         toggleModal();
       }
     } catch (e) {
-      errorAlert(e.message);
+      // Catch specific errors from the lead creation itself
+      errorAlert(e.message || "Something went wrong. Please try again.");
     }
   };
 
   const validatePhoneNumber = (number) => {
-    const cleanedNumber = number.replace(/\D/g, "");
-    if (cleanedNumber.length !== 10) {
-      setError("Please enter a valid phone number");
+    if (!number) {
+      setError("");
+      return false;
+    }
+    const indianMobileRegex = /^[6-9]\d{9}$/;
+    if (!indianMobileRegex.test(number)) {
+      setError(number.length === 10 ? "Invalid Indian mobile number" : "Please enter a valid 10-digit number");
       return false;
     }
     setError("");
     return true;
   }
 
-  function handleChangeNumber(number) {
-    setNumber(number);
+  const handleChangeNumber = (val) => {
+    // Remove non-digit characters and truncate to 10
+    const cleaned = val.replace(/\D/g, "").slice(0, 10);
+    setNumber(cleaned);
+
+    // Immediate validation for starting digit
+    if (cleaned.length > 0 && !/^[6-9]/.test(cleaned)) {
+      setError("Mobile number must start with 6, 7, 8, or 9");
+    } else {
+      setError("");
+    }
   }
 
   return (
@@ -96,9 +140,11 @@ const ShopNowModal = React.memo(({ isOpen, toggleModal, product }) => {
                   Phone Number
                 </label>
                 <input
-                  type="number"
+                  type="text"
+                  inputMode="numeric"
                   className={`w-full bg-slate-50 border ${error ? 'border-red-500' : 'border-slate-100 group-focus-within:border-[#ffb200] group-focus-within:bg-white'} rounded-xl px-4 py-3 text-slate-900 text-base font-semibold outline-none transition-all placeholder:text-slate-400`}
                   placeholder="e.g. 9876543210"
+                  value={number}
                   onChange={(e) => handleChangeNumber(e.target.value)}
                 />
                 {error && <p className="absolute -bottom-5 left-0 text-red-500 text-[10px] font-bold uppercase tracking-wider">{error}</p>}

@@ -8,6 +8,9 @@ export const VehicleCategoryModel = (sequelize, Sequelize) => {
     name: {
       type: Sequelize.STRING,
     },
+  }, {
+    freezeTableName: true,
+    tableName: 'vehicle_categories'
   });
 
   return model;

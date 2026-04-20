@@ -3,6 +3,7 @@
 export * from "../modules/blogs/BlogModel.js";
 export * from "../modules/banners/BannerModel.js";
 export * from "../modules/product-categories/ProductCategoryModel.js";
+export * from "../modules/subcategories/SubCategoryModel.js";
 export * from "../modules/colors/ColorModel.js";
 export * from "../modules/products/ProductModel.js";
 export * from "./User.js";
@@ -34,3 +35,7 @@ export * from "../api/product_comment/product_comment_model.js"
 export * from "../api/seo/seo_data_mapping.js"
 export * from "../api/user_address/user_address_mapping.js"
 export * from "../api/leads_generation/lead_data_model.js"
+export * from "../api/pop_leads/pop_lead_model.js"
+export * from "../modules/franchise/FranchiseInquiryModel.js"
+export * from "../modules/testimonials/TestimonialModel.js"
+export * from "../modules/online-shop/SelectiveShopModel.js"

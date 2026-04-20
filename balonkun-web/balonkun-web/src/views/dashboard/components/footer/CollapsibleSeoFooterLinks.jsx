@@ -25,7 +25,7 @@ const CollapsibleSeoFooterLinks = ({ footerSeo, titleKey }) => {
                     footerSeo[titleKey].map((data) => {
                         return (<Link
                             key={data.url_text}
-                            to={`/${data.canonical_url}`}
+                            to={`/products/${data.canonical_url}`}
                             title={data.url_text}>
                             {data.url_text}
                         </Link>)

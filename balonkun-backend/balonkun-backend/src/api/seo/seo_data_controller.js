@@ -12,35 +12,133 @@ import {
 import db from "../../database/index.js";
 import {Op} from "sequelize";
 
-export function get_seo_header(req, res) {
-    let query = {}
-    query['product_category_id'] = req.query.c_id;
-    if (req.query.v_id)
-        query['vehicle_category_id'] = req.query.v_id;
-    if (req.query.v_b_id)
-        query['vehicle_brand_id'] = req.query.v_b_id;
-    if (req.query.v_m_id)
-        query['vehicle_model_id'] = req.query.v_m_id;
-    query['url'] = null;
+export async function get_seo_header(req, res) {
+    // Normalize parameters: treat 'null', 'undefined', '0', 0, or missing as null
+    const normalizeId = (val) => {
+        if (!val || val === 'null' || val === 'undefined' || val === '0' || parseInt(val) <= 0) return null;
+        return val;
+    };
+
+    const c_id = normalizeId(req.query.c_id);
+    const v_id = normalizeId(req.query.v_id);
+    const v_b_id = normalizeId(req.query.v_b_id);
+    const v_m_id = normalizeId(req.query.v_m_id);
+    const sc_id = normalizeId(req.query.sc_id);
 
     return validations.validateSchema(
         req,
         res,
         getSEOHeaderValidation,
         async () => {
-            return dao.getRow(model_values.seo_data_mapping.tableName, query, null, {raw: true}).then(data => {
-                if (data) {
-                    return data
-                } else {
-                    return {}
-                }
+            const attempts = [];
 
-            })
+            // 1. Exact Match (with Subcategory)
+            if (c_id) {
+                attempts.push({
+                    product_category_id: c_id,
+                    vehicle_category_id: v_id,
+                    vehicle_brand_id: v_b_id,
+                    vehicle_model_id: v_m_id,
+                    product_subcategory_id: sc_id,
+                    url: null
+                });
+            }
+
+            // 2. Exact Match (without Subcategory)
+            if (sc_id) {
+                attempts.push({
+                    product_category_id: c_id,
+                    vehicle_category_id: v_id || null,
+                    vehicle_brand_id: v_b_id || null,
+                    vehicle_model_id: v_m_id || null,
+                    product_subcategory_id: null,
+                    url: null
+                });
+            }
+
+            // 3. Brand Level Match (fallback if model was provided but no model-specific row exists)
+            if (v_m_id && v_b_id) {
+                attempts.push({
+                    product_category_id: c_id,
+                    vehicle_category_id: v_id || null,
+                    vehicle_brand_id: v_b_id,
+                    vehicle_model_id: null,
+                    product_subcategory_id: null,
+                    url: null
+                });
+            }
+
+            // 4. Default Brand Match (if only brand was provided)
+            if (v_b_id && !v_m_id) {
+                attempts.push({
+                    product_category_id: c_id,
+                    vehicle_category_id: v_id || null,
+                    vehicle_brand_id: v_b_id,
+                    vehicle_model_id: null,
+                    product_subcategory_id: null,
+                    url: null
+                });
+            }
+
+            // 5. Category Level Match
+            attempts.push({
+                product_category_id: c_id,
+                vehicle_category_id: v_id || null,
+                vehicle_brand_id: null,
+                vehicle_model_id: null,
+                product_subcategory_id: null,
+                url: null
+            });
+
+            console.log(`[SEO DEBUG] Input params: c_id=${c_id}, v_b_id=${v_b_id}, v_m_id=${v_m_id}`);
+            for (let i = 0; i < attempts.length; i++) {
+                const query = attempts[i];
+                console.log(`[SEO DEBUG] Attempt ${i + 1} query:`, JSON.stringify(query));
+                const data = await dao.getRow(model_values.seo_data_mapping.tableName, query, null, { raw: true });
+                if (data && Object.keys(data).length > 0) {
+                    console.log(`[SEO DEBUG] Attempt ${i + 1} SUCCESS: ID=${data.id}, Title=${data.seo_page_title}`);
+                    return data;
+                }
+            }
+            console.log(`[SEO DEBUG] No match found in DB, falling back to dynamic generation.`);
+
+            // Fallback: Generate a clean dynamic title if absolutely no record exists
+            return await generateDefaultSEO(req.query);
         },
         constants.GET_SUCCESS,
         messages.blogs_author.get
     );
 }
+
+async function generateDefaultSEO(queryParams) {
+    const { c_id, v_b_id, v_m_id } = queryParams;
+    let titleParts = [];
+
+    try {
+        if (v_b_id) {
+            const brand = await dao.getRow(model_values.brand.tableName, { id: v_b_id }, null, { attributes: ['name'], raw: true });
+            if (brand) titleParts.push(brand.name);
+        }
+        if (v_m_id) {
+            const model = await dao.getRow(model_values.brand_model.tableName, { id: v_m_id }, null, { attributes: ['name'], raw: true });
+            if (model) titleParts.push(model.name);
+        }
+        if (c_id) {
+            const category = await dao.getRow(model_values.product_category.tableName, { id: c_id }, null, { attributes: ['name'], raw: true });
+            if (category) titleParts.push(category.name);
+        }
+    } catch (e) {
+        console.error("Error generating default SEO:", e);
+    }
+
+    const title = titleParts.length > 0 ? titleParts.join(' ') : 'Autoform Products';
+    return {
+        seo_page_title: title,
+        seo_title: null,
+        category_text: `<h1>${title}</h1><p>Explore our premium range of ${title.toLowerCase()} crafted for perfection.</p>`
+    };
+}
+
 
 export function get_seo_footer(req, res) {
     return validations.validateSchema(

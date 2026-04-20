@@ -51,6 +51,11 @@ function getDashboardProductList(req, res) {
                         },
                     ]
                 },
+                {
+                    model: db.selectiveShops,
+                    as: 'ecommerce',
+                    required: false
+                }
                 ],
                 order: [['updatedAt', 'DESC']],
                 page: 1,
@@ -64,7 +69,7 @@ function getDashboardProductList(req, res) {
                     include: [
                         { model: db[constants.model_values.vehicle_type.tableName], attributes: ['id', 'name'],
                             where: {
-                                name: vehicle_type
+                                name: vehicle_type.toUpperCase()
                             }
                         },
                     ]

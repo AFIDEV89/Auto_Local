@@ -156,30 +156,68 @@
 }
 
 .advantages {
-	background: #f5f7ff;
-	padding: 60px 0px;
+	background: #fdfdfd; // 💡 Clean minimalist background
+	padding: 100px 0;
+	position: relative;
+
+	@media (max-width: 768px) {
+		padding: 60px 0;
+	}
 
 	.card {
 		border: none;
-		background: transparent;
+		background: #ffffff;
+		padding: 40px 30px;
+		border-radius: 24px;
 		text-align: center;
-		display: block;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+		height: 100%;
+		border: 1px solid #f1f5f9;
+
+		@media (max-width: 992px) {
+			margin-bottom: 24px;
+		}
 
 		img {
-			margin-bottom: 20px;
+			width: 64px;
+			height: 64px;
+			margin-bottom: 24px;
+			object-fit: contain;
+			transition: transform 0.4s ease;
+			filter: drop-shadow(0 4px 10px rgba(255, 178, 0, 0.15)); // 💡 Soft Brand Glow
 		}
 
 		h4 {
-			font-size: 20px;
-			font-weight: 700;
+			font-family: 'Montserrat', 'Outfit', sans-serif;
+			font-size: 1.25rem;
+			font-weight: 800;
+			color: #0f172a;
 			margin-bottom: 12px;
+			text-transform: capitalize;
 		}
 
 		p {
-			font-size: 15px;
-			font-weight: 400;
-			opacity: 0.7;
-			padding: 0px 16%;
+			font-size: 0.95rem;
+			font-weight: 450;
+			line-height: 1.6;
+			color: #64748b; // 💡 Refined Slate
+			padding: 0;
+			margin: 0;
+			max-width: 250px;
+		}
+
+		&:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 20px 60px rgba(255, 178, 0, 0.15); // 💡 Brand Yellow shadow
+			border-color: rgba(255, 178, 0, 0.3);
+
+			img {
+				transform: scale(1.1);
+			}
 		}
 	}
 }

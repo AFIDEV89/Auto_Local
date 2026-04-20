@@ -14,6 +14,10 @@ export const seo_data_mapping_model = (sequelize, Sequelize) => {
             type: Sequelize.INTEGER,
             allowNull: true,
         },
+        product_subcategory_id: {
+            type: Sequelize.INTEGER,
+            allowNull: true,
+        },
 
         vehicle_brand_id: {
             type: Sequelize.INTEGER,

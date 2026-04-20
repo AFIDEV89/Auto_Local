@@ -50,7 +50,8 @@ const ColorCheckboxSelect = ({
   onSelectedFilters,
   placeholder,
   defaultSelectedValues = [],
-  isDisabled = false
+  isDisabled = false,
+  styles = {}
 }) => {
 
   const [selectedValue, setSelectedValue] = useState([]);
@@ -69,6 +70,23 @@ const ColorCheckboxSelect = ({
     setSelectedValue(option);
   }
 
+  // Merge global styles with color-specific indicators
+  const mergedStyles = {
+    ...styles,
+    option: (base, state) => ({
+      ...(styles.option ? styles.option(base, state) : base),
+      ...color(state.data.color)
+    }),
+    multiValue: (base, state) => ({
+      ...(styles.multiValue ? styles.multiValue(base, state) : base),
+      ...color(state.data.color, 4),
+    }),
+    multiValueLabel: (base, state) => ({
+        ...(styles.multiValueLabel ? styles.multiValueLabel(base, state) : base),
+        paddingLeft: '24px' // Make room for the color dot
+    })
+  };
+
   return (<ReactSelect
     options={options}
     isMulti
@@ -76,7 +94,7 @@ const ColorCheckboxSelect = ({
     placeholder={placeholder}
     value={selectedValue}
     isDisabled={isDisabled}
-    style={{ menu: provided => ({ ...provided, zIndex: 4 }), ...colourStyles }}
+    style={mergedStyles}
   />)
 }
 

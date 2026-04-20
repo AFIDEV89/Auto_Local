@@ -9,7 +9,8 @@ export const ROUTES = {
   PRIVACY_POLICY: "/privacy-policy",
   REFUND_POLICY: "/refund-policy",
   ABOUT_US: "/about-us",
-  STORE_LOCATOR: "/store-locator"
+  STORE_LOCATOR: "/store-locator",
+  CATEGORY_LISTING: "/categories"
 };
 
 export const MODULES = Object.freeze({

@@ -13,6 +13,7 @@ import {
 } from "reactstrap";
 import { postDataApi } from "../../../services/ApiCaller";
 import { errorAlert, successAlert } from "../../../utils";
+import { ReactSelect } from "@views/components";
 
 import { howItWorks, logo } from "@assets/images";
 
@@ -27,14 +28,82 @@ const FranchiseModal = ({ isOpen, toggleModal }) => {
     category: "",
   });
 
+  const categoryOptions = [
+    { value: "4-Wheeler", label: "4 Wheeler" },
+    { value: "2-Wheeler", label: "2 Wheeler" },
+  ];
+
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      background: "#f8fafc",
+      borderColor: state.isFocused ? "#ffb200" : "#f1f5f9",
+      borderRadius: "12px",
+      padding: "2px 8px",
+      minHeight: "40px",
+      boxShadow: "none",
+      "&:hover": {
+        borderColor: state.isFocused ? "#ffb200" : "#cbd5e1",
+      },
+    }),
+    placeholder: (base) => ({
+      ...base,
+      color: "#94a3b8",
+      fontSize: "0.85rem",
+      fontWeight: "500",
+    }),
+    singleValue: (base) => ({
+      ...base,
+      color: "#0f172a",
+      fontSize: "0.85rem",
+      fontWeight: "600",
+    }),
+    menu: (base) => ({
+      ...base,
+      borderRadius: "12px",
+      overflow: "hidden",
+      border: "1px solid #f1f5f9",
+      boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+      zIndex: 9999,
+    }),
+    option: (base, state) => ({
+      ...base,
+      background: state.isSelected
+        ? "#ffb200"
+        : state.isFocused
+        ? "#fff7ed"
+        : "white",
+      color: state.isSelected ? "#0f172a" : "#475569",
+      fontSize: "0.85rem",
+      fontWeight: state.isSelected ? "700" : "500",
+      "&:active": {
+        background: "#ffb200",
+      },
+    }),
+  };
+
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }));
+    
+    if (name === "mobile_number") {
+      // Remove non-digit characters and truncate to 10
+      const cleaned = value.replace(/\D/g, "").slice(0, 10);
+      setFormData((prev) => ({ ...prev, [name]: cleaned }));
+      
+      // Immediate validation for starting digit
+      if (cleaned.length > 0 && !/^[6-9]/.test(cleaned)) {
+        setErrors((prev) => ({ ...prev, [name]: "Must start with 6, 7, 8, or 9" }));
+      } else {
+        setErrors((prev) => ({ ...prev, [name]: "" }));
+      }
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+      if (errors[name]) {
+        setErrors((prev) => ({ ...prev, [name]: "" }));
+      }
     }
   };
 
@@ -46,8 +115,8 @@ const FranchiseModal = ({ isOpen, toggleModal }) => {
 
     if (!formData.mobile_number)
       newErrors.mobile_number = "Mobile number is mandatory";
-    else if (!/^\d{10}$/.test(formData.mobile_number))
-      newErrors.mobile_number = "Mobile number must be 10 digits";
+    else if (!/^[6-9]\d{9}$/.test(formData.mobile_number))
+      newErrors.mobile_number = "Enter a valid 10-digit Indian number";
 
     if (!formData.contact_person_name)
       newErrors.contact_person_name = "Name is mandatory";
@@ -199,6 +268,8 @@ const FranchiseModal = ({ isOpen, toggleModal }) => {
                   </Label>
                   <Input
                     name="mobile_number"
+                    type="text"
+                    inputMode="numeric"
                     placeholder="10-digit number"
                     value={formData.mobile_number}
                     onChange={handleChange}
@@ -255,18 +326,13 @@ const FranchiseModal = ({ isOpen, toggleModal }) => {
                   <Label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1 inline-block">
                     Category
                   </Label>
-                  <Input
-                    name="category"
-                    type="select"
-                    value={formData.category}
-                    onChange={handleChange}
-                    className="w-full bg-slate-50 border-slate-100 rounded-xl px-4 h-[40px] text-sm focus:bg-white focus:border-[#ffb200] transition-all"
-                  >
-                    <option value="">Select Category</option>
-                    <option value="4-Wheeler">4 Wheeler</option>
-                    <option value="2-Wheeler">2 Wheeler</option>
-                    <option value="Both">Both</option>
-                  </Input>
+                  <ReactSelect
+                    options={categoryOptions}
+                    style={customStyles}
+                    placeholder="Select Category"
+                    value={categoryOptions.find(opt => opt.value === formData.category)}
+                    onSelect={(option) => setFormData(prev => ({ ...prev, category: option.value }))}
+                  />
                 </FormGroup>
               </div>
 

@@ -22,5 +22,6 @@ router.get("/price", productCtr.getProductPrice);
 router.get("/:id", productCtr.getProduct);
 router.post('/bulk_create', upload.single('file'), productCtr.bulkCreateProduct);
 router.put('/hide-show/:id', productCtr.setHideShowProduct);
+router.post('/toggle-ecommerce', productCtr.toggleEcommerceProduct);
 
 export default router;

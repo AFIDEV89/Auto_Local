@@ -9,11 +9,11 @@ const DrawerHeader = ({
 }) => {
     return (
         <div className="drawerHeader">
-            <Link to="/">
-                <img src={newLogo} className="autoform-logo" />
+            <Link to="/" className="drawer-logo-wrapper" onClick={onClose}>
+                <img src={newLogo} className="autoform-logo" alt="Autoform" />
             </Link>
 
-            <FontAwesomeIcon icon={faXmark} onClick={onClose} />
+            <FontAwesomeIcon icon={faXmark} onClick={onClose} className="drawer-close-icon" />
         </div>
     )
 }

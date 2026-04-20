@@ -1,13 +1,31 @@
-// common login btn css
+@import './variables.scss';
+
+// Unified Premium Login Styles
 .login-btn {
-  background: #0156ff;
-  border-radius: 100px;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 14px;
-  width: 150px;
-  border: none;
-  margin-right: 20px;
+	background-color: #ffb200; // 💡 Brand Yellow
+	border-radius: 12px; // 💡 Modern corner
+	font-weight: 700;
+	font-size: 14px;
+	padding: 14px 28px;
+	border: none;
+	color: #000; // 💡 Black text on yellow
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+	box-shadow: 0 4px 15px rgba(255, 178, 0, 0.3);
+	cursor: pointer;
+
+	&:hover {
+		background-color: #ffc233;
+		transform: translateY(-2px);
+		box-shadow: 0 8px 25px rgba(255, 178, 0, 0.4);
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+		transform: none;
+	}
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -18,111 +36,136 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 
-
 .login-signup-card-wrapper {
-  padding: 20px 0px 60px 0px;
+	background: radial-gradient(circle at 20% 150%, #f8fafc 0%, #f1f5f9 100%); // 💡 Matches static pages
+	min-height: 100vh;
+	padding: 80px 0 100px;
+	position: relative;
+	overflow: hidden;
 
-  .title {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 32px;
-  }
-  .mobileVerify {
-    color: #00d566;
-  }
+	// Signature Top Yellow Accent Line
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 3px;
+		background: linear-gradient(90deg, #ffb200, transparent);
+	}
 
-  .login-signup-card {
-    background: #f5f7ff;
-    padding: 30px 40px;
-    border-radius: 4px;
+	.container {
+		position: relative;
+		z-index: 5;
+	}
 
-    @media (max-width: 768px) {
-      margin-bottom: 26px;
-    }
+	// Premium Montserrat Header
+	.title {
+		font-family: 'Montserrat', 'Outfit', sans-serif;
+		font-weight: 950;
+		font-size: 3.5rem;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+		text-align: center;
+		background: linear-gradient(135deg, #0f172a 30%, #475569 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 
-    @media (max-width: 576px) {
-      padding: 24px 22px;
-      margin-bottom: 26px;
-    }
+		@media (max-width: 768px) {
+			font-size: 2rem;
+			letter-spacing: -0.02em;
+		}
+	}
 
-    h4 {
-      font-size: 18px;
-      font-weight: 600;
-    }
+	.login-signup-card, .new-customer {
+		background: rgba(255, 255, 255, 0.4); // 💡 Frosted Glass
+		backdrop-filter: blur(40px);
+		padding: 40px;
+		border-radius: 24px;
+		border: 1px solid rgba(255, 255, 255, 0.6);
+		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+		height: 100%;
 
-    p {
-      font-size: 14px;
-      font-weight: 300;
-    }
+		@media (max-width: 768px) {
+			margin-bottom: 30px;
+			padding: 30px 20px;
+		}
 
-    label {
-      font-size: 13px;
-      font-weight: 600;
+		h4, .title {
+			font-size: 20px;
+			font-weight: 700;
+			color: #0f172a;
+			margin-bottom: 15px;
+			text-align: left;
+			background: none;
+			-webkit-text-fill-color: initial;
+		}
 
-      span {
-        color: rgb(226, 24, 24);
-      }
-    }
+		p, .desc, li {
+			font-size: 14px;
+			color: #475569;
+			line-height: 1.6;
+		}
 
-    .verifyBtn {
-      color: blue;
-      cursor: pointer;
-    }
+		label {
+			font-weight: 600;
+			color: #334155;
+			font-size: 0.9rem;
+			margin-bottom: 8px;
 
-    input {
-      border-radius: 4px;
-      border: 1px solid #a2a6b0;
-      background-color: white;
-      padding: 12px;
-    }
+			span {
+				color: #ef4444;
+			}
+		}
 
-    .login-btn-wrap {
-      display: flex;
-      align-items: center;
-      margin-top: 3rem;
+		input {
+			border-radius: 12px;
+			border: 1px solid #e2e8f0;
+			background-color: #f8fafc;
+			padding: 14px;
+			font-size: 15px;
+			color: #0f172a;
+			transition: all 0.2s;
 
-      .login-btn {
-        @extend .login-btn;
-      }
+			&:focus {
+				background-color: #fff;
+				border-color: #ffb200;
+				box-shadow: 0 0 0 4px rgba(255, 178, 0, 0.1);
+				outline: none;
+			}
+		}
 
-      .forgot-password {
-        color: #0156ff;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 400;
-      }
-    }
-  }
+		.login-btn-wrap {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 32px;
 
-  .new-customer {
-    background: #f5f7ff;
-    padding: 30px 40px;
-    border-radius: 4px;
+			.forgot-password {
+				color: #0f172a;
+				font-weight: 600;
+				font-size: 14px;
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+				transition: all 0.2s;
 
-    .title {
-      font-size: 18px;
-      font-weight: 600;
-    }
+				&:hover {
+					color: #ffb200;
+					border-bottom-color: #ffb200;
+				}
+			}
+		}
 
-    .desc {
-      font-size: 14px;
-      font-weight: 300;
-    }
-
-    li {
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 26px;
-    }
-
-    .create-btn {
-      @extend .login-btn;
-      width: 200px;
-      margin-top: 1rem;
-    }
-  }
+		.create-btn {
+			@extend .login-btn;
+			width: 100%;
+			margin-top: 24px;
+		}
+	}
 }
 
 .select-vehicle-modal-go {
-  text-align: center;
+	text-align: center;
 }

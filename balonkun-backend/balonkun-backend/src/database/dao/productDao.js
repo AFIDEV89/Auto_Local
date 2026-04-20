@@ -86,6 +86,14 @@ async function getUnHideProducts({ query, user_id, ...rest }) {
       required: false
     });
   }
+
+  rest.include = rest.include || [];
+  rest.include.push({
+    model: db.selectiveShops,
+    as: 'ecommerce',
+    required: false
+  });
+
   const data = await dao.getRows({ ...rest, tableName: model_values.product.tableName, query });
 
   const products = JSON.parse(JSON.stringify(data));
@@ -93,10 +101,10 @@ async function getUnHideProducts({ query, user_id, ...rest }) {
   if (products.list) {
     return {
       ...products,
-      list: wishlistMapping(products.list)
+      list: productMapping(products.list)
     };
   } else {
-    return wishlistMapping(products);
+    return productMapping(products);
   }
 };
 
@@ -112,20 +120,30 @@ async function getWishlistProductDetails({ query, include, user_id }) {
       required: false
     });
   }
+
+  include = include || [];
+  include.push({
+    model: db.selectiveShops,
+    as: 'ecommerce',
+    required: false
+  });
+
   const details = await dao.getRow(model_values.product.tableName, query, include);
 
   const product = JSON.parse(JSON.stringify(details));
 
-  return wishlistMapping([product])[0];
+  return productMapping([product])[0];
 };
 
-function wishlistMapping(products) {
+function productMapping(products) {
   return products.map((product) => {
     const details = {
       ...product,
-      isInWishlist: !!(product.wishlists?.length)
+      isInWishlist: !!(product.wishlists?.length),
+      is_saleable: !!(product.ecommerce),
     };
     delete details.wishlists;
+    delete details.ecommerce;
     return details;
   });
 }

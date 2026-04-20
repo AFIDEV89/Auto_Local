@@ -7,6 +7,7 @@ export const getSEOHeaderValidation = {
     v_id: validations.optional_allow_null_positive_integer,
     v_b_id: validations.optional_allow_null_positive_integer,
     v_m_id: validations.optional_allow_null_positive_integer,
+    sc_id: validations.optional_allow_null_positive_integer,
 };
 
 export const createSEOHeaderValidation = {

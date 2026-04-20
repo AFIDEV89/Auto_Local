@@ -28,6 +28,7 @@ app.use(logger("dev"));
 app.use(bodyParser.json());
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 // database syncing
 db.sync(RESET_DATBASE_SWITCH === "on" ? { force: true } : {});
@@ -35,12 +36,15 @@ db.sync(RESET_DATBASE_SWITCH === "on" ? { force: true } : {});
 // server authentication middleware
 app.use(function (req, res, next) {
     const { origin } = req.headers;
-    console.log(origin)
-    // if (ALLOWED_ORIGINS.indexOf(origin) > -1) {
-        res.header("Access-Control-Allow-Origin", "*");
-    // }
-    res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, PATCH");
+    if (ALLOWED_ORIGINS.indexOf(origin) > -1) {
+        res.header("Access-Control-Allow-Origin", origin);
+    }
+    res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, PATCH, OPTIONS");
     res.header("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Api-Key, Authorization, User-Type");
+
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(204);
+    }
     next();
 });
 

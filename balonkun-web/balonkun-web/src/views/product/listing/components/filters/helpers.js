@@ -13,13 +13,73 @@ export const FILTER_TYPE_MAP = {
 }
 
 export const styles = {
-    control: (baseStyles) => ({
+    control: (baseStyles, state) => ({
         ...baseStyles,
+        backgroundColor: "#FFFFFF",
+        borderColor: state.isFocused ? "#ffb200" : "#E5E7EB",
+        borderRadius: '8px',
+        padding: '2px',
+        boxShadow: state.isFocused ? "0 0 0 1px #ffb200" : "none",
+        "&:hover": {
+            borderColor: "#ffb200"
+        },
+        fontSize: 13,
+        color: "#1A1A1A"
+    }),
+    singleValue: (base) => ({
+        ...base,
+        color: "#1A1A1A"
+    }),
+    placeholder: (base) => ({
+        ...base,
+        color: "#9CA3AF"
+    }),
+    menu: (base) => ({
+        ...base,
+        backgroundColor: "#FFFFFF",
+        border: "1px solid #E5E7EB",
+        borderRadius: "8px",
+        zIndex: 50,
+        boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
+    }),
+    option: (base, state) => ({
+        ...base,
+        backgroundColor: state.isFocused ? "rgba(255, 178, 0, 0.1)" : "transparent",
+        color: state.isSelected ? "#ffb200" : "#1A1A1A",
+        "&:hover": {
+            backgroundColor: "rgba(255, 178, 0, 0.1)",
+            color: "#ffb200"
+        },
+        cursor: "pointer",
         fontSize: 13
     }),
-    menuList: (listCss) => ({
-        ...listCss,
-        fontSize: 13
+    multiValue: (base) => ({
+        ...base,
+        backgroundColor: "#ffb200",
+        borderRadius: "4px"
+    }),
+    multiValueLabel: (base) => ({
+        ...base,
+        color: "#000",
+        fontWeight: "600"
+    }),
+    multiValueRemove: (base) => ({
+        ...base,
+        color: "#000",
+        "&:hover": {
+            backgroundColor: "rgba(0, 0, 0, 0.1)",
+            color: "#000"
+        }
+    }),
+    dropdownIndicator: (base) => ({
+        ...base,
+        color: "#9CA3AF",
+        "&:hover": {
+            color: "#ffb200"
+        }
+    }),
+    indicatorSeparator: () => ({
+        display: "none"
     })
 }
 

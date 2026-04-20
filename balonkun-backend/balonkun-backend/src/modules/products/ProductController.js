@@ -128,7 +128,7 @@ function getProductList(req, res) {
         res,
         Validator.getProductList,
         async () => {
-            const {search, filter_type, filter_id, page, limit} = req.query;
+            const {search, filter_type, filter_id, page, limit, vehicles, product_categories} = req.query;
             const cond = {};
             const productVehicleDetailInclude = {model: db[constants.model_values.vehicle_detail.tableName]};
 
@@ -148,6 +148,18 @@ function getProductList(req, res) {
                     cond.category_id = filter_id;
                     break;
                 }
+            }
+
+            if (vehicles && vehicles.length > 0) {
+                // Ensure vehicles is an array (Express might return a single string if only one item)
+                const vehicleArr = Array.isArray(vehicles) ? vehicles : [vehicles];
+                productVehicleDetailInclude.where = { ...productVehicleDetailInclude.where, vehicle_type_id: { [Op.in]: vehicleArr } };
+                productVehicleDetailInclude.required = true;
+            }
+
+            if (product_categories && product_categories.length > 0) {
+                const categoryArr = Array.isArray(product_categories) ? product_categories : [product_categories];
+                cond.category_id = { [Op.in]: categoryArr };
             }
 
             if (search) {
@@ -187,6 +199,11 @@ function getProductList(req, res) {
                             },
                         ]
                     },
+                    {
+                        model: db.selectiveShops,
+                        as: 'ecommerce',
+                        required: false
+                    }
                 ],
                 order: [['updatedAt', 'DESC']],
                 page: page,
@@ -194,6 +211,7 @@ function getProductList(req, res) {
             });
 
             // console.log("cond***", result.length);
+
             return result;
         },
         constants.GET_SUCCESS,
@@ -590,11 +608,38 @@ function bulkCreateProduct(req, res) {
                     }
 
                     if (isValidForAllVehicleProducts) {
+                        // First find if there's a Universal brand to include its ID
+                        let universalBrandIds = [];
+                        try {
+                            const universalBrands = await dao.getRows({
+                                tableName: constants.model_values.brand.tableName,
+                                query: { name: {[Op.like]: '%Univ%'} },
+                                attributes: ['id'],
+                                raw: true
+                            });
+                            universalBrandIds = universalBrands.map(b => b.id);
+                        } catch (e) {
+                            console.error("Error finding universal brand: ", e);
+                        }
+
                         if (!!(filters.vehicle_brands?.length)) {
-                            vehicleDetailQuery.brand_id = {[Op.in]: filters.vehicle_brands};
+                            const allowedBrands = [...filters.vehicle_brands, ...universalBrandIds];
+                            vehicleDetailQuery.brand_id = {
+                                [Op.or]: [
+                                    {[Op.in]: allowedBrands},
+                                    {[Op.eq]: null},
+                                    {[Op.eq]: 0}
+                                ]
+                            };
                         }
                         if (!!(filters.vehicle_models?.length)) {
-                            vehicleDetailQuery.model_id = {[Op.in]: filters.vehicle_models};
+                            vehicleDetailQuery.model_id = {
+                                [Op.or]: [
+                                    {[Op.in]: filters.vehicle_models},
+                                    {[Op.eq]: null},
+                                    {[Op.eq]: 0}
+                                ]
+                            };
                         }
                     } else {
                         // brand and models finding for product categories those valid for all products like mats and accessories
@@ -663,12 +708,20 @@ function bulkCreateProduct(req, res) {
                         //   { vehicle_type_id: { [Op.in]: filters.vehicle_types } }
                         // ];
                     }
-
+                
                     // fetching product categories
                     if (!!(filters.product_categories?.length)) {
                         cond.category_id = {[Op.in]: filters.product_categories};
                     }
+
+                    // fetching product subcategories
+                    if (!!(filters.product_subcategories?.length)) {
+                        cond.subcategory_id = {[Op.in]: filters.product_subcategories};
+                    }
                 }
+
+                console.log("=== Product List Request Filters ===", JSON.stringify(filters, null, 2));
+                console.log("=== Final Database Query Conditions ===", JSON.stringify(cond, null, 2));
 
                 /**
                  * Product Combination Filters
@@ -851,5 +904,33 @@ function bulkCreateProduct(req, res) {
         getUserProduct,
         getUserRelatedProductList,
         getProductPrice,
-        setHideShowProduct
+        setHideShowProduct,
+        toggleEcommerceProduct
     };
+
+/**
+ * @method toggleEcommerceProduct: To whitelist or remove product from ecommerce direct sale
+ * @param {Object} req request object
+ * @param {Object} res response object
+ */
+async function toggleEcommerceProduct(req, res) {
+    return validations.validateSchema(
+        req,
+        res,
+        null,
+        async () => {
+            const { product_id, is_saleable } = req.body;
+            if (is_saleable) {
+                // Add to whitelist
+                await dao.createRow('selectiveShops', { product_id });
+            } else {
+                // Remove from whitelist
+                await dao.deleteRow('selectiveShops', { product_id });
+            }
+            return { product_id, is_saleable };
+        },
+        constants.UPDATE_SUCCESS,
+        "Product ecommerce status updated successfully"
+    );
+}
+
