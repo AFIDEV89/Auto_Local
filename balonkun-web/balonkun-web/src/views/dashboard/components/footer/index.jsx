@@ -12,6 +12,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MODULES } from '@shared/constants';
 import * as actions from '@redux/actions';
+import { newLogo } from '@assets/images';
 import CollapsibleSeoFooterLinks from './CollapsibleSeoFooterLinks';
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from "@mui/material";
@@ -47,7 +48,13 @@ const Footer = () => {
 			<Container>
 				<Row>
 					<Col lg={6}>
-						<h2 className="footer-title">AutoForm</h2>
+						<div className="mb-4 mt-[-8px]">
+							<img 
+								src={newLogo} 
+								alt="AutoForm" 
+								style={{ height: '60px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} 
+							/>
+						</div>
 						<p className="footer-desc">
 							An ISO TS/ 16949 certified company, Autoform is a Leading Provider of
 							Premium Quality Car Seat Covers in India. With our Experience of over 30 Years in the Industry,
@@ -80,12 +87,17 @@ const Footer = () => {
 						{(!isMobile || isCollapsedInfo) && (
 							<ul>
 								<li>
-									<a href="https://warranty.autoformindia.co.in" target="_blank" rel="noreferrer">
+									<a href="https://warranty2.autoformindia.co.in/login?mode=warranty" target="_blank" rel="noreferrer">
 										Warranty
 									</a>
 								</li>
 								<li>
 									<Link to="/retail-franchise">Retail Franchise</Link>
+								</li>
+								<li>
+									<a href="https://warranty2.autoformindia.co.in/login?mode=franchise" target="_blank" rel="noreferrer">
+										Retail Franchise - Portal
+									</a>
 								</li>
 								<li>
 									<Link to="/careers">Careers</Link>
@@ -154,11 +166,13 @@ const Footer = () => {
 				</Row>
 				<Row>
 					{
-						footerSeo && Object.keys(footerSeo).map(titleKey => {
-							return (
-								<CollapsibleSeoFooterLinks footerSeo={footerSeo} titleKey={titleKey} key={titleKey} />
-							)
-						})
+						footerSeo && Object.keys(footerSeo)
+							.filter(key => ['Make and Model', 'Car Accessories', 'Car Floor Mats'].includes(key))
+							.map(titleKey => {
+								return (
+									<CollapsibleSeoFooterLinks footerSeo={footerSeo} titleKey={titleKey} key={titleKey} />
+								)
+							})
 					}
 				</Row>
 				<Row className="c-row">
