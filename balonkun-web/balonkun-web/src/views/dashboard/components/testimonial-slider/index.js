@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import testimonialData from './MockData';
+import API from "../../../../api";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
 
@@ -11,6 +11,29 @@ const TestimonialSlider = () => {
     const [activeTab, setActiveTab] = useState('carOwners');
     const headerRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
+    const [testimonials, setTestimonials] = useState({ carOwners: [], franchisePartners: [] });
+    const [loading, setLoading] = useState(true);
+
+    const fetchTestimonials = async () => {
+        try {
+            setLoading(true);
+            const response = await API.get(`testimonials?status=Active`);
+            if (response?.data?.statusCode === 200) {
+                const list = response.data.data.rows || [];
+                const carOwners = list.filter(item => item.type === 'carOwners');
+                const franchisePartners = list.filter(item => item.type === 'franchisePartners');
+                setTestimonials({ carOwners, franchisePartners });
+            }
+        } catch (error) {
+            console.error("Error fetching testimonials:", error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        fetchTestimonials();
+    }, []);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -57,7 +80,8 @@ const TestimonialSlider = () => {
                         </p>
                     </div>
                     
-                    <div className="flex gap-8 lg:gap-12 pb-1 relative">
+                    {/* Desktop Toggle (RESTORED - Zero Impact) */}
+                    <div className="hidden md:flex gap-8 lg:gap-12 pb-1 relative">
                         <button
                             onClick={() => setActiveTab('carOwners')}
                             className={`pb-4 font-black text-xs lg:text-sm uppercase tracking-widest transition-all duration-300 relative ${activeTab === 'carOwners'
@@ -83,6 +107,30 @@ const TestimonialSlider = () => {
                             )}
                         </button>
                     </div>
+
+                    {/* Mobile Sliding Pill Toggle (MODERNIZED - Mobile Only) */}
+                    <div className="md:hidden relative w-full max-w-[280px] mx-auto bg-slate-100 p-1 rounded-full flex items-center mb-10">
+                        {/* Sliding Background Pill */}
+                        <div 
+                            className="absolute h-[calc(100%-8px)] w-[calc(50%-4px)] bg-[#ffb200] rounded-full shadow-sm transition-all duration-300 ease-out z-0"
+                            style={{
+                                left: activeTab === 'carOwners' ? '4px' : 'calc(50% + 2px)',
+                            }}
+                        />
+                        
+                        <button
+                            onClick={() => setActiveTab('carOwners')}
+                            className={`relative flex-1 py-2 text-[10px] font-black uppercase tracking-widest text-center transition-colors duration-300 z-10 ${activeTab === 'carOwners' ? 'text-white' : 'text-slate-400'}`}
+                        >
+                            CUSTOMERS
+                        </button>
+                        <button
+                            onClick={() => setActiveTab('franchisePartners')}
+                            className={`relative flex-1 py-2 text-[10px] font-black uppercase tracking-widest text-center transition-colors duration-300 z-10 ${activeTab === 'franchisePartners' ? 'text-white' : 'text-slate-400'}`}
+                        >
+                            PARTNERS
+                        </button>
+                    </div>
                 </div>
 
                 {/* Slider Container */}
@@ -106,7 +154,7 @@ const TestimonialSlider = () => {
                         }}
                         className="!pb-16"
                     >
-                        {testimonialData[activeTab].map((item) => (
+                        {testimonials[activeTab]?.map((item) => (
                             <SwiperSlide key={item.id} className="!h-auto">
                                 <div className="group h-full bg-white border-l-4 border-[#ffb200] p-8 flex flex-col relative shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 rounded-r-xl overflow-hidden min-h-[340px]">
                                     
@@ -124,8 +172,8 @@ const TestimonialSlider = () => {
                                             "{item.description}"
                                         </p>
                                         
-                                        {/* Stars */}
-                                        <div className="flex gap-1 mb-6 mt-auto">
+                                        {/* Stars (MODERNIZED - Centered on Mobile) */}
+                                        <div className="flex gap-1 justify-center md:justify-start mb-6 mt-auto">
                                             {[...Array(5)].map((_, i) => (
                                                 <span key={i} className={`material-symbols-outlined text-xs ${i < item.rating ? 'text-[#ffb200] fill-current' : 'text-gray-200'}`}>star</span>
                                             ))}
@@ -134,13 +182,17 @@ const TestimonialSlider = () => {
 
                                     {/* Identity Section */}
                                     <div className="flex items-center gap-4 pt-6 border-t border-dashed border-gray-100">
-                                        <div className="size-12 rounded-full border border-gray-100 p-1 bg-white shadow-sm overflow-hidden flex-shrink-0">
-                                            <img
-                                                alt={item.clientName}
-                                                className="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-500"
-                                                src={item.image}
-                                                loading="lazy"
-                                            />
+                                        <div className="size-12 rounded-full border border-gray-100 p-1 bg-white shadow-sm overflow-hidden flex-shrink-0 flex items-center justify-center">
+                                            {item.image ? (
+                                                <img
+                                                    alt={item.clientName}
+                                                    className="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-500"
+                                                    src={item.image.startsWith('http') ? item.image : `${process.env.REACT_APP_API_BASE_URL}${item.image}`}
+                                                    loading="lazy"
+                                                />
+                                            ) : (
+                                                <span className="font-extrabold text-[#ffb200] text-lg">{item.clientName?.charAt(0).toUpperCase()}</span>
+                                            )}
                                         </div>
                                         <div>
                                             <h4 className="font-black text-[#1a1a1a] text-sm uppercase tracking-tight mb-0.5">

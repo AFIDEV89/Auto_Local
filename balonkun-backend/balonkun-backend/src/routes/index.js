@@ -1,6 +1,7 @@
 "use strict";
 import ProductCategoryAdminRoutes from "../modules/product-categories/ProductCategoryAdminRoutes.js";
 import ProductCategoryUserRoutes from "../modules/product-categories/ProductCategoryUserRoutes.js";
+import SubCategoryRoutes from "../modules/subcategories/SubCategoryRoutes.js";
 import ColorRoutes from "../modules/colors/ColorAdminRoutes.js";
 import ProductAdminRoutes from "../modules/products/ProductAdminRoutes.js";
 import ProductUserRoutes from '../modules/products/ProductUserRoutes.js';
@@ -25,12 +26,17 @@ import BlogCategoryAdminRoutes from '../modules/blog-categories/BlogCategoryAdmi
 import UploadDataRoutes from '../modules/upload-data/UploadDataRoutes.js';
 import WishlistUserRoutes from '../modules/wishlist/WishlistUserRoutes.js';
 import FranchiseRoutes from '../modules/franchise/FranchiseRoutes.js';
+import TestimonialRoutes from '../modules/testimonials/TestimonialRoutes.js';
+import StoreLocatorRoutes from "../modules/store-locator/StoreLocatorRoutes.js";
+import { SelectiveShopRoutes } from "../modules/online-shop/SelectiveShopRoutes.js";
 
 import config from "../../config.js";
 import SearchRouter from "../modules/search/SearchRouter.js";
 import seo_data_router from "../api/seo/seo_data_index.js";
 import contact_us_router from "../api/contact_us/contact_us_router.js";
 import lead_data_router from "../api/leads_generation/lead_data_index.js";
+import pop_lead_router from "../api/pop_leads/pop_lead_index.js";
+import csvRouter from "../modules/bulk-csv/csvRoutes.js";
 
 /**
  * Define all module api's base urls
@@ -41,6 +47,7 @@ const router = (app) => {
     app.use(`${config.API_BASE_URL}product`, ProductAdminRoutes);
     app.use(`${config.API_BASE_URL}user/product`, ProductUserRoutes);
     app.use(`${config.API_BASE_URL}category`, ProductCategoryAdminRoutes);
+    app.use(`${config.API_BASE_URL}subcategory`, SubCategoryRoutes);
     app.use(`${config.API_BASE_URL}user/category`, ProductCategoryUserRoutes);
     app.use(`${config.API_BASE_URL}color`, ColorRoutes);
     app.use(`${config.API_BASE_URL}vehicle-detail`, VehicleDetailsRoutes);
@@ -50,7 +57,6 @@ const router = (app) => {
     app.use(`${config.API_BASE_URL}review`, ReviewRoutes);
     app.use(`${config.API_BASE_URL}user/dashboard`, DashboardUserRoutes);
     app.use(`${config.API_BASE_URL}cart-product`, CartProductUserRoutes);
-    app.use(`${config.API_BASE_URL}store`, StoreRoutes);
     app.use(`${config.API_BASE_URL}order`, OrderRoutes);
     app.use(`${config.API_BASE_URL}web-setting`, WebSettingRoutes);
     app.use(`${config.API_BASE_URL}design`, DesignRoutes);
@@ -62,12 +68,17 @@ const router = (app) => {
     app.use(`${config.API_BASE_URL}admin/blog-categories`, BlogCategoryAdminRoutes);
 
     app.use(`${config.API_BASE_URL}lead`,lead_data_router)
+    app.use(`${config.API_BASE_URL}pop-lead`, pop_lead_router)
     app.use(`${config.API_BASE_URL}upload`, UploadDataRoutes);
     app.use(`${config.API_BASE_URL}user/wishlist`, WishlistUserRoutes);
     app.use(`${config.API_BASE_URL}seo`, seo_data_router);
     app.use(`${config.API_BASE_URL}contactus`, contact_us_router);
     app.use(`${config.API_BASE_URL}franchise`, FranchiseRoutes);
-
+    app.use(`${config.API_BASE_URL}testimonials`, TestimonialRoutes);
+    app.use(`${config.API_BASE_URL}store-locator-isolated`, StoreLocatorRoutes);
+    app.use(`${config.API_BASE_URL}store`, StoreRoutes);
+    app.use(`${config.API_BASE_URL}csv`, csvRouter);
+    app.use(`${config.API_BASE_URL}online-shop`, SelectiveShopRoutes);
 
 };
 

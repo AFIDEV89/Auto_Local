@@ -11,19 +11,27 @@ const ContactInfo = () => {
 
         <div className="contacts">
             <div className="contact">
-                <FontAwesomeIcon icon={faEnvelope} />
-                <a href="mailto:marketing@autoformindia.com" className="link" target="_blank" rel="noreferrer">
-                    {CONTACT_INFO.email}
-                </a>
+                <div className="contact-icon">
+                    <FontAwesomeIcon icon={faEnvelope} />
+                </div>
+                <div className="contact-details">
+                    <a href="mailto:marketing@autoformindia.com" className="link" target="_blank" rel="noreferrer">
+                        {CONTACT_INFO.email}
+                    </a>
+                </div>
             </div>
             <div className="contact">
-                <FontAwesomeIcon icon={faPhone} />
-                <a href="tel:+91 9278411411" className="link" target="_blank" rel="noreferrer">
-                    {CONTACT_INFO.phone1}
-                </a>
-                <a href="tel:+91 120 4247861" className="link" target="_blank" rel="noreferrer">
-                    {CONTACT_INFO.phone2}
-                </a>
+                <div className="contact-icon">
+                    <FontAwesomeIcon icon={faPhone} />
+                </div>
+                <div className="contact-details">
+                    <a href="tel:+91 9278411411" className="link" target="_blank" rel="noreferrer">
+                        {CONTACT_INFO.phone1}
+                    </a>
+                    <a href="tel:+91 120 4247861" className="link shadow-link" target="_blank" rel="noreferrer">
+                        {CONTACT_INFO.phone2}
+                    </a>
+                </div>
             </div>
         </div>
     </div>)

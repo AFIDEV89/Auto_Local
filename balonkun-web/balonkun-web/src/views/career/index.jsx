@@ -15,7 +15,7 @@ const Career = () => {
             </section>
 
             <div className="max-w-[1200px] mx-auto px-4 md:px-0">
-                <div className="static-card text-center py-20">
+                <div className="static-card text-center py-10 sm:py-20">
                     <div className="w-20 h-20 bg-[#ffb200]/10 rounded-2xl flex items-center justify-center mx-auto mb-8 transform rotate-3">
                         <span className="material-symbols-outlined text-[#ffb200] text-4xl">work</span>
                     </div>
@@ -29,12 +29,12 @@ const Career = () => {
 
                     <div className="section-divider max-w-xs mx-auto my-12"></div>
 
-                    <div className="bg-slate-50 p-10 rounded-[32px] border border-slate-100 inline-block px-12 transition-transform hover:scale-[1.02]">
+                    <div className="bg-slate-50 p-8 sm:p-10 rounded-[24px] sm:rounded-[32px] border border-slate-100 block sm:inline-block px-4 sm:px-12 transition-transform hover:scale-[1.02]">
                         <p className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-4">Current Opportunities</p>
                         <p className="text-slate-600 mb-6 font-medium">Please send your updated CV and portfolio to:</p>
                         <a 
                             href="mailto:careers@autoformindia.com" 
-                            className="text-2xl md:text-3xl font-black text-[#ffb200] hover:text-[#0f172a] transition-all duration-300 decoration-[#ffb200]/30 underline underline-offset-8"
+                            className="text-xl sm:text-3xl break-all font-black text-[#ffb200] hover:text-[#0f172a] transition-all duration-300 decoration-[#ffb200]/30 underline underline-offset-8"
                         >
                             careers@autoformindia.com
                         </a>

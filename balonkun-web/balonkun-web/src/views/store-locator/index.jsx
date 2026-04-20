@@ -116,9 +116,15 @@ const StoreCard = ({
           <div className="store-item">
             <span className="store-icon-wrapper"><FaClock /></span>
             <div className="flex flex-col gap-1">
-              <span>{timings}</span>
-              <div className="flex items-center gap-2">
-                {timings.toLowerCase().includes("closed") ? (
+              <div className="flex flex-col gap-1 leading-relaxed">
+                {Array.isArray(timings) ? timings.map((t, idx) => (
+                  <span key={idx} className="block text-[#0f172a] font-medium">{t}</span>
+                )) : (
+                  <span>{timings}</span>
+                )}
+              </div>
+              <div className="flex items-center gap-2 mt-1">
+                {String(Array.isArray(timings) ? timings.join(' ') : timings).toLowerCase().includes("closed") ? (
                   <span className="status-badge closed">Closed</span>
                 ) : (
                   <span className="status-badge open">Open</span>
@@ -135,6 +141,7 @@ const StoreCard = ({
             <span className="score">{rating.toFixed(1)}</span>
             <span className="rating-count">({ratingCount})</span>
             <button 
+              type="button"
               className="add-rating" 
               onClick={() => onOpenRatingForm(store.StoreID)}
             >
@@ -153,14 +160,14 @@ const StoreCard = ({
 
       <div className="btons">
         <a href={store.StoreLoc} target="_blank" rel="noopener noreferrer" className="no-underline">
-          <button className="locate-button">
+          <button type="button" className="locate-button">
             <MdDirections className="text-xl" />
             Directions
           </button>
         </a>
 
         <a href={whatsappShareLink} target="_blank" rel="noopener noreferrer" className="no-underline">
-          <button className="share-button">
+          <button type="button" className="share-button">
             <FaShare className="text-lg" />
             Share
           </button>
@@ -182,6 +189,7 @@ const StoreLocator = () => {
     data: false
   });
   const [isDataLoaded, setIsDataLoaded] = useState(false);
+  const [citiesCache, setCitiesCache] = useState({}); // Cache: { stateId: [cities] }
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
@@ -189,21 +197,28 @@ const StoreLocator = () => {
   const [storeRatings, setStoreRatings] = useState({});
   const [activeRatingStoreId, setActiveRatingStoreId] = useState(null);
   
-  const API_BASE_URL = 'https://emporio1-1blc.vercel.app';
+  const API_BASE_URL = `${process.env.REACT_APP_API_BASE_URL}/api/v1/store-locator-isolated`;
 
+  // Fetch all states on mount
   useEffect(() => {
     fetchStates();
   }, []);
 
+  // Smart search with character guards
   const debouncedSearch = useCallback(
     debounce(() => {
-      if (searchQuery.trim()) {
+      const query = searchQuery.trim();
+      if (!query) {
+        resetDropdowns();
+        return;
+      }
+      const isNumeric = /^\d+$/.test(query);
+      // Smart Search: 3+ chars for text, exactly 6 digits for pincode
+      if ((isNumeric && query.length === 6) || (!isNumeric && query.length >= 3)) {
         setSelectedState("");
         setSelectedCity("");
         setCities([]);
         searchStoresByLocation();
-      } else {
-        resetDropdowns();
       }
     }, 500),
     [searchQuery]
@@ -218,9 +233,10 @@ const StoreLocator = () => {
 
   useEffect(() => {
     if (stores.length > 0) {
+      // Background initial load for timings/ratings
       batchFetchStoreData();
     }
-  }, [stores]);
+  }, [stores.length]); // Only run when the store list ITSELF changes
 
   const resetDropdowns = () => {
     setSelectedState("");
@@ -233,9 +249,11 @@ const StoreLocator = () => {
   const fetchStates = async () => {
     try {
       setIsLoading(prev => ({ ...prev, states: true }));
-      const response = await fetch(`${API_BASE_URL}/getallstate`);
+      const response = await fetch(`${API_BASE_URL}/get-states`);
       const data = await response.json();
-      setStates(data);
+      if (data.statusCode === 200) {
+        setStates(data.data);
+      }
     } catch (err) {
       console.error('Error fetching states:', err);
     } finally {
@@ -243,17 +261,23 @@ const StoreLocator = () => {
     }
   };
 
+  // Fetch cities with caching — instant on second visit
   const fetchCitiesByState = async (stateId) => {
     if (!stateId) return;
+    // Check cache first for instant load
+    if (citiesCache[stateId]) {
+      setCities(citiesCache[stateId]);
+      return;
+    }
     try {
       setIsLoading(prev => ({ ...prev, cities: true }));
-      const response = await fetch(`${API_BASE_URL}/getCitiesByState`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ state_id: stateId }),
-      });
+      const response = await fetch(`${API_BASE_URL}/get-cities?StateID=${stateId}`);
       const data = await response.json();
-      setCities(data);
+      if (data.statusCode === 200) {
+        setCities(data.data);
+        // Cache the result for instant future lookups
+        setCitiesCache(prev => ({ ...prev, [stateId]: data.data }));
+      }
     } catch (error) {
       console.error('Error fetching cities:', error);
     } finally {
@@ -266,18 +290,18 @@ const StoreLocator = () => {
     setIsLoading(prev => ({ ...prev, stores: true }));
     setStores([]);
     try {
-      const response = await fetch(`${API_BASE_URL}/getStore`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ cityid: cityId }),
-      });
+      const response = await fetch(`${API_BASE_URL}/get-list?CityID=${cityId}`);
       const data = await response.json();
-      setStores(data);
+      if (data.statusCode === 200) {
+        setStores(Array.isArray(data.data.list) ? data.data.list : (Array.isArray(data.data) ? data.data : []));
+      }
+      setIsDataLoaded(true);
     } catch (error) {
       console.error('Error fetching stores:', error);
+      setStores([]);
+      setIsDataLoaded(true);
     } finally {
       setIsLoading(prev => ({ ...prev, stores: false }));
-      setIsDataLoaded(true);
     }
   };
 
@@ -291,23 +315,24 @@ const StoreLocator = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ stateid: searchQuery }),
       });
-      if (stateResponse.ok) {
-        const stateData = await stateResponse.json();
-        if (stateData.length > 0) {
-          setStores(stateData);
+        if (stateResponse.ok) {
+          const stateData = await stateResponse.json();
+          if (Array.isArray(stateData) && stateData.length > 0) {
+            setStores(stateData);
+          } else {
+            await searchStoresByCity(searchQuery);
+          }
         } else {
           await searchStoresByCity(searchQuery);
         }
-      } else {
-        await searchStoresByCity(searchQuery);
+      } catch (error) {
+        console.error('Error searching stores:', error);
+        setStores([]);
+      } finally {
+        setIsLoading(prev => ({ ...prev, search: false }));
+        setIsDataLoaded(true);
       }
-    } catch (error) {
-      console.error('Error searching stores:', error);
-    } finally {
-      setIsLoading(prev => ({ ...prev, search: false }));
-      setIsDataLoaded(true);
-    }
-  };
+    };
 
   const searchStoresByCity = async (cityName) => {
     try {
@@ -317,17 +342,54 @@ const StoreLocator = () => {
         body: JSON.stringify({ cityname: cityName }),
       });
       const data = await response.json();
-      setStores(data);
+      setStores(Array.isArray(data) ? data : []);
     } catch (error) {
       console.error('Error fetching stores by city name:', error);
+      setStores([]);
+    }
+  };
+
+  const fetchSingleStoreData = async (storeId) => {
+    try {
+      const [timingsRes, ratingsRes] = await Promise.all([
+        fetch(`${API_BASE_URL}/getStoreTimings`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ storeid: storeId }),
+        }).then(res => res.json()).catch(() => ({})),
+        fetch(`${API_BASE_URL}/getRatings/${storeId}`)
+          .then(res => res.json()).catch(() => ({}))
+      ]);
+
+      if (timingsRes.timings) {
+        setStoreTimings(prev => ({ 
+          ...prev, 
+          [storeId]: { 
+            timings: timingsRes.timings, 
+            closed: timingsRes.Closed || timingsRes.closed || "" 
+          } 
+        }));
+      }
+
+      if (ratingsRes.averageRating !== undefined) {
+        setStoreRatings(prev => ({ 
+          ...prev, 
+          [storeId]: { 
+            average: parseFloat(ratingsRes.averageRating) || 0, 
+            count: parseInt(ratingsRes.ratingCount) || 0 
+          } 
+        }));
+      }
+    } catch (err) {
+      console.error('Error refreshing single store:', err);
     }
   };
 
   const batchFetchStoreData = async () => {
     if (!stores.length) return;
-    setIsLoading(prev => ({ ...prev, data: true }));
     const storeIds = stores.map(store => store.StoreID);
     
+    // We'll fetch in smaller batches or all at once but WITHOUT setting anyLoading global spinner
     const timingsPromises = storeIds.map(storeId => 
       fetch(`${API_BASE_URL}/getStoreTimings`, {
         method: 'POST',
@@ -366,10 +428,10 @@ const StoreLocator = () => {
         };
       });
       
-      setStoreTimings(timingsMap);
-      setStoreRatings(ratingsMap);
-    } finally {
-      setIsLoading(prev => ({ ...prev, data: false }));
+      setStoreTimings(prev => ({ ...prev, ...timingsMap }));
+      setStoreRatings(prev => ({ ...prev, ...ratingsMap }));
+    } catch (err) {
+      console.error('Batch fetch error:', err);
     }
   };
 
@@ -405,12 +467,17 @@ const StoreLocator = () => {
   };
 
   const handleOpenRatingForm = (storeId) => setActiveRatingStoreId(storeId);
-  const handleCloseRatingForm = () => {
+  const handleCloseRatingForm = (wasSubmitted = false) => {
+    const storeIdToRefresh = activeRatingStoreId;
     setActiveRatingStoreId(null);
-    if (stores.length > 0) batchFetchStoreData();
+    // 💡 Performance Fix: Only refresh the ONE store that was just rated
+    // This avoids overwhelming the API and prevents the "page refresh" feel.
+    if (wasSubmitted && storeIdToRefresh) {
+      fetchSingleStoreData(storeIdToRefresh);
+    }
   };
 
-  const anyLoading = isLoading.stores || isLoading.search || isLoading.data;
+  const anyLoading = isLoading.stores || isLoading.search;
 
   return (
     <div className="store-locator-page">
@@ -434,9 +501,9 @@ const StoreLocator = () => {
         <div className="glass-filters animate-fade-in" style={{ animationDelay: '0.4s' }}>
           <div className="filter-grid">
             <ReactSelect
-              options={states.map(s => ({ value: s.StateID, label: s.StateName }))}
+              options={states.map(s => ({ value: s.id, label: s.name }))}
               onChange={handleStateChange}
-              value={selectedState ? { value: selectedState, label: states.find(s => s.StateID === selectedState)?.StateName } : null}
+              value={selectedState ? { value: selectedState, label: states.find(s => s.id === selectedState)?.name } : null}
               placeholder={isLoading.states ? "Loading States..." : "Select State"}
               isLoading={isLoading.states}
               style={customSelectStyles}
@@ -455,8 +522,10 @@ const StoreLocator = () => {
             <div className="search-input-wrapper">
               <input
                 type="text"
+                name="storeSearchQuery"
+                autoComplete="off"
                 className="search-input-modern"
-                placeholder="Search by brand store, city or pin code..."
+                placeholder="Search by state or city..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyDown={handleSearchKeyDown}
@@ -516,11 +585,11 @@ const StoreLocator = () => {
 
       {/* Rating Popup */}
       {activeRatingStoreId && (
-        <div className="popup-overlay fixed inset-0 z-[100] bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div className="popup-overlay fixed inset-0 z-[1000000] bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
           <div className="popup-content bg-white p-0 rounded-[40px] shadow-2xl w-full max-w-lg overflow-hidden animate-fade-in">
             <RatingForm 
               storeId={activeRatingStoreId} 
-              onClose={handleCloseRatingForm} 
+              onClose={() => handleCloseRatingForm(true)} 
             />
           </div>
         </div>

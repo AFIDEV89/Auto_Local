@@ -42,13 +42,35 @@ import { addToWishList } from "../../../services";
 import { ShopNowModal } from "@views/components";
 let page = 1;
 const sortByStyle = {
-  menu: provided => ({ ...provided, zIndex: 4 }),
-  control: (baseStyles) => ({
+  control: (baseStyles, state) => ({
     ...baseStyles,
-    fontSize: 14
+    backgroundColor: "#FFFFFF",
+    borderColor: state.isFocused ? "#ffb200" : "#E5E7EB",
+    borderRadius: '8px',
+    fontSize: 14,
+    color: "#1A1A1A",
+    boxShadow: state.isFocused ? "0 0 0 1px #ffb200" : "none",
+    "&:hover": {
+      borderColor: "#ffb200"
+    }
   }),
-  menuList: (listCss) => ({
-    ...listCss,
+  menu: provided => ({ 
+    ...provided, 
+    zIndex: 50,
+    backgroundColor: "#FFFFFF",
+    borderRadius: "8px",
+    border: "1px solid #E5E7EB",
+    boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
+  }),
+  option: (base, state) => ({
+    ...base,
+    backgroundColor: state.isFocused ? "rgba(255, 178, 0, 0.1)" : "transparent",
+    color: state.isSelected ? "#ffb200" : "#1A1A1A",
+    "&:hover": {
+      backgroundColor: "rgba(255, 178, 0, 0.1)",
+      color: "#ffb200"
+    },
+    cursor: "pointer",
     fontSize: 14
   })
 }
@@ -130,9 +152,13 @@ const ProductListing = ({
     navigate(`${ROUTES.PRODUCT}/${navSubPath}`);
   };
 
-  const createCartProduct = (pid) => {
+  const createCartProduct = (pid, isDirectBuy = false) => {
     if (isLogin) {
-      dispatch(actions.cartProductCreate(pid, () => { }));
+      dispatch(actions.cartProductCreate(pid, () => {
+        if (isDirectBuy) {
+          navigate("/my-cart");
+        }
+      }));
     } else {
       navigate("/login");
     }
@@ -275,6 +301,9 @@ const ProductListing = ({
           seo_page_description: res.seo_page_description,
           canonical_url: res.canonical_url
         });
+        if (res?.canonical_url && res.canonical_url !== seoURL) {
+          navigate(`/products/${res.canonical_url}`);
+        }
       }))
     } else {
       setSeoData(null);
@@ -463,6 +492,7 @@ const ProductListing = ({
                                    onClickProduct={handleProductOnClick} 
                                    showShopNowModal={showShopNowModal} 
                                    showColors={true} 
+                                   onAddToCart={() => createCartProduct(product.id)}
                                 />
                               </Col>
                             );

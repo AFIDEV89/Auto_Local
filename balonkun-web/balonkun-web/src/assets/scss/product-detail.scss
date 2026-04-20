@@ -3,15 +3,6 @@
   position: relative;
   min-height: 200px;
 
-  &::before {
-    content: "";
-    bottom: 0;
-    position: absolute;
-    height: 18%;
-    width: 100%;
-    z-index: 2;
-    background: linear-gradient(to top, rgba(35, 35, 37, 0.66) 0%, rgba(35, 35, 37, 0.13) 53%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
-  }
 
   .product-image-carousal {
     display: flex;

@@ -1,4 +1,113 @@
+// Premium Banner Refinements (Media Query First Approach)
+
+.home-banner-section {
+  height: 85vh;
+  
+  @media (max-width: 1023px) {
+    height: 75vh;
+  }
+  
+  @media (max-width: 767px) {
+    height: 65vh;
+  }
+  
+  @media (max-width: 480px) {
+    height: 60vh;
+    min-height: 480px; // Ensure content isn't cramped
+  }
+}
+
+.banner-content-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end;
+  padding-bottom: 160px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  @media (max-width: 1023px) {
+    padding-bottom: 120px;
+  }
+  
+  @media (max-width: 767px) {
+    justify-content: center !important;
+    padding-bottom: 40px !important; // Minimal bottom padding to feel "uperside"
+    text-align: center;
+    
+    .animate-fade-in-up {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.banner-title {
+  letter-spacing: -0.02em;
+  
+  @media (min-width: 1024px) {
+    font-size: 4.5rem !important; // lg:text-7xl
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: 3.75rem !important; // md:text-6xl
+  }
+  @media (max-width: 767px) {
+    font-size: 2.5rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 1rem !important;
+  }
+  @media (max-width: 480px) {
+    font-size: 2.125rem !important;
+  }
+}
+
+.banner-description {
+  @media (min-width: 768px) {
+    font-size: 1.25rem !important; // md:text-xl
+  }
+  @media (max-width: 767px) {
+    font-size: 1.05rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 2rem !important;
+    max-width: 100% !important;
+  }
+}
+
+.banner-btn-group {
+  @media (max-width: 767px) {
+    justify-content: center !important;
+  }
+  
+  @media (max-width: 480px) {
+    flex-direction: column !important;
+    width: 100%;
+    max-width: 280px;
+    gap: 12px !important;
+    
+    .banner-btn {
+      width: 100% !important;
+    }
+  }
+}
+
+.banner-btn {
+  border-radius: 10px !important; // Standardized brand radius (modern but consistent)
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+  &.secondary {
+    border: 1px solid rgba(255,255,255,0.4) !important;
+    background: rgba(255,255,255,0.05) !important;
+    backdrop-filter: blur(8px) !important;
+  }
+
+  @media (max-width: 767px) {
+    padding: 12px 28px !important;
+    font-size: 14px !important;
+  }
+}
+
+// Keep legacy home-slider styles below for backward compatibility
 .home-slider {
+  // ... existing code ...
   .carousel {
     .slide {
       overflow: hidden;

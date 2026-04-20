@@ -96,7 +96,7 @@ export default {
     DATABASE_DIALECT,
     PORT,
     ALLOWED_ORIGINS: [LOCAL_WEB_URL, DEV_WEB_URL, DEV_ADMIN_URL, LOCAL_ADMIN_URL, DEV_WEB_URL_1, DEV_WEB_URL_2,
-        ,PROD_WEB_URL_2,PROD_ADMIN_URL,"https://autoformindia.com","https://www.autoformindia.com","http://127.0.0.1:5086"],
+        PROD_WEB_URL, PROD_WEB_URL_1, PROD_WEB_URL_2, PROD_ADMIN_URL, "https://autoformindia.com", "https://www.autoformindia.com", "http://localhost:5086", "http://localhost:4000"],
     API_BASE_URL,
     AUTHENTICATOR_SWITCH,
     API_VALIDATOR_SWITCH,

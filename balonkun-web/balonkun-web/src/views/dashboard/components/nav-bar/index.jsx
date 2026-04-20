@@ -26,6 +26,7 @@ const NavBar = () => {
   useEffect(() => {
     if (isLogin) {
       dispatch(actions.getCartProductCount());
+      dispatch(actions.getCartProductRequest(() => {}));
     }
   }, [isLogin, dispatch]);
 
@@ -51,7 +52,7 @@ const NavBar = () => {
   return (
 
     <nav
-      className={`fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b transition-all duration-300 ${scrolled
+      className={`fixed top-0 w-full z-[1010] bg-white/90 backdrop-blur-xl border-b transition-all duration-300 ${scrolled
         ? "border-gray-200 shadow-[0_20px_40px_-30px_rgba(22,31,26,0.5)]"
         : "border-gray-100 shadow-sm"
         }`}
@@ -83,7 +84,7 @@ const NavBar = () => {
               <img
                 src={newLogo}
                 alt="Autoform India"
-                className="h-10 w-auto"
+                className="h-10 w-auto navbar-logo"
               />
             </Link>
 
@@ -136,10 +137,10 @@ const NavBar = () => {
           )}
 
           {/* Right Icons */}
-          <div className="flex items-center justify-end gap-4 px-2">
+          <div className="flex items-center justify-end gap-4 px-2 navbar-right-side">
 
             {/* Search */}
-            <button onClick={handleOpenSearchDialog}>
+            <button onClick={handleOpenSearchDialog} className="navbar-search-btn">
               <span className="material-symbols-outlined text-[22px] text-black" style={{ fontFamily: "'Material Symbols Outlined'", fontVariationSettings: "'wght' 400, 'opsz' 24" }}>
                 search
               </span>
@@ -147,7 +148,7 @@ const NavBar = () => {
 
             {/* Phone */}
             {!isMobile && (
-              <a href="tel:+919278411411">
+              <a href="tel:+919278411411" className="navbar-phone-link">
                 <span className="material-symbols-outlined text-[22px] text-black" style={{ fontFamily: "'Material Symbols Outlined'", fontVariationSettings: "'wght' 400, 'opsz' 24" }}>
                   call
                 </span>
@@ -163,7 +164,7 @@ const NavBar = () => {
             ) : (
               <Link
                 to="/login"
-                className="bg-brand-green text-white px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide shadow-md"
+                className="bg-brand-green text-white px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide shadow-md navbar-login-btn"
               >
                 Login
               </Link>

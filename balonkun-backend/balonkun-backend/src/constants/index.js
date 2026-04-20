@@ -99,4 +99,7 @@ export const model_values = Object.freeze({
     tableName:'useraddresses'},
   leads: {
     tableName:'leadDatas'},
+  selective_shop: {
+    tableName: 'ecommerce_shop_registry'
+  },
 });

@@ -87,7 +87,7 @@ const Dashboard = ({ categoryList }) => {
 				onClickProduct={handleProductOnClick}
 				onCreateCartProduct={createCartProduct}
 				title="Trending This Season"
-				categoryList={categoryList}
+				categoryList={categoryList.filter(cat => cat.id !== 13)}
 				vehicleTypeList={vehicleTypeList}
 			/>
 

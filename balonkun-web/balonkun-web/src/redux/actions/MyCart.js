@@ -3,6 +3,8 @@ import {
   CART_PRODUCT_DELETE,
   CART_PRODUCT_UPDATE,
   GET_CART_PRODUCT_REQUEST,
+  GET_CART_PRODUCT_SUCCESS,
+  GET_CART_PRODUCT_FAILURE,
   GET_CART_PRODUCT_COUNT,
   GET_CART_PRODUCT_COUNT_SUCCESS,
   RESET_CART_PRODUCT_COUNT
@@ -29,6 +31,11 @@ export const cartProductUpdate = (payload, callback) => ({
 export const getCartProductRequest = (callback) => ({
   type: GET_CART_PRODUCT_REQUEST,
   callback
+});
+
+export const getCartProductSuccess = (payload) => ({
+  type: GET_CART_PRODUCT_SUCCESS,
+  payload
 });
 
 export const getCartProductCount = () => ({

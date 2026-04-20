@@ -78,3 +78,6 @@ export { default as twoWheelerBodyCoversExplore } from "./two-wheeler-body-cover
 export { default as storeLocatorBanner } from "./store-locator-banner.jpg";
 export { default as storeLocatorBannerPremium } from "./store-locator-banner-premium.png";
 export { default as automotiveCallback } from "./automotive-callback.png";
+export { default as lightUtilityExplore } from "./light-utility-explore.png";
+export { default as audioSecurityExplore } from "./audio-security-explore.png";
+export { default as careFragranceExplore } from "./care-fragrance-explore.png";

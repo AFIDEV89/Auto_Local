@@ -4,12 +4,12 @@ import './RatingForm.css';
 // 🟡 API Helpers
 const API_BASE = 'https://emporio1-1blc.vercel.app/api';
 
-const sendOtp = async (email) => {
+const sendOtp = async (email, StoreID) => {
   try {
     const response = await fetch(`${API_BASE}/sendOTP`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email }),
+      body: JSON.stringify({ email, StoreID }),
     });
     return await response.json();
   } catch (error) {
@@ -43,13 +43,24 @@ const submitRating = async (StoreID, mobile, email, rating, submitted_at, userNa
         email,
         rating,
         submitted_at,
-        name: userName || null,
+        name: userName || "Prabhat",
       }),
     });
-    return await response.json();
+
+    const data = await response.json();
+    
+    if (!response.ok) {
+        // Return the specific message from backend (e.g., 409 Conflict)
+        return { 
+          success: false, 
+          message: data.message || data.error || 'Rating submission failed' 
+        };
+    }
+
+    return { ...data, success: true };
   } catch (error) {
     console.error('Error submitting rating:', error);
-    return { success: false, message: 'Failed to submit rating' };
+    return { success: false, message: 'Network error. Please try again.' };
   }
 };
 
@@ -85,16 +96,26 @@ const RatingForm = ({ storeId, onClose }) => {
       showToast('Please enter a valid email address', true);
       return;
     }
+    
     setLoading(prev => ({ ...prev, otp: true }));
     try {
-      const result = await sendOtp(email);
+      // 🛡️ Pre-emptive Duplicate Check
+      // We'll call sendOTP with StoreID so the backend can check for this specific store.
+      const result = await sendOtp(email, storeId);
+      
       if (result.success) {
         setOtpSent(true);
         setOtpTimer(30);
         setResendCount(prev => prev + 1);
-        showToast('OTP sent to your email');
+        showToast('OTP sent to your email 📧');
       } else {
-        showToast(result.message || 'Failed to send OTP', true);
+        // Handle "Already Registered" or "Duplicate" messages from the backend
+        const msg = result.message || '';
+        if (msg.toLowerCase().includes('already') || msg.toLowerCase().includes('duplicate')) {
+          showToast('You have already submitted a rating with this email.', true);
+        } else {
+          showToast(msg || 'Failed to send OTP', true);
+        }
       }
     } finally {
       setLoading(prev => ({ ...prev, otp: false }));
@@ -113,7 +134,8 @@ const RatingForm = ({ storeId, onClose }) => {
         setIsOtpValidated(true);
         showToast('Verification successful');
       } else {
-        showToast(result.message || 'Invalid OTP', true);
+        // Use the specific message from backend (e.g., "Already submitted...")
+        showToast(result.message || 'Verification failed', true);
       }
     } finally {
       setLoading(prev => ({ ...prev, verify: false }));
@@ -128,9 +150,11 @@ const RatingForm = ({ storeId, onClose }) => {
     setLoading(prev => ({ ...prev, submit: true }));
     try {
       const result = await submitRating(storeId, mobile, email, rating, new Date().toISOString(), userName);
-      if (result.success || result.message?.includes('successfully')) {
-        showToast('Thank you for your rating!');
-        setTimeout(onClose, 2000);
+      if (result.success || result.message?.toLowerCase().includes('successfully')) {
+        showToast('Thank you for your rating! 🙏');
+        setTimeout(() => onClose(true), 2500);
+      } else {
+        showToast(result.message || 'Submission failed', true);
       }
     } finally {
       setLoading(prev => ({ ...prev, submit: false }));
@@ -138,12 +162,22 @@ const RatingForm = ({ storeId, onClose }) => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-white p-6 md:p-10">
-      {/* Toast Overlay */}
-      <div className="fixed top-6 right-6 z-[200] space-y-3 pointer-events-none">
+    <div className="relative overflow-hidden bg-white p-5 md:p-10 max-h-[90vh] overflow-y-auto">
+      {/* Toasts */}
+      <div className="toast-container">
         {toasts.map((t) => (
-          <div key={t.id} className={`px-6 py-4 rounded-2xl shadow-2xl text-white font-bold text-sm animate-slide-in pointer-events-auto ${t.isError ? 'bg-red-500' : 'bg-[#10b981]'}`}>
-            {t.message}
+          <div key={t.id} className={`toast-card group ${t.isError ? 'error' : 'success'}`}>
+            <div className="toast-icon">
+              <span className="material-symbols-outlined">
+                {t.isError ? 'error' : 'check_circle'}
+              </span>
+            </div>
+            <div className="toast-content">
+              <p className="toast-message">{t.message}</p>
+            </div>
+            <button className="toast-close" onClick={() => setToasts(prev => prev.filter(toast => toast.id !== t.id))}>
+              <span className="material-symbols-outlined">close</span>
+            </button>
           </div>
         ))}
       </div>
@@ -153,12 +187,12 @@ const RatingForm = ({ storeId, onClose }) => {
           <h2 className="text-2xl font-black text-slate-900 tracking-tight uppercase">Rate Store</h2>
           <div className="h-1 w-12 bg-[#ffb200] mt-1"></div>
         </div>
-        <button className="w-10 h-10 rounded-full hover:bg-slate-100 flex items-center justify-center transition-colors group" onClick={onClose}>
+        <button type="button" className="w-10 h-10 rounded-full hover:bg-slate-100 flex items-center justify-center transition-colors group" onClick={onClose}>
           <span className="material-symbols-outlined text-slate-400 group-hover:text-slate-900 transition-colors">close</span>
         </button>
       </div>
 
-      <div className="space-y-8">
+      <div className="space-y-6 md:space-y-8">
         {/* Basic Info */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
@@ -185,28 +219,33 @@ const RatingForm = ({ storeId, onClose }) => {
           </div>
           <div className="md:col-span-2 space-y-2">
             <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] ml-1">Email Address*</label>
-            <div className="relative">
-              <input 
-                type="email" 
-                className="rating-input pr-32" 
-                placeholder="email@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                disabled={isOtpValidated}
-              />
+            <div className="flex flex-col gap-4 relative">
+              <div className="relative">
+                <input 
+                  type="email" 
+                  className={`rating-input w-full ${isOtpValidated ? 'pr-20' : ''}`} 
+                  placeholder="email@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={isOtpValidated}
+                />
+                {isOtpValidated && (
+                  <span className="absolute right-3 top-1/2 -translate-y-1/2 text-emerald-500 font-bold text-[10px] flex items-center gap-1 bg-white pl-1">
+                    <span className="material-symbols-outlined text-sm">check_circle</span> Verified
+                  </span>
+                )}
+              </div>
               {!isOtpValidated && (
                 <button 
-                  className={`absolute right-2 top-2 bottom-2 px-6 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${otpSent ? 'bg-slate-100 text-slate-400' : 'bg-[#ffb200] text-slate-900 hover:bg-[#e6a100]'}`}
+                  type="button"
+                  className={`w-full py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all ${otpSent ? 'bg-slate-50' : 'bg-[#ffb200] text-slate-900 hover:bg-[#e6a100]'}`}
                   onClick={handleSendOtp}
                   disabled={loading.otp || (otpSent && otpTimer > 0)}
                 >
-                  {loading.otp ? '...' : otpSent ? `Resend (${otpTimer}s)` : 'Verify Email'}
+                  <span className={otpSent && otpTimer > 0 ? 'timer-active' : ''}>
+                    {loading.otp ? 'Verifying...' : otpSent ? `Resend (${otpTimer}s)` : 'Verify Email'}
+                  </span>
                 </button>
-              )}
-              {isOtpValidated && (
-                <span className="absolute right-4 top-1/2 -translate-y-1/2 text-emerald-500 font-bold text-xs flex items-center gap-1">
-                  <span className="material-symbols-outlined text-sm">check_circle</span> Verified
-                </span>
               )}
             </div>
           </div>
@@ -214,22 +253,24 @@ const RatingForm = ({ storeId, onClose }) => {
 
         {/* OTP Input */}
         {otpSent && !isOtpValidated && (
-          <div className="bg-slate-50 p-6 rounded-3xl animate-fade-in border border-slate-100">
+          <div className="otp-input-container animate-fade-in shadow-inner">
             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Enter 6-digit Verification Code</p>
-            <div className="flex gap-4">
+            <div className="flex flex-col gap-4">
               <input 
                 type="text" 
-                className="flex-1 bg-white border-2 border-slate-200 rounded-2xl p-4 text-center text-xl font-black tracking-[0.5em] focus:border-[#ffb200] outline-none transition-colors"
+                className="otp-digit-input w-full shadow-sm"
                 maxLength="6"
+                placeholder="000000"
                 value={otp}
                 onChange={(e) => setOtp(e.target.value.replace(/\D/g, ''))}
               />
               <button 
-                className="bg-slate-900 text-white px-8 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-slate-800 transition-colors shadow-lg"
+                type="button"
+                className="verify-btn w-full active:scale-95"
                 onClick={handleVerifyOtp}
                 disabled={loading.verify}
               >
-                {loading.verify ? '...' : 'Verify'}
+                {loading.verify ? 'Verifying...' : 'Verify Now'}
               </button>
             </div>
           </div>
@@ -239,19 +280,42 @@ const RatingForm = ({ storeId, onClose }) => {
         {isOtpValidated && (
           <div className="animate-fade-in text-center space-y-8 pt-4">
             <h3 className="text-sm font-black text-slate-900 uppercase tracking-widest">Share Your Experience</h3>
-            <div className="flex justify-center gap-4">
+            <div className="flex justify-center gap-3 sm:gap-4">
               {[1, 2, 3, 4, 5].map((num) => (
                 <button 
+                  type="button"
                   key={num} 
-                  className={`w-14 h-14 md:w-16 md:h-16 rounded-3xl text-xl font-black transition-all flex items-center justify-center ${rating === num ? 'bg-[#ffb200] text-slate-900 scale-110 shadow-2xl' : 'bg-slate-50 text-slate-400 hover:bg-white hover:shadow-xl border-2 border-transparent hover:border-[#ffb200]'}`}
+                  className={`w-12 h-20 sm:w-16 sm:h-24 rounded-[32px] text-xl font-black transition-all flex items-center justify-center ${rating === num ? 'bg-[#ffb200] text-slate-900 scale-110 shadow-2xl' : 'bg-slate-50 text-slate-400 hover:bg-white hover:shadow-xl border-2 border-transparent hover:border-[#ffb200]'}`}
                   onClick={() => setRating(num)}
                 >
                   {num}
                 </button>
               ))}
             </div>
+
+            {/* Dynamic Emoji feedback */}
+            {rating && (
+              <div className="animate-bounce-in py-4">
+                <div className="text-6xl mb-2">{
+                  rating === 1 ? "😠" : 
+                  rating === 2 ? "🙁" : 
+                  rating === 3 ? "🙂" : 
+                  rating === 4 ? "😊" : "😍"
+                }</div>
+                <p className="text-xs font-black uppercase tracking-[0.3em] text-[#ffb200]">
+                  {
+                    rating === 1 ? "Terrible" : 
+                    rating === 2 ? "Poor" : 
+                    rating === 3 ? "Good" : 
+                    rating === 4 ? "Very Good" : "Excellent"
+                  }
+                </p>
+              </div>
+            )}
+
             <button 
-              className="w-full bg-[#161f1a] text-white py-5 rounded-[24px] font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:shadow-2xl hover:bg-black transition-all disabled:opacity-50 mt-4" 
+              type="button"
+              className="w-full bg-[#285A48] text-white py-4 rounded-[20px] font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:shadow-2xl opacity-100 transition-all disabled:opacity-50 mt-4" 
               onClick={handleSubmit} 
               disabled={loading.submit || !rating}
             >

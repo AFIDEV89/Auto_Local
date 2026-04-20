@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { getProductPicture, formatNumberToIndian } from '@utils';
 import { Link, useNavigate } from 'react-router-dom';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import * as actions from '@redux/actions';
 import {
   Container,
   Row,
@@ -40,6 +41,8 @@ const ProductSlider = ({
   onClickProduct = () => { },
 }) => {
   const { isLogin } = useSelector(state => state.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const stripHtml = (html) => {
     if (!html) return "";
@@ -54,6 +57,8 @@ const ProductSlider = ({
   const [activeCategory2W, setActiveCategory2W] = useState('');
   const [isModalVisible, setModalVisible] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isDropdownOpen4W, setIsDropdownOpen4W] = useState(false);
+  const [isDropdownOpen2W, setIsDropdownOpen2W] = useState(false);
 
   const fetchProductsRow = useCallback(async (category, vehicleType, setProducts, setLoading) => {
     setLoading(true);
@@ -88,6 +93,19 @@ const ProductSlider = ({
       fetchProductsRow(activeCategory2W, '2W', setProducts2W, setIsLoading2W);
     }
   }, [activeCategory2W, fetchProductsRow]);
+
+  const handleAddToCart = (productId, isDirectBuy = false) => {
+    if (!isLogin) {
+      navigate('/login');
+      return;
+    }
+    
+    dispatch(actions.cartProductCreate({ product_id: productId, quantity: 1 }, (res) => {
+      if (isDirectBuy) {
+        navigate('/my-cart');
+      }
+    }));
+  };
 
   const showShopNowModal = (product) => {
     setSelectedProduct(product);
@@ -149,8 +167,9 @@ const ProductSlider = ({
             </div>
 
             {/* Row 1: 4-Wheelers */}
-            <div className="mb-6">
-              <div className="flex items-center justify-between mb-8 border-b border-slate-200 pb-4">
+            <div className="mb-12">
+              {/* Desktop Header (RESTORED - Zero impact) */}
+              <div className="hidden md:flex items-center justify-between mb-8 border-b border-slate-200 pb-4">
                 <h3 className="group/title text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-4 cursor-default">
                   <span className="w-10 h-1 bg-[#ffb200] rounded-full transition-all duration-500 group-hover/title:w-16" />
                   <span>For Your 4-Wheeler</span>
@@ -165,6 +184,39 @@ const ProductSlider = ({
                   >
                     Browse All <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">trending_flat</span>
                   </Link>
+                </div>
+              </div>
+
+              {/* Mobile "For Your" Header (MODERNIZED - Mobile Only) */}
+              <div className="md:hidden mb-10">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-1 h-12 bg-[#ffb200] rounded-full shrink-0" />
+                  <div className="flex flex-col">
+                    <span className="text-slate-900 font-bold text-lg leading-tight">For Your</span>
+                    <span className="text-slate-900 font-extrabold text-2xl leading-tight">4-Wheeler</span>
+                  </div>
+                </div>
+
+                {/* Category Sliding Pill Navigation (MODERNIZED - Mobile Only) */}
+                <div className="relative bg-slate-100/50 p-1 rounded-full flex items-center">
+                  {/* Sliding Background Pill */}
+                  <div 
+                    className="absolute h-[calc(100%-8px)] bg-[#ffb200] rounded-full shadow-sm transition-all duration-300 ease-out z-0"
+                    style={{
+                      width: `${100 / categoryList.length}%`,
+                      left: `calc(${(categoryList.findIndex(c => c.name === activeCategory4W)) * (100 / categoryList.length)}% + 4px)`,
+                    }}
+                  />
+                  
+                  {categoryList.map((cat) => (
+                    <button
+                      key={cat.id}
+                      onClick={() => setActiveCategory4W(cat.name)}
+                      className={`relative flex-1 py-2.5 text-[10px] font-black uppercase tracking-[0.1em] text-center transition-colors duration-300 z-10 ${activeCategory4W === cat.name ? 'text-white' : 'text-slate-400'}`}
+                    >
+                      {cat.display || cat.name}
+                    </button>
+                  ))}
                 </div>
               </div>
 
@@ -201,6 +253,7 @@ const ProductSlider = ({
                           product={product} 
                           onClickProduct={onClickProduct} 
                           showShopNowModal={showShopNowModal} 
+                          onAddToCart={handleAddToCart}
                         />
                       </SwiperSlide>
                     ))}
@@ -218,8 +271,9 @@ const ProductSlider = ({
             </div>
 
             {/* Row 2: 2-Wheelers */}
-            <div className="mb-4">
-              <div className="flex items-center justify-between mb-8 border-b border-slate-200 pb-4">
+            <div className="mb-8">
+              {/* Desktop Header (RESTORED - Zero impact) */}
+              <div className="hidden md:flex items-center justify-between mb-8 border-b border-slate-200 pb-4">
                 <h3 className="group/title text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-4 cursor-default">
                   <span className="w-10 h-1 bg-[#ffb200] rounded-full transition-all duration-500 group-hover/title:w-16" />
                   <span>For Your 2-Wheeler</span>
@@ -234,6 +288,39 @@ const ProductSlider = ({
                   >
                     Browse All <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">trending_flat</span>
                   </Link>
+                </div>
+              </div>
+
+              {/* Mobile "For Your" Header (MODERNIZED - Mobile Only) */}
+              <div className="md:hidden mb-10">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-1 h-12 bg-[#ffb200] rounded-full shrink-0" />
+                  <div className="flex flex-col">
+                    <span className="text-slate-900 font-bold text-lg leading-tight">For Your</span>
+                    <span className="text-slate-900 font-extrabold text-2xl leading-tight">2-Wheeler</span>
+                  </div>
+                </div>
+
+                {/* Category Sliding Pill Navigation (MODERNIZED - Mobile Only) */}
+                <div className="relative bg-slate-100/50 p-1 rounded-full flex items-center">
+                  {/* Sliding Background Pill */}
+                  <div 
+                    className="absolute h-[calc(100%-8px)] bg-[#ffb200] rounded-full shadow-sm transition-all duration-300 ease-out z-0"
+                    style={{
+                      width: `${100 / categoryList.length}%`,
+                      left: `calc(${(categoryList.findIndex(c => c.name === activeCategory2W)) * (100 / categoryList.length)}% + 4px)`,
+                    }}
+                  />
+                  
+                  {categoryList.map((cat) => (
+                    <button
+                      key={cat.id}
+                      onClick={() => setActiveCategory2W(cat.name)}
+                      className={`relative flex-1 py-2.5 text-[10px] font-black uppercase tracking-[0.1em] text-center transition-colors duration-300 z-10 ${activeCategory2W === cat.name ? 'text-white' : 'text-slate-400'}`}
+                    >
+                      {cat.display || cat.name}
+                    </button>
+                  ))}
                 </div>
               </div>
 
@@ -270,6 +357,7 @@ const ProductSlider = ({
                           product={product} 
                           onClickProduct={onClickProduct} 
                           showShopNowModal={showShopNowModal} 
+                          onAddToCart={handleAddToCart}
                         />
                       </SwiperSlide>
                     ))}

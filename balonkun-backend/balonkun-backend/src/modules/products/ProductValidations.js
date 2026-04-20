@@ -1,11 +1,13 @@
+import Joi from 'joi';
 import { validations } from '../../common/joi.js';
 import { model_values } from '../../constants/index.js';
 
 const createProduct = {
   category_id: validations.positive_integer,
+  subcategory_id: validations.optional_positive_integer,
   name: validations.string,
   ratings: validations.optional_positive_integer,
-  pictures: validations.array_of_strings,
+  pictures: validations.optional_array_of_strings,
   videos: validations.optional_array_of_strings,
   original_price: validations.positive_integer,
   discounted_price: validations.optional_positive_integer,
@@ -14,9 +16,9 @@ const createProduct = {
   product_code: validations.string,
   availability: validations.enum(model_values.product.availability),
   quantity: validations.positive_integer,
-  reviews: validations.any_json,
+  reviews: validations.any_json.optional(),
   tags: validations.optional_array_of_strings,
-  suggestions: validations.array_of_positive_integers,
+  suggestions: validations.array_of_positive_integers.optional(),
   additional_info: validations.string,
   is_latest: validations.optional_boolean,
   is_trending: validations.optional_boolean,
@@ -99,6 +101,11 @@ const getProductList = {
   search: validations.optional_string,
   filter_type: validations.optional_enum(Object.values(model_values.product.admin_listing_filters)),
   filter_id: validations.optional_positive_integer,
+  vehicles: Joi.any().optional(),
+  product_categories: Joi.any().optional(),
+  colors: Joi.any().optional(),
+  price: Joi.any().optional(),
+  rating: Joi.any().optional(),
 };
 
 const getUserProductList = {

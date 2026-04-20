@@ -10,6 +10,10 @@ export const ProductModel = (sequelize, Sequelize) => {
       type: Sequelize.INTEGER,
       allowNull: false,
     },
+    subcategory_id: {
+      type: Sequelize.INTEGER,
+      allowNull: true,
+    },
     vehicle_details_id: {
       type: Sequelize.INTEGER,
       allowNull: false,

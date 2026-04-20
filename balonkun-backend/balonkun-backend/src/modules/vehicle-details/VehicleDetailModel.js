@@ -37,6 +37,9 @@ export const VehicleDetailsModel = (sequelize, Sequelize) => {
       type: Sequelize.STRING,
       allowNull: true
     },
+  }, {
+    freezeTableName: true,
+    tableName: 'vehicle_details'
   });
 
   return model;

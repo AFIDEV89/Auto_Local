@@ -29,6 +29,10 @@ export const LeadDataModel = (sequelize, Sequelize) => {
             type: Sequelize.STRING,
             allowNull: true,
             trim: true // Trim leading and trailing spaces
+        },
+        cart_snapshot: {
+            type: Sequelize.JSON,
+            allowNull: true
         }
     });
 

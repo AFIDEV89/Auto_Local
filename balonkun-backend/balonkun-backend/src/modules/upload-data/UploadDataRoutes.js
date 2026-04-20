@@ -12,9 +12,36 @@ import {
 } from "./uploadVehicles.js";
 import {change_bucket_name, change_bucket_name_in_array} from "./change_image_s3.js";
 
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'public/uploads')
+    },
+    filename: function (req, file, cb) {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+        const ext = file.originalname.split('.').pop();
+        cb(null, file.fieldname + '-' + uniqueSuffix + '.' + ext)
+    }
+});
+
+const uploadLocal = multer({ storage: storage });
 const upload = multer();
 
 const router = express.Router();
+
+/**
+ * Handle single file upload for testimonials/banners etc
+ */
+router.post("/single", uploadLocal.single('file'), (req, res) => {
+    if (!req.file) {
+        return res.status(400).send({ statusCode: 400, message: "No file uploaded" });
+    }
+    const filePath = `/uploads/${req.file.filename}`;
+    res.status(200).send({
+        statusCode: 200,
+        data: filePath,
+        message: "File uploaded successfully"
+    });
+});
 
 /**
  * Upload bulks of data module api's

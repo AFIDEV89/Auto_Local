@@ -12,7 +12,7 @@ const NAV_ROUTES = {
   MATS: "/products?category=10",
   AUDIO_SECURITY: "/products?category=12",
   STORE_LOCATOR: ROUTES.STORE_LOCATOR,
-  E_CATALOGUE: "/e-catalogue",
+  FRANCHISE: "/retail-franchise",
   CONTACT_US: "/contact-us",
 };
 
@@ -21,10 +21,11 @@ const NavContent = ({ onClose }) => {
   const [expandedItems, setExpandedItems] = React.useState({});
   const [activeSubMenu, setActiveSubMenu] = React.useState(null);
 
-  const toggleExpand = (label) => {
+  const toggleExpand = (label, subLabel = null) => {
+    const key = subLabel ? `${label}:${subLabel}` : label;
     setExpandedItems(prev => ({
       ...prev,
-      [label]: !prev[label]
+      [key]: !prev[key]
     }));
   };
 
@@ -33,80 +34,102 @@ const NavContent = ({ onClose }) => {
     const path = item.path || NAV_ROUTES[item.key] || "/";
     const isExpanded = expandedItems[item.label];
     
-    // Check if any child has its own children (requires split layout)
-    const isSplitLayout = hasChildren && item.children.some(child => child.children && child.children.length > 0);
-
     if (isMobile) {
       return (
-        <div key={item.key || item.label} className="w-full">
+        <div key={item.key || item.label} className="w-full border-b border-gray-50 last:border-0">
           {!hasChildren ? (
             <Link
               to={path}
-              className="block px-3 py-2.5 text-[15px] font-medium text-slate-700 hover:text-primary transition-colors rounded-lg hover:bg-gray-50"
+              className="block px-4 py-3 text-[15px] font-semibold text-slate-800 hover:text-primary transition-colors flex items-center justify-between"
               onClick={onClose}
             >
-              {item.label}
+              <span>{item.label}</span>
+              <span className="material-symbols-outlined text-[18px] opacity-40">chevron_right</span>
             </Link>
           ) : (
             <div className="">
               <div 
-                className="flex items-center justify-between px-3 py-2.5 text-[15px] font-medium text-slate-700 cursor-pointer"
+                className={`flex items-center justify-between px-4 py-3 text-[15px] font-semibold transition-colors ${isExpanded ? 'text-primary' : 'text-slate-800'} cursor-pointer`}
                 onClick={() => toggleExpand(item.label)}
               >
                 <span>{item.label}</span>
-                <span className={`material-symbols-outlined text-[18px] transition-transform ${isExpanded ? 'rotate-180' : ''}`}>expand_more</span>
+                <span className={`material-symbols-outlined text-[20px] transition-transform duration-300 ${isExpanded ? 'rotate-180 opacity-100' : 'opacity-40'}`}>expand_more</span>
               </div>
+              
               {isExpanded && (
-                <div className="pl-4 border-l-2 border-gray-100 ml-4 flex flex-col gap-1 overflow-hidden transition-all duration-300">
-                  {item.children.map(child => (
-                    <div key={child.label}>
-                      {child.items ? (
-                        /* New structure with sections (COLLECTION, FITMENT) */
-                        <div className="mb-4 mt-2">
-                          <div className="px-3 py-1 text-[11px] font-bold text-slate-400 uppercase letter-spacing-1">{child.label}</div>
-                          <div className="flex flex-col gap-1">
-                            {child.items.map(subItem => (
-                              <Link
-                                key={subItem.label}
-                                to={subItem.path}
-                                className="flex items-center gap-3 px-3 py-2 text-sm text-slate-600 hover:text-primary transition-colors"
-                                onClick={onClose}
-                              >
-                                {subItem.icon && <span className="material-symbols-outlined text-[18px] opacity-70">{subItem.icon}</span>}
-                                <span>{subItem.label}</span>
-                              </Link>
-                            ))}
+                <div className="bg-gray-50/50 pb-2 flex flex-col gap-1 overflow-hidden transition-all duration-300 animate-in fade-in slide-in-from-top-2">
+                  {item.children.map(child => {
+                    const subKey = `${item.label}:${child.label}`;
+                    const isSubExpanded = expandedItems[subKey];
+                    const hasItems = child.items && child.items.length > 0;
+
+                    return (
+                      <div key={child.label} className="px-2">
+                        {hasItems ? (
+                          /* Hierarchy: Child (e.g., 4W ACCESSORIES) */
+                          <div className="mb-1">
+                            <div 
+                              className={`flex items-center justify-between px-3 py-2 text-[12px] font-black uppercase tracking-wider cursor-pointer rounded-lg transition-all ${isSubExpanded ? 'text-primary bg-white shadow-sm' : 'text-slate-400'}`}
+                              onClick={() => toggleExpand(item.label, child.label)}
+                            >
+                              <span>{child.label}</span>
+                              <span className={`material-symbols-outlined text-[16px] transition-transform ${isSubExpanded ? 'rotate-180' : ''}`}>expand_more</span>
+                            </div>
+                            
+                            {isSubExpanded && (
+                              <div className="flex flex-col gap-0.5 mt-1 border-l-2 border-gray-100 ml-4 animate-in fade-in slide-in-from-left-1">
+                                {child.items.map(subItem => (
+                                  <Link
+                                    key={subItem.label}
+                                    to={subItem.path}
+                                    className="flex items-center gap-3 px-4 py-2 text-[14px] text-slate-600 hover:text-primary transition-colors rounded-r-lg hover:bg-white"
+                                    onClick={onClose}
+                                  >
+                                    {subItem.icon && <span className="material-symbols-outlined text-[18px] opacity-60">{subItem.icon}</span>}
+                                    <span>{subItem.label}</span>
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
                           </div>
-                        </div>
-                      ) : child.children ? (
-                        /* Handle deeply nested children if any (legacy or future) */
-                        <div className="mb-2">
-                          <div className="px-3 py-2 text-sm font-bold text-slate-800 flex items-center gap-2">{child.label}</div>
-                          <div className="pl-6 flex flex-col gap-1">
-                            {child.children.map(subChild => (
-                              <Link
-                                key={subChild.label}
-                                to={subChild.path || "/"}
-                                className="block px-3 py-1.5 text-sm text-slate-600 hover:text-primary"
-                                onClick={onClose}
-                              >
-                                {subChild.label}
-                              </Link>
-                            ))}
+                        ) : child.children ? (
+                          /* Mats / Other structured lists */
+                          <div className="mb-1">
+                            <div 
+                              className={`flex items-center justify-between px-3 py-2 text-[14px] font-bold cursor-pointer rounded-lg transition-all ${isSubExpanded ? 'text-primary bg-white shadow-sm' : 'text-slate-700'}`}
+                              onClick={() => toggleExpand(item.label, child.label)}
+                            >
+                              <span>{child.label}</span>
+                              <span className={`material-symbols-outlined text-[16px] transition-transform ${isSubExpanded ? 'rotate-180' : ''}`}>expand_more</span>
+                            </div>
+                            {isSubExpanded && (
+                              <div className="flex flex-col gap-1 mt-1 border-l-2 border-gray-100 ml-4 animate-in fade-in slide-in-from-left-1">
+                                {child.children.map(subChild => (
+                                  <Link
+                                    key={subChild.label}
+                                    to={subChild.path || "/"}
+                                    className="block px-4 py-2 text-[13px] text-slate-600 hover:text-primary rounded-r-lg hover:bg-white"
+                                    onClick={onClose}
+                                  >
+                                    {subChild.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
                           </div>
-                        </div>
-                      ) : (
-                        /* Single level child links */
-                        <Link
-                          to={child.path || "/"}
-                          className="block px-3 py-2 text-sm text-slate-600 hover:text-primary"
-                          onClick={onClose}
-                        >
-                          {child.label}
-                        </Link>
-                      )}
-                    </div>
-                  ))}
+                        ) : (
+                          /* Flat links */
+                          <Link
+                            to={child.path || "/"}
+                            className="block px-3 py-2 text-[14px] text-slate-600 hover:text-primary font-medium hover:bg-white rounded-lg transition-all"
+                            onClick={onClose}
+                          >
+                            {child.label}
+                          </Link>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               )}
             </div>
