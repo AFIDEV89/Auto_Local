@@ -13,6 +13,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MODULES } from '@shared/constants';
 import * as actions from '@redux/actions';
+import { footerLogo } from '@assets/images';
 import CollapsibleSeoFooterLinks from './CollapsibleSeoFooterLinks';
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from "@mui/material";
@@ -48,10 +49,12 @@ const Footer = () => {
 			<Container>
 				<Row>
 					<Col lg={6}>
-						<div className="mb-4 mt-[-4px]">
-							<Link to="/" className="text-decoration-none">
-								<h4 className="footer-title" style={{ color: '#ffffffff', marginBottom: 0 }}>AUTOFORM</h4>
-							</Link>
+						<div className="mb-4 mt-[-8px]">
+							<img 
+								src={footerLogo} 
+								alt="AutoForm" 
+								style={{ height: '60px', objectFit: 'contain' }} 
+							/>
 						</div>
 						<p className="footer-desc">
 							An ISO TS/ 16949 certified company, Autoform is a Leading Provider of
