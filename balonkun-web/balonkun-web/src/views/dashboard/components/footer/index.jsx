@@ -12,7 +12,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MODULES } from '@shared/constants';
 import * as actions from '@redux/actions';
-import { newLogo } from '@assets/images';
+import { footerLogo } from '@assets/images';
 import CollapsibleSeoFooterLinks from './CollapsibleSeoFooterLinks';
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from "@mui/material";
@@ -50,7 +50,7 @@ const Footer = () => {
 					<Col lg={6}>
 						<div className="mb-4 mt-[-8px]">
 							<img 
-								src={newLogo} 
+								src={footerLogo} 
 								alt="AutoForm" 
 								style={{ height: '60px', objectFit: 'contain' }} 
 							/>
