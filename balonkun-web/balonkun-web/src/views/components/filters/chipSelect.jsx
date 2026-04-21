@@ -52,10 +52,7 @@ const ChipSelect = ({
                     label={option.label}
                     disabled={isDisabled}
                     variant={isChipSelected(option) ? "filled" : "outlined"}
-                    style={{
-                        backgroundColor: isChipSelected(option) ? "#ffb400" : "#ffffff"
-                    }}
-                    color={isChipSelected(option) ? "secondary" : "default"}
+                    className={`filter-chip ${isChipSelected(option) ? 'selected' : ''}`}
                     onClick={(e) => handleOnSelectedFilters(option)}
                 />
             })

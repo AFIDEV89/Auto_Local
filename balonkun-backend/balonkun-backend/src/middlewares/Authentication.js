@@ -10,12 +10,11 @@ const { JWT_TOKEN_SECRET_KEY, LOGIN_TOKEN_EXPIRY, API_KEY, VERIFY_EMAIL_TOKEN_EX
 
 const isPublicRoute = ({ userType, apiUrl }) => {
     try {
-        if (userType === constants.USER_TYPE.USER) {
-            return !constants.WebPrivateRoutes.find(route => apiUrl.startsWith(API_BASE_URL + route));
-        } else if (userType === constants.USER_TYPE.ADMIN) {
+        if (userType === constants.USER_TYPE.ADMIN) {
             return !!constants.AdminPublicRoutes.find(route => apiUrl.startsWith(API_BASE_URL + route));
         }
-        return false;
+        // Default to USER logic for undefined/guest user types
+        return !constants.WebPrivateRoutes.find(route => apiUrl.startsWith(API_BASE_URL + route));
     } catch (error) {
         return false;
     }

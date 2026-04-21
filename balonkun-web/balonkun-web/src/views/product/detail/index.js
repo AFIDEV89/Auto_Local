@@ -48,10 +48,12 @@ const ProductDetail = () => {
     }
   }, [dispatch, productId, navigate]);
 
-  const handleAddToCart = (pid, cb = () => { }) => {
+  const handleAddToCart = (pid, isDirectBuy = false) => {
     if (userDetails.isLogin) {
       dispatch(actions.cartProductCreate(pid, () => {
-        cb();
+        if (isDirectBuy) {
+          navigate("/my-cart");
+        }
       }));
     } else {
       navigate("/login");

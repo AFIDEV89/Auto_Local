@@ -13,6 +13,8 @@ export function* cartProductCreate(action) {
       action.callback(data);
       const count = yield call(services.getCartProductCount);
       yield put(actions.getCartProductCountSuccess(count.data.data));
+      // Re-fetch cart list to sync stepper
+      yield put(actions.getCartProductRequest(() => {}));
     } else {
       errorAlert(message);
       action.callback(false);
@@ -30,6 +32,8 @@ export function* cartProductDelete(action) {
     if (statusCode === 204) {
       const count = yield call(services.getCartProductCount);
       yield put(actions.getCartProductCountSuccess(count.data.data));
+      // Re-fetch cart list to sync stepper
+      yield put(actions.getCartProductRequest(() => {}));
       action.callback(data);
     } else {
       action.callback(false);
@@ -45,6 +49,8 @@ export function* cartProductUpdate(action) {
     const response = yield call(services.cartProductUpdate, action.payload);
     const { statusCode, data = {} } = response?.data || {};
     if (statusCode === 200) {
+      // Re-fetch cart list to sync stepper
+      yield put(actions.getCartProductRequest(() => {}));
       action.callback(data);
     } else {
       action.callback(false);
@@ -60,6 +66,7 @@ export function* getCartProductListRequest(action) {
     const response = yield call(services.getCartProductList);
     const { statusCode, message, data = [] } = response?.data || {};
     if (statusCode == 200) {
+      yield put(actions.getCartProductSuccess(data));
       action.callback(data);
     } else {
       errorAlert(message);

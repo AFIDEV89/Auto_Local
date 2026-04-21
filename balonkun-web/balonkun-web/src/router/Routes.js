@@ -27,6 +27,8 @@ const OrdersListComponent = React.lazy(() => import("../views/ordersList"))
 const ShippingAddressManagementComponent = React.lazy(() => import("../views/ShippingAddressManagement"))
 const WishListComponent = React.lazy(() => import("../views/wishlist"));
 const StoreLocatorComponent = React.lazy(() => import("../views/store-locator"));
+const ECatalogueComponent = React.lazy(() => import("../views/eCatalogue"));
+const CategoryListingComponent = React.lazy(() => import("../views/category-listing"));
 
 const NotFoundPage = React.lazy(() => import('../views/404'))
 
@@ -38,7 +40,7 @@ export const PAGE_ROUTES = [
   { path: "/forgot-password", component: ForgotPasswordComponent },
   { path: "/reset-password/:token", component: ResetPasswordComponent },
   { path: "/products", component: ProductsPageComponent },
-  { path: "/:id", component: ProductsPageComponent },
+  { path: "/products/:id", component: ProductsPageComponent },
   { path: "/product/:id", component: ProductDetailComponent },
   { path: "/my-cart", component: MyCartComponent, isPrivate: true },
   { path: "/orders", component: OrdersListComponent, isPrivate: true },
@@ -59,7 +61,9 @@ export const PAGE_ROUTES = [
   { path: "/careers", component: CareersComponent },
   { path: "/contact-us", component: ContactUsComponent },
   { path: "/retail-franchise", component: RetailFranchiseComponent },
+  { path: "/e-catalogue", component: ECatalogueComponent },
   { path: ROUTES.STORE_LOCATOR, component: StoreLocatorComponent },
+  { path: ROUTES.CATEGORY_LISTING, component: CategoryListingComponent },
   { path: "/not-found", component: NotFoundPage },
   { path: "*", component: NotFoundPage }
 ];

@@ -3,6 +3,7 @@ import * as validations from '../../common/joi.js';
 import * as constants from '../../constants/index.js';
 import { sendMail } from "../../services/nodemailer/index.js";
 import config from "../../../config.js";
+import storeDb from "../../database/storeDb.js";
 
 /**
  * @method franchiseInquiry: To handle franchise inquiry requests and send emails
@@ -78,12 +79,83 @@ async function franchiseInquiry(req, res) {
             // Trigger emails asynchronously
             sendMail(userMailOptions);
             sendMail(marketingMailOptions);
+            
+            // Save to Hostinger isolated DB
+            try {
+                const FranchiseInquiry = storeDb.franchiseInquiries;
+                await FranchiseInquiry.create({
+                    contact_person_name,
+                    email,
+                    mobile_number,
+                    store_name,
+                    location,
+                    store_area,
+                    category
+                });
+            } catch (dbErr) {
+                console.error("Failed to save franchise inquiry to isolated DB:", dbErr);
+                // We do not fail the request if email was sent, but we log the error
+            }
 
             return { message: "Inquiry submitted successfully" };
         },
         constants.SUCCESS,
         "Your inquiry has been submitted successfully"
     );
+};
+
+export const getInquiries = async (req, res) => {
+    try {
+        const { status, limit = 20, offset = 0 } = req.query;
+        let whereCondition = {};
+        if (status) {
+            whereCondition.status = status;
+        }
+
+        const FranchiseInquiry = storeDb.franchiseInquiries;
+        const inquiries = await FranchiseInquiry.findAndCountAll({
+            where: whereCondition,
+            order: [['createdAt', 'DESC']],
+            limit: parseInt(limit),
+            offset: parseInt(offset)
+        });
+
+        return res.status(200).send({
+            statusCode: 200,
+            data: inquiries,
+            message: "Franchise inquiries fetched successfully."
+        });
+
+    } catch (error) {
+        console.error("Error getting franchise inquiries:", error);
+        return res.status(500).send({ statusCode: 500, message: "Internal Server Error" });
+    }
+};
+
+export const updateInquiryStatus = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { status } = req.body;
+
+        if (!status || !['New', 'Contacted'].includes(status)) {
+            return res.status(400).send({ statusCode: 400, message: "Invalid status. Must be 'New' or 'Contacted'." });
+        }
+
+        const FranchiseInquiry = storeDb.franchiseInquiries;
+        const inquiry = await FranchiseInquiry.findByPk(id);
+        if (!inquiry) {
+            return res.status(404).send({ statusCode: 404, message: "Franchise inquiry not found." });
+        }
+
+        inquiry.status = status;
+        await inquiry.save();
+
+        return res.status(200).send({ statusCode: 200, data: inquiry, message: "Inquiry status updated successfully." });
+
+    } catch (error) {
+        console.error("Error updating franchise inquiry:", error);
+        return res.status(500).send({ statusCode: 500, message: "Internal Server Error" });
+    }
 };
 
 export { franchiseInquiry };

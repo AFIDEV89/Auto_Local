@@ -350,12 +350,20 @@
 }
 
 .clear-btn:not(:disabled) {
-	border-color: #ffb400 !important;
-	color: #ffb400 !important;
+	border-color: #ffb200 !important;
+	color: #ffb200 !important;
+	background: transparent !important;
+	border-radius: 8px !important;
+	&:hover {
+		background: rgba(255, 178, 0, 0.1) !important;
+	}
 }
 
 .ok-btn {
-	background-color: #ffb400 !important;
+	background-color: #ffb200 !important;
+	color: #000 !important;
+	font-weight: 700 !important;
+	border-radius: 8px !important;
 }
 
 .sort-by-wraper {
@@ -365,60 +373,117 @@
 }
 
 .filter-products {
+	background: #FAF9F6;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-radius: 20px;
+	padding: 24px 16px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 
 	.filter-product-btn-wrapper {
+		margin-bottom: 24px;
 		@media (max-width: 767px) {
-			padding: 1rem 1rem 0;
+			padding: 0;
 		}
 
 		.filter-product-btn {
-			background: none;
-			border: 1px solid #9dc2ff;
-			font-weight: 700;
-			color: #2264d1;
+			background: #FFFFFF;
+			border: 1px solid #E5E7EB;
+			font-weight: 800;
+			color: #1A1A1A;
 			width: 100%;
-			cursor: auto;
+			cursor: default;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			padding: 14px;
+			border-radius: 12px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 
 			>img {
-				margin-right: 18px;
+				margin-right: 12px;
+				width: 18px;
+				opacity: 0.7;
 			}
 		}
 	}
 
 
 	.filter-menu {
-		margin: 22px 0 28px -12px;
+		margin: 0;
 		cursor: pointer;
-		border-top: 1px solid #e9e9ed;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 
 		@media (max-width: 767px) {
 			margin-left: 0;
 		}
 
 		>div {
-			padding: 16px;
-			border-right: 1px solid #e9e9ed;
-			border-bottom: 1px solid #e9e9ed;
-
-			@media (max-width: 767px) {
-				border-right: 0;
-			}
+			padding: 0;
+			border: none;
 		}
 
 		.all-cat {
-			font-size: 14px;
-			margin-bottom: 10px;
+			font-size: 12px;
+			font-weight: 800;
+			color: #DAA520; // A slightly more sophisticated golden-yellow for light backgrounds
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			margin-bottom: 12px;
+			padding-left: 4px;
+			border-left: 3px solid #ffb200;
 		}
 
 		.expand-btn {
-			background-color: #ebf2ff;
-			border-radius: 4px;
+			background-color: #FFFFFF;
+			border-radius: 8px;
 			font-weight: 700;
-			color: #2264d1;
-			padding: 8px 12px 10px 12px;
-			font-size: 15px;
-			border: none;
-			margin-left: 14%;
+			color: #ffb200;
+			padding: 8px 16px;
+			font-size: 14px;
+			border: 1px solid #ffb200;
+			margin-top: 10px;
+			transition: all 0.3s;
+
+			&:hover {
+				background-color: #ffb200;
+				color: #000;
+			}
+		}
+	}
+
+	// Dynamic styling for Chips
+	.chip-select-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		padding: 4px;
+
+		.filter-chip {
+			background-color: #FFFFFF !important;
+			color: #1A1A1A !important;
+			border: 1px solid #E5E7EB !important;
+			border-radius: 8px !important;
+			height: 32px !important;
+			font-weight: 500 !important;
+			transition: all 0.3s !important;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.02) !important;
+
+			&:hover {
+				background-color: rgba(255, 178, 0, 0.05) !important;
+				border-color: #ffb200 !important;
+			}
+
+			&.selected {
+				background-color: #ffb200 !important;
+				color: #000000 !important;
+				border-color: #ffb200 !important;
+				font-weight: 700 !important;
+				box-shadow: 0 4px 12px rgba(255, 178, 0, 0.2) !important;
+			}
 		}
 	}
 }

@@ -53,7 +53,26 @@
   }
 
   @media (max-width: 767px) {
-    display: none;
+    width: 80px;
+    height: 53px;
+    bottom: 75px;
+    right: -20px;
+
+    &.show-car {
+      bottom: 75px;
+      right: -23px;
+    }
+
+    .headlight {
+      top: 5.5px;
+      
+      &-left {
+        left: 6px;
+      }
+      &-right {
+        right: 58px;
+      }
+    }
   }
 }
 

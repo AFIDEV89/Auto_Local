@@ -1,5 +1,5 @@
 "use strict";
-import Sequelize, {DataTypes} from "sequelize";
+import Sequelize, {DataTypes, Op} from "sequelize";
 
 import * as Models from "../models/index.js";
 import config from "../../config.js";
@@ -45,6 +45,7 @@ process.on('SIGINT', () => {
 db.users = Models.UserModel(db, Sequelize);
 db.products = Models.ProductModel(db, Sequelize);
 db.categories = Models.ProductCategoryModel(db, Sequelize);
+db.subcategories = Models.SubCategoryModel(db, Sequelize);
 db.colors = Models.ColorModel(db, Sequelize);
 db.banners = Models.BannerModel(db, Sequelize);
 db.blogs = Models.BlogModel(db, Sequelize);
@@ -76,6 +77,8 @@ db.wishlists = Models.WishlistModel(db, Sequelize);
 db.productComments = Models.product_comment_model(db, Sequelize);
 db.seoMappings = Models.seo_data_mapping_model(db, Sequelize);
 db.leadDatas = Models.LeadDataModel(db, Sequelize);
+db.popLeads = Models.PopLeadModel(db, Sequelize);
+db.selectiveShops = Models.SelectiveShopModel(db, Sequelize);
 
 /**
  * Database model Associations
@@ -146,5 +149,10 @@ db.brandModels.hasMany(db.seoMappings, { foreignKey: "vehicle_model_id" });
  db.seoMappings.belongsTo(db.brandModels,{foreignKey:"vehicle_model_id"})
 db.leadDatas.belongsTo(db.products,{ foreignKey: "product_id" })
 db.products.hasMany(db.leadDatas,{ foreignKey: "product_id" })
+db.products.hasOne(db.selectiveShops, { foreignKey: "product_id", as: 'ecommerce' });
+db.selectiveShops.belongsTo(db.products, { foreignKey: "product_id" });
+
+db.Sequelize = Sequelize;
+db.Op = Op;
 
 export default db;

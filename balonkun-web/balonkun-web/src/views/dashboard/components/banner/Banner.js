@@ -49,7 +49,7 @@ const Banner = ({ bannerList = [] }) => {
 
     if (!bannerList || bannerList.length === 0) {
         return (
-        <section className="relative h-[85vh] w-full bg-gray-900 flex items-center justify-center">
+        <section className="relative home-banner-section w-full bg-gray-900 flex items-center justify-center">
                 <div className="animate-pulse flex flex-col items-center">
                     <div className="w-48 h-48 bg-gray-700 rounded-2xl mb-6"></div>
                     <div className="h-8 bg-gray-700 rounded w-96 mb-4"></div>
@@ -61,7 +61,7 @@ const Banner = ({ bannerList = [] }) => {
 
     return (
         <section
-            className="relative h-[85vh] w-full bg-gray-900 overflow-hidden group"
+            className="relative home-banner-section w-full bg-gray-900 overflow-hidden group"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
@@ -86,23 +86,23 @@ const Banner = ({ bannerList = [] }) => {
             }}></div>
 
             {/* Static Hero Content — exact match from template */}
-            <div className="relative z-10 h-full max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col justify-end pb-32 lg:pb-40">
+            <div className="relative z-10 h-full max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col banner-content-wrapper">
                 <div className="max-w-3xl animate-fade-in-up">
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight mb-6" style={{ textShadow: '0 14px 24px rgba(0,0,0,0.3)' }}>
+                    <h1 className="text-4xl font-semibold text-white leading-tight mb-6 banner-title" style={{ textShadow: '0 14px 24px rgba(0,0,0,0.3)' }}>
                         Crafting <span className="text-[#ffb200]">Premium</span><br />Interiors Since 1994
                     </h1>
-                    <p className="text-gray-200 text-lg md:text-xl mb-8 max-w-xl">
+                    <p className="text-gray-200 text-lg mb-8 max-w-xl banner-description">
                         Experience unparalleled luxury and comfort with India's finest automotive accessories.
                     </p>
-                    <div className="flex flex-wrap gap-4">
+                    <div className="flex flex-wrap gap-4 banner-btn-group">
                         <button
-                            className="bg-[#ffb200] hover:bg-[#e6a100] text-slate-900 px-7 py-3 rounded-lg text-base font-bold transition-colors"
+                            className="bg-[#ffb200] hover:bg-[#e6a100] text-slate-900 px-7 py-3 rounded-lg text-base font-bold transition-all hover:scale-105 banner-btn primary"
                             onClick={() => navigate('/products')}
                         >
                             Explore Products
                         </button>
                         <button
-                            className="border border-white/30 hover:bg-white/10 text-white px-7 py-3 rounded-lg text-base font-bold transition-colors backdrop-blur-sm"
+                            className="border border-white/30 hover:bg-white/10 text-white px-7 py-3 rounded-lg text-base font-bold transition-all hover:scale-105 backdrop-blur-sm banner-btn secondary"
                             onClick={() => navigate(ROUTES.STORE_LOCATOR)}
                         >
                             Find a Store
@@ -113,7 +113,7 @@ const Banner = ({ bannerList = [] }) => {
 
             {/* Slide Indicators */}
             {bannerList.length > 1 && (
-                <div className="absolute inset-x-0 bottom-24 z-30 flex justify-center gap-3">
+                <div className="absolute inset-x-0 z-30 flex justify-center gap-3 banner-indicators">
                     {bannerList.map((_, index) => (
                         <button
                             key={index}

@@ -7,9 +7,10 @@ import * as utils from '../utils/index.js';
 import responseCtr from '../common/messages/index.js';
 
 function validateSchema(req, res, schema, cb, statusCode, message) {
-  if (utils.isObject(schema)) {
+  if (schema) {
     const data = { ...req.body, ...req.params, ...req.query };
-    const errors = Joi.object().keys(schema).validate(data);
+    const joiSchema = Joi.isSchema(schema) ? schema : Joi.object().keys(schema);
+    const errors = joiSchema.validate(data);
     const errorsToReturn = errors.error?.details?.map(
       error => error.message &&
         error.message.replace(/"/g, "") || ''
@@ -60,7 +61,7 @@ const validations = Object.freeze({
   optional_latitude: Joi.number().min(-90).max(90).optional(),
   optional_longitude: Joi.number().min(-180).max(180).optional(),
   postal_code: Joi.string().trim().pattern(/^\d{6}$/).required(),
-  contact_no: Joi.string().pattern(/^\d{10}$/),
+  contact_no: Joi.string().trim().pattern(/^[6-9]\d{9}$/).required(),
   rating: Joi.number().min(1).max(5).required(),
   // country: countrySchema.required(),
   // state: stateSchema.required(),

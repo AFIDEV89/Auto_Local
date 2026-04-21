@@ -39,7 +39,8 @@
         -webkit-text-fill-color: transparent;
         
         @media (max-width: 768px) {
-            font-size: 3.5rem;
+            font-size: 2.25rem;
+            letter-spacing: -0.02em;
         }
     }
 
@@ -66,9 +67,10 @@
         }
 
         @media (max-width: 768px) {
-            font-size: 0.8rem;
-            letter-spacing: 0.3em;
-            &::before, &::after { width: 20px; }
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            gap: 12px;
+            &::before, &::after { width: 15px; }
         }
     }
 }
@@ -87,10 +89,11 @@
     margin-right: auto;
 
     @media (max-width: 768px) {
-        padding: 1.5rem;
+        padding: 1.25rem;
         margin-top: 0;
         border-radius: 0;
         border: none;
+        box-shadow: none;
     }
 
     h3 {
