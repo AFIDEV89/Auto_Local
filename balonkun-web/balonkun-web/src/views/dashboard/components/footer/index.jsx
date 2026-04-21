@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+// Triggering fresh deployment with corrected footer logo
 import { useDispatch } from 'react-redux';
 import { Container, Col, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
