@@ -10,7 +10,7 @@ export { default as premiumQuality } from "./quality-icon-red.png";
 export { default as refund } from "./refund.png";
 export { default as support } from "./support.png";
 export { default as logo } from "./balonkun-logo.png";
-export { default as newLogo } from "./balonkun-logo.png";
+export { default as newLogo } from "./footer-new-logo.png";
 export { default as clientImg } from "./client-img.png";
 export { default as cartIcon } from "./cart-icon.png";
 export { default as heartIcon } from "./heart.png";
