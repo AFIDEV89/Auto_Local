@@ -1,0 +1,263 @@
+@import "variables";
+
+.assistance-modal {
+  .modal-dialog {
+    max-width: 860px !important; // Increased from 780px to prevent overlap
+  }
+
+  .modal-content {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible;
+  }
+
+  .amaze-duo-canvas {
+    background: #f8fafc;
+    border-radius: 35px;
+    position: relative;
+    min-height: 620px; // Increased from 580px for more breathing room
+    display: flex;
+    box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.3) !important;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+
+    .amaze-left-panel {
+        flex: 1.4; // Giving more priority to clear the area
+        padding: 40px 0 40px 30px; // Shifted left
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        
+        .amaze-headers {
+            position: relative;
+            margin-bottom: 30px;
+            
+            .badge-dark-skew {
+                background: #1e293b;
+                color: #fff;
+                padding: 20px 40px;
+                width: fit-content;
+                transform: skewX(-20deg);
+                border-radius: 4px;
+                border-bottom: 3px solid #ffb100;
+                position: relative;
+                z-index: 2;
+                
+                h2 {
+                    margin: 0;
+                    font-weight: 900;
+                    font-size: 16px; 
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    transform: skewX(20deg);
+                }
+            }
+
+            .badge-orange-skew {
+                background: #ffb100;
+                color: #fff;
+                padding: 5px 15px;
+                width: fit-content;
+                transform: skewX(-20deg);
+                margin-left: 60px;
+                margin-top: -5px;
+                border-radius: 4px;
+                position: relative;
+                z-index: 1;
+                
+                span {
+                    font-size: 10px;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    display: block;
+                    transform: skewX(20deg);
+                }
+            }
+        }
+
+        .amaze-pill-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; // Increased from 10px
+            margin-top: 20px; // Pulling them down
+
+            .amaze-pill {
+                background: #fff;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                padding: 4px 15px 4px 4px;
+                box-shadow: 0 8px 15px -5px rgba(0, 0, 0, 0.08);
+                transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+                width: fit-content;
+                min-width: 200px; // Shrank from 250px
+                max-width: 280px;
+                opacity: 0;
+                transform: translateX(-40px);
+
+                &.appeared { opacity: 1; transform: translateX(0); }
+
+                // The Diagonal Slope Logic ( \ ) - Even Tighter offset
+                @for $i from 1 through 4 {
+                    &:nth-child(#{$i}) {
+                        margin-left: #{(4 - $i) * 12}px; // Shrank offset from 20px
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 10px 15px rgba(255, 177, 0, 0.12);
+                }
+
+                .pill-icon-circle {
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 50%;
+                    background: #f1f5f9;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #1e293b;
+                    font-size: 13px;
+                    flex-shrink: 0;
+                }
+
+                .form-control {
+                    border: none;
+                    background: transparent;
+                    font-weight: 800;
+                    font-size: 11px;
+                    color: #1e293b;
+                    padding-left: 10px;
+                    height: 34px;
+                    text-transform: uppercase;
+                    
+                    &:focus {
+                        box-shadow: none;
+                        color: #ffb100;
+                    }
+                    
+                    &::placeholder {
+                        color: #94a3b8;
+                    }
+                }
+                
+                textarea {
+                    height: 40px !important;
+                    padding-top: 8px;
+                }
+            }
+        }
+    }
+
+    .amaze-right-panel {
+        flex: 1.1; // Giving enough space but keeping it separate
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 480px;
+            height: 480px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: -1;
+            right: -60px;
+            top: 50px;
+        }
+
+        img.hero-image {
+            position: absolute;
+            right: 0px; // Aligned to edge without bleeding into left
+            top: 60px; // Adjusted for taller canvas
+            height: 480px; // Fixed height to prevent stretching
+            width: auto;
+            max-width: none;
+            object-fit: contain;
+            filter: drop-shadow(0 30px 40px rgba(0,0,0,0.18));
+            transform: scale(1.0);
+        }
+
+        .amaze-close-btn {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #1e293b;
+            color: #fff;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 30;
+            
+            &:hover { background: #ffb100; transform: rotate(90deg); }
+        }
+    }
+
+    .submit-precision-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%) skewX(-20deg);
+        width: 400px; // Bold center anchor
+        background: #ffb100;
+        color: #fff;
+        padding: 12px 0;
+        border: none;
+        border-radius: 4px;
+        font-weight: 900;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        box-shadow: 0 10px 40px rgba(255, 177, 0, 0.3);
+        transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+        cursor: pointer;
+        z-index: 50;
+
+        span { display: block; transform: skewX(20deg); }
+
+        &:hover {
+            background: #000;
+            color: #ffb100;
+            transform: translateX(-50%) skewX(-20deg) translateY(-5px);
+            box-shadow: 0 15px 45px rgba(255, 177, 0, 0.4);
+        }
+        
+        &:disabled { background: #94a3b8; }
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 900px) {
+    .assistance-modal {
+        .amaze-duo-canvas {
+            flex-direction: column;
+            min-height: auto;
+            .amaze-left-panel {
+                padding: 30px;
+                .amaze-pill-container .amaze-pill {
+                    margin-left: 0 !important;
+                    width: 100% !important;
+                }
+            }
+            .amaze-right-panel {
+                height: 350px;
+                &::before { display: none; }
+                img.hero-image { right: 50%; transform: translateX(50%) scale(0.9); height: 100%; top: 0; }
+            }
+            .submit-precision-btn {
+                position: static;
+                width: 90%;
+                margin: 0 auto 30px;
+                text-align: center;
+            }
+        }
+    }
+}

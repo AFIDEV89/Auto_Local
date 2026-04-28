@@ -1,0 +1,307 @@
+=== MASTER 4W BRAND > MODEL > PRODUCT AUDIT ===
+Total Brands: 35
+Total Models (brandModels table): 555
+Total Seat Cover Products (Cat 10): 9666
+Total Vehicle Details: 654
+
+======================================================================
+SECTION A: BRANDS AND THEIR MODELS
+======================================================================
+
+📦 Hyundai (ID: 1, Type: 4W) — 19 models
+   └── [1] Santro (type: 2)
+   └── [3] Venue (type: 2)
+   └── [5] i10 Nios (type: 2)
+   └── [6] Aura (type: 2)
+   └── [10] Creta (type: 2)
+   └── [12] Alcazar (type: 2)
+   └── [44] Alcazar 6 (type: 2)
+   └── [188] EON (type: 2)
+   └── [189] EXTER (type: 2)
+   └── [190] I20 (type: 2)
+   └── [191] VERNA (type: 2)
+   └── [192] TUCSON (type: 2)
+   └── [207] I-10 Grand  (type: 2)
+   └── [208] Kona Electric  (type: 2)
+   └── [211] Elantra  (type: 2)
+   └── [212] Ioniq (type: 2)
+   └── [245] Exter  (type: 2)
+   └── [270] SANTA FE (type: 2)
+   └── [304] I-10 NIOS (type: 0)
+
+📦 Mahindra (ID: 2, Type: 4W) — 17 models
+   └── [2] XUV 300 (type: 2)
+   └── [14] Scorpio (type: 2)
+   └── [16] MARAZZO (type: 2)
+   └── [17] MARAZZO 8 (type: 2)
+   └── [33] SCR 7 T1 21(S3) (type: 2)
+   └── [34] SCR 7 T1 21(S5) (type: 2)
+   └── [35] SCR 7 T3 REF 21 (type: 2)
+   └── [36] Rexton  (type: 2)
+   └── [157] Thar (type: 2)
+   └── [194] XUV 700 (type: 2)
+   └── [195] XUV 500 (type: 2)
+   └── [196] Bolero (type: 2)
+   └── [197] XYLO (type: 2)
+   └── [203] Bolero Neo  (type: 2)
+   └── [204] Xuv 400 (type: 2)
+   └── [205] Scorpio N  (type: 2)
+   └── [206] Alturas  (type: 2)
+
+📦 KIA (ID: 3, Type: 4W) — 1 models
+   └── [4] SELTOS (type: 2)
+
+📦 TATA (ID: 4, Type: 4W) — 13 models
+   └── [7] Altroz (type: 2)
+   └── [8] Tiago (type: 2)
+   └── [9] Tigor (type: 2)
+   └── [24] HARRIER (type: 2)
+   └── [27] TIAGO-1 (type: 2)
+   └── [28] TIGOR211 (type: 2)
+   └── [29] HEXA (type: 2)
+   └── [31] PUNCH (type: 2)
+   └── [42] SAFARI 211 (type: 2)
+   └── [43] SAFARI (type: 2)
+   └── [47] Nexon1 (type: 2)
+   └── [193] NEXON (type: 2)
+   └── [277] Zest  (type: 2)
+
+📦 Renault (ID: 5, Type: 4W) — 6 models
+   └── [11] KIGER (type: 2)
+   └── [26] TRIBER (type: 2)
+   └── [40] CAPTUR (type: 2)
+   └── [185] CLIMBER (type: 2)
+   └── [186] DUSTER (type: 2)
+   └── [187] KWID (type: 2)
+
+📦 Toyota (ID: 6, Type: 4W) — 18 models
+   └── [15] Glanza (type: 2)
+   └── [37] Glanza 23 (type: 2)
+   └── [38] Innova Crysta (type: 2)
+   └── [178] HYCROSS (type: 2)
+   └── [179] HYRYDER (type: 2)
+   └── [180] LIVA (type: 2)
+   └── [181] URBAN CRUISER (type: 2)
+   └── [182] FORTUNER (type: 2)
+   └── [183] HILUX (type: 2)
+   └── [184] RUMION (type: 2)
+   └── [236] Altis (type: 2)
+   └── [237] Yaris (type: 2)
+   └── [238] Innova  (type: 2)
+   └── [239] LAND CRUSER ZX  (type: 2)
+   └── [240] COROLA (type: 2)
+   └── [241] VELFIRE (type: 2)
+   └── [242] Etios (type: 2)
+   └── [243] Camry  (type: 2)
+
+📦 Ford (ID: 8, Type: 4W) — 9 models
+   └── [18] FREESTYLE (type: 2)
+   └── [19] O FIGO (type: 2)
+   └── [20] FIGO 12 (type: 2)
+   └── [21] FIGO 15 (type: 2)
+   └── [22] FIGO (type: 2)
+   └── [174] Aspire (type: 2)
+   └── [175] ECO SPORT (type: 2)
+   └── [176] ENVEAVOUR (type: 2)
+   └── [177] FIESTA (type: 2)
+
+📦 Nissan (ID: 9, Type: 4W) — 5 models
+   └── [23] KICKS (type: 2)
+   └── [30] MAGNITE (type: 2)
+   └── [171] Micra (type: 2)
+   └── [172] TERRANO (type: 2)
+   └── [173] SUNNY (type: 2)
+
+📦 HONDA (ID: 10, Type: 4W) — 11 models
+   └── [25] CIVIC (type: 2)
+   └── [200] City  (type: 2)
+   └── [201] Elevate (type: 2)
+   └── [202] Amaze  (type: 2)
+   └── [247] WRV  (type: 2)
+   └── [248] Brio  (type: 2)
+   └── [249] Accord  (type: 2)
+   └── [274] CRV (type: 2)
+   └── [276] Brio (type: 2)
+   └── [306] City (type: 2)
+   └── [742] HONDA (type: 2)
+
+📦 VW (ID: 11, Type: 4W) — 3 models
+   └── [32] TAIGUN (type: 2)
+   └── [48] Polo (type: 2)
+   └── [170] VIRTUS (type: 2)
+
+📦 Datsun (ID: 12, Type: 4W) — 2 models
+   └── [168] Redi Go (type: 2)
+   └── [169] Go Plus (type: 2)
+
+📦 Skoda (ID: 13, Type: 4W) — 7 models
+   └── [39] KUSHAQ (type: 2)
+   └── [159] Rapid (type: 2)
+   └── [160] FABIA (type: 2)
+   └── [161] Octavia (type: 2)
+   └── [162] SLAVIA (type: 2)
+   └── [163] SUPERB (type: 2)
+   └── [167] Laura (type: 2)
+
+📦 MG (ID: 14, Type: 4W) — 6 models
+   └── [13] Gloster1 (type: 2)
+   └── [41] HECTOR (type: 2)
+   └── [45] ZS EV (type: 2)
+   └── [164] Astor (type: 2)
+   └── [165] COMET (type: 2)
+   └── [166] Gloster (type: 2)
+
+📦 Jeep (ID: 15, Type: 4W) — 2 models
+   └── [46] Compass (type: 2)
+   └── [305] Compas (type: 0)
+
+📦  Citroen (ID: 16, Type: 4W) — 2 models
+   └── [49] C3 (type: 2)
+   └── [303] C5 (type: 2)
+
+📦 Chevrolet (ID: 24, Type: 4W) — 6 models
+   └── [146] OPTRA (type: 2)
+   └── [148] AVEO (type: 2)
+   └── [149] CRUZE (type: 2)
+   └── [150] SAIL (type: 2)
+   └── [154] Beat (type: 2)
+   └── [156] SPARK (type: 2)
+
+📦 ISUZU (ID: 31, Type: 4W) — 1 models
+   └── [198] DMAX-VCROSS (type: 2)
+
+📦 Universal (ID: 38, Type: 4W) — 1 models
+   └── [199] Universal (type: 2)
+
+📦 Mercedes-Benz (ID: 40, Type: 4W) — 0 models
+   ⚠️  NO MODELS FOUND!
+
+📦 Audi  (ID: 44, Type: 4W) — 0 models
+   ⚠️  NO MODELS FOUND!
+
+📦 BMW  (ID: 45, Type: 4W) — 0 models
+   ⚠️  NO MODELS FOUND!
+
+
+======================================================================
+SECTION B: PRODUCT NAME → BRAND+MODEL MATCHING
+======================================================================
+
+
+📦 Hyundai (1293 products by name)
+   ✅ Model "Santro" [ID:1]: 106 products (VD: 1, Linked: 106, Needs: 0)
+   ✅ Model "Venue" [ID:3]: 133 products (VD: 6, Linked: 133, Needs: 0)
+   ✅ Model "Aura" [ID:6]: 124 products (VD: 12, Linked: 124, Needs: 0)
+   ✅ Model "Creta" [ID:10]: 124 products (VD: 18, Linked: 124, Needs: 0)
+   ✅ Model "Alcazar" [ID:12]: 106 products (VD: 21, Linked: 106, Needs: 0)
+   ✅ Model "EON" [ID:188]: 106 products (VD: 635, Linked: 106, Needs: 0)
+   ✅ Model "EXTER" [ID:189]: 124 products (VD: 251, Linked: 124, Needs: 0)
+   ✅ Model "I20" [ID:190]: 133 products (VD: 258, Linked: 133, Needs: 0)
+   ✅ Model "VERNA" [ID:191]: 133 products (VD: 275, Linked: 133, Needs: 0)
+   ✅ Model "TUCSON" [ID:192]: 80 products (VD: 273, Linked: 80, Needs: 0)
+   ✅ Model "I-10 NIOS" [ID:304]: 124 products (VD: 624, Linked: 124, Needs: 0)
+
+📦 Mahindra (877 products by name)
+   ✅ Model "XUV 300" [ID:2]: 133 products (VD: 2, Linked: 133, Needs: 0)
+   ✅ Model "Scorpio" [ID:14]: 133 products (VD: 23, Linked: 133, Needs: 0)
+   ✅ Model "MARAZZO" [ID:16]: 115 products (VD: 44, Linked: 115, Needs: 0)
+   ✅ Model "Thar" [ID:157]: 107 products (VD: 219, Linked: 107, Needs: 0)
+   ✅ Model "XUV 700" [ID:194]: 89 products (VD: 236, Linked: 89, Needs: 0)
+   ✅ Model "XUV 500" [ID:195]: 133 products (VD: 237, Linked: 133, Needs: 0)
+   ✅ Model "Bolero" [ID:196]: 115 products (VD: 244, Linked: 115, Needs: 0)
+   ✅ Model "XYLO" [ID:197]: 52 products (VD: 242, Linked: 52, Needs: 0)
+
+📦 TATA (964 products by name)
+   ✅ Model "Altroz" [ID:7]: 124 products (VD: 13, Linked: 124, Needs: 0)
+   ✅ Model "Tiago" [ID:8]: 124 products (VD: 15, Linked: 124, Needs: 0)
+   ✅ Model "Tigor" [ID:9]: 133 products (VD: 16, Linked: 133, Needs: 0)
+   ✅ Model "HARRIER" [ID:24]: 133 products (VD: 56, Linked: 133, Needs: 0)
+   ✅ Model "HEXA" [ID:29]: 115 products (VD: 71, Linked: 115, Needs: 0)
+   ✅ Model "PUNCH" [ID:31]: 78 products (VD: 77, Linked: 78, Needs: 0)
+   ✅ Model "SAFARI" [ID:43]: 124 products (VD: 101, Linked: 124, Needs: 0)
+   ✅ Model "NEXON" [ID:193]: 133 products (VD: 280, Linked: 133, Needs: 0)
+
+📦 Renault (613 products by name)
+   ✅ Model "KIGER" [ID:11]: 114 products (VD: 20, Linked: 114, Needs: 0)
+   ✅ Model "TRIBER" [ID:26]: 115 products (VD: 64, Linked: 115, Needs: 0)
+   ✅ Model "CAPTUR" [ID:40]: 30 products (VD: 97, Linked: 30, Needs: 0)
+   ✅ Model "CLIMBER" [ID:185]: 106 products (VD: 276, Linked: 106, Needs: 0)
+   ✅ Model "DUSTER" [ID:186]: 124 products (VD: 232, Linked: 124, Needs: 0)
+   ✅ Model "KWID" [ID:187]: 124 products (VD: 262, Linked: 124, Needs: 0)
+
+📦 Toyota (1014 products by name)
+   ✅ Model "Glanza" [ID:15]: 133 products (VD: 24, Linked: 133, Needs: 0)
+   ✅ Model "Innova Crysta" [ID:38]: 133 products (VD: 89, Linked: 133, Needs: 0)
+   ✅ Model "HYCROSS" [ID:178]: 51 products (VD: 255, Linked: 51, Needs: 0)
+   ✅ Model "HYRYDER" [ID:179]: 115 products (VD: 256, Linked: 115, Needs: 0)
+   ✅ Model "LIVA" [ID:180]: 124 products (VD: 263, Linked: 124, Needs: 0)
+   ✅ Model "URBAN CRUISER" [ID:181]: 124 products (VD: 274, Linked: 124, Needs: 0)
+   ✅ Model "FORTUNER" [ID:182]: 124 products (VD: 252, Linked: 124, Needs: 0)
+   ✅ Model "HILUX" [ID:183]: 105 products (VD: 260, Linked: 105, Needs: 0)
+   ✅ Model "RUMION" [ID:184]: 105 products (VD: 634, Linked: 105, Needs: 0)
+
+📦 Ford (768 products by name)
+   ✅ Model "FREESTYLE" [ID:18]: 115 products (VD: 47, Linked: 115, Needs: 0)
+   ✅ Model "O FIGO" [ID:19]: 87 products (VD: 50, Linked: 87, Needs: 0)
+   ✅ Model "FIGO" [ID:22]: 115 products (VD: 53, Linked: 115, Needs: 0)
+   ✅ Model "Aspire" [ID:174]: 115 products (VD: 238, Linked: 115, Needs: 0)
+   ✅ Model "ECO SPORT" [ID:175]: 124 products (VD: 249, Linked: 124, Needs: 0)
+   ✅ Model "ENVEAVOUR" [ID:176]: 115 products (VD: 250, Linked: 115, Needs: 0)
+   ✅ Model "FIESTA" [ID:177]: 97 products (VD: 633, Linked: 97, Needs: 0)
+
+📦 Nissan (456 products by name)
+   ✅ Model "KICKS" [ID:23]: 124 products (VD: 55, Linked: 124, Needs: 0)
+   ✅ Model "MAGNITE" [ID:30]: 96 products (VD: 74, Linked: 96, Needs: 0)
+   ✅ Model "Micra" [ID:171]: 69 products (VD: 265, Linked: 69, Needs: 0)
+   ✅ Model "TERRANO" [ID:172]: 78 products (VD: 272, Linked: 78, Needs: 0)
+   ✅ Model "SUNNY" [ID:173]: 89 products (VD: 270, Linked: 89, Needs: 0)
+
+📦 HONDA (568 products by name)
+   ❌ Model "CIVIC" [ID:25]: 115 products (VD: 58, Linked: 113, Needs: 2)
+   ❌ Model "City " [ID:200]: 124 products (VD: 234, Linked: 122, Needs: 2)
+   ❌ Model "Elevate" [ID:201]: 69 products (VD: 246, Linked: 67, Needs: 2)
+   ❌ Model "HONDA" [ID:742]: 260 products (VD: 640, Linked: 124, Needs: 136)
+
+📦 VW (280 products by name)
+   ✅ Model "TAIGUN" [ID:32]: 78 products (VD: 79, Linked: 78, Needs: 0)
+   ✅ Model "Polo" [ID:48]: 133 products (VD: 267, Linked: 133, Needs: 0)
+   ✅ Model "VIRTUS" [ID:170]: 69 products (VD: 243, Linked: 69, Needs: 0)
+
+📦 Datsun (203 products by name)
+   ✅ Model "Redi Go" [ID:168]: 97 products (VD: 264, Linked: 97, Needs: 0)
+   ✅ Model "Go Plus" [ID:169]: 106 products (VD: 632, Linked: 106, Needs: 0)
+
+📦 Skoda (567 products by name)
+   ✅ Model "KUSHAQ" [ID:39]: 87 products (VD: 92, Linked: 87, Needs: 0)
+   ✅ Model "Rapid" [ID:159]: 115 products (VD: 268, Linked: 115, Needs: 0)
+   ✅ Model "FABIA" [ID:160]: 61 products (VD: 631, Linked: 61, Needs: 0)
+   ✅ Model "Octavia" [ID:161]: 98 products (VD: 266, Linked: 98, Needs: 0)
+   ✅ Model "SLAVIA" [ID:162]: 78 products (VD: 269, Linked: 78, Needs: 0)
+   ✅ Model "SUPERB" [ID:163]: 21 products (VD: 271, Linked: 21, Needs: 0)
+   ✅ Model "Laura" [ID:167]: 107 products (VD: 261, Linked: 107, Needs: 0)
+
+📦 MG (266 products by name)
+   ✅ Model "HECTOR" [ID:41]: 67 products (VD: 99, Linked: 67, Needs: 0)
+   ✅ Model "ZS EV" [ID:45]: 30 products (VD: 103, Linked: 30, Needs: 0)
+   ✅ Model "Astor" [ID:164]: 106 products (VD: 239, Linked: 106, Needs: 0)
+   ✅ Model "COMET" [ID:165]: 42 products (VD: 247, Linked: 42, Needs: 0)
+   ✅ Model "Gloster" [ID:166]: 21 products (VD: 230, Linked: 21, Needs: 0)
+
+📦 Jeep (106 products by name)
+   ✅ Model "Compas" [ID:305]: 106 products (VD: 625, Linked: 106, Needs: 0)
+
+📦 Chevrolet (374 products by name)
+   ✅ Model "OPTRA" [ID:146]: 52 products (VD: 205, Linked: 52, Needs: 0)
+   ✅ Model "AVEO" [ID:148]: 51 products (VD: 207, Linked: 51, Needs: 0)
+   ✅ Model "CRUZE" [ID:149]: 52 products (VD: 208, Linked: 52, Needs: 0)
+   ✅ Model "SAIL" [ID:150]: 107 products (VD: 209, Linked: 107, Needs: 0)
+   ✅ Model "Beat" [ID:154]: 69 products (VD: 213, Linked: 69, Needs: 0)
+   ✅ Model "SPARK" [ID:156]: 43 products (VD: 214, Linked: 43, Needs: 0)
+
+📦 ISUZU (133 products by name)
+   ✅ Model "DMAX-VCROSS" [ID:198]: 133 products (VD: 248, Linked: 133, Needs: 0)
+
+======================================================================
+SUMMARY:
+   Total products needing vehicle_details mapping: 142
+======================================================================

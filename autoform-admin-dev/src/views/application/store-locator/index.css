@@ -1,0 +1,25 @@
+span.storeInfo {
+  font-weight: bold;
+}
+
+.addDiv {
+  width: 100%;
+  margin-left: 14px;
+}
+
+
+.addDiv.btns .css-1t7t7fh-MuiButtonBase-root-MuiButton-root{
+  padding: 12px;
+  position: absolute;
+  right: 26px;
+}
+
+.serchStore {
+  display: flex;
+  margin-left: 24px;
+}
+
+
+.mobileError{
+  color: red;
+}
