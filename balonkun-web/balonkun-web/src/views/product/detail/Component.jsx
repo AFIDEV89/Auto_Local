@@ -10,7 +10,7 @@ import {
 	Row,
 } from 'reactstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Thumbs, Autoplay } from "swiper";
+import { Navigation, Thumbs } from "swiper";
 import { Helmet } from "react-helmet";
 
 import ProductInfoTabs from './ProductInfoTabs';
@@ -136,16 +136,21 @@ const DetailComponent = ({
 									prevEl: '.main-swiper-prev',
 								}}
 								thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
-								modules={[Navigation, Thumbs, Autoplay]}
-								autoplay={{ delay: 5000, pauseOnMouseEnter: true, disableOnInteraction: false }}
+								modules={[Navigation, Thumbs]}
 								loop={true}
 								className="mySwiper h-full overflow-hidden rounded-lg"
 							>
-								{pictures.map((picture, index) => (
+								{pictures && pictures.length > 0 ? pictures.map((picture, index) => (
 									<SwiperSlide key={index} className="h-full">
 										<ZoomImage picture={picture} setZoomData={setZoomData} />
 									</SwiperSlide>
-								))}
+								)) : (
+									<SwiperSlide className="h-full">
+										<div className="flex items-center justify-center h-full bg-slate-100">
+											<span className="material-symbols-outlined text-4xl text-slate-300">image</span>
+										</div>
+									</SwiperSlide>
+								)}
 							</Swiper>
 							
 							{/* Modern Navigation Buttons on Main Image */}
@@ -187,7 +192,7 @@ const DetailComponent = ({
 								modules={[Navigation, Thumbs]}
 								className="thumbSwiper"
 							>
-								{pictures.map((picture, index) => (
+								{pictures && pictures.length > 0 && pictures.map((picture, index) => (
 									<SwiperSlide key={index} className="cursor-pointer border border-slate-200 rounded-lg overflow-hidden aspect-square transition-all hover:border-[#ffb400]">
 										<img src={picture} alt="" className="w-full h-full object-cover" />
 									</SwiperSlide>

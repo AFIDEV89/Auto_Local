@@ -96,11 +96,14 @@ const Footer = () => {
 								<li>
 									<Link to="/retail-franchise">Retail Franchise</Link>
 								</li>
-								<li>
-									<a href="https://warranty2.autoformindia.co.in/login?mode=franchise" target="_blank" rel="noreferrer">
-										Retail Franchise - Portal
-									</a>
-								</li>
+								{/* Only show Portal link if current date is past April 20th midnight */}
+								{new Date() >= new Date('2026-04-20T18:30:00.000Z') && (
+									<li>
+										<a href="https://warranty2.autoformindia.co.in/login?mode=franchise" target="_blank" rel="noreferrer">
+											Retail Franchise - Portal
+										</a>
+									</li>
+								)}
 								<li>
 									<Link to="/careers">Careers</Link>
 								</li>
@@ -178,7 +181,7 @@ const Footer = () => {
 					}
 				</Row>
 				<Row className="c-row">
-					<p className="c-text">Copyright ©Autoform 2024.</p>
+					<p className="c-text">Copyright ©Autoform 2026, a product of AFAC India Private Limited, all rights reserved.</p>
 				</Row>
 			</Container>
 		</footer>

@@ -30,11 +30,11 @@ export async function get_seo_header(req, res) {
         res,
         getSEOHeaderValidation,
         async () => {
-            const attempts = [];
+            const conditions = [];
 
             // 1. Exact Match (with Subcategory)
             if (c_id) {
-                attempts.push({
+                conditions.push({
                     product_category_id: c_id,
                     vehicle_category_id: v_id,
                     vehicle_brand_id: v_b_id,
@@ -46,7 +46,7 @@ export async function get_seo_header(req, res) {
 
             // 2. Exact Match (without Subcategory)
             if (sc_id) {
-                attempts.push({
+                conditions.push({
                     product_category_id: c_id,
                     vehicle_category_id: v_id || null,
                     vehicle_brand_id: v_b_id || null,
@@ -56,9 +56,9 @@ export async function get_seo_header(req, res) {
                 });
             }
 
-            // 3. Brand Level Match (fallback if model was provided but no model-specific row exists)
+            // 3. Brand Level Match
             if (v_m_id && v_b_id) {
-                attempts.push({
+                conditions.push({
                     product_category_id: c_id,
                     vehicle_category_id: v_id || null,
                     vehicle_brand_id: v_b_id,
@@ -68,9 +68,9 @@ export async function get_seo_header(req, res) {
                 });
             }
 
-            // 4. Default Brand Match (if only brand was provided)
+            // 4. Default Brand Match
             if (v_b_id && !v_m_id) {
-                attempts.push({
+                conditions.push({
                     product_category_id: c_id,
                     vehicle_category_id: v_id || null,
                     vehicle_brand_id: v_b_id,
@@ -81,7 +81,7 @@ export async function get_seo_header(req, res) {
             }
 
             // 5. Category Level Match
-            attempts.push({
+            conditions.push({
                 product_category_id: c_id,
                 vehicle_category_id: v_id || null,
                 vehicle_brand_id: null,
@@ -90,19 +90,28 @@ export async function get_seo_header(req, res) {
                 url: null
             });
 
-            console.log(`[SEO DEBUG] Input params: c_id=${c_id}, v_b_id=${v_b_id}, v_m_id=${v_m_id}`);
-            for (let i = 0; i < attempts.length; i++) {
-                const query = attempts[i];
-                console.log(`[SEO DEBUG] Attempt ${i + 1} query:`, JSON.stringify(query));
-                const data = await dao.getRow(model_values.seo_data_mapping.tableName, query, null, { raw: true });
-                if (data && Object.keys(data).length > 0) {
-                    console.log(`[SEO DEBUG] Attempt ${i + 1} SUCCESS: ID=${data.id}, Title=${data.seo_page_title}`);
-                    return data;
+            // Fetch all potential matches in one go to save DB roundtrips
+            const matches = await db.seoMappings.findAll({
+                where: {
+                    [Op.or]: conditions
+                },
+                raw: true
+            });
+
+            // Re-order based on specificity (conditions array order)
+            if (matches.length > 0) {
+                for (const cond of conditions) {
+                    const match = matches.find(m => 
+                        m.product_category_id == cond.product_category_id &&
+                        m.vehicle_category_id == cond.vehicle_category_id &&
+                        m.vehicle_brand_id == cond.vehicle_brand_id &&
+                        m.vehicle_model_id == cond.vehicle_model_id &&
+                        m.product_subcategory_id == cond.product_subcategory_id
+                    );
+                    if (match) return match;
                 }
             }
-            console.log(`[SEO DEBUG] No match found in DB, falling back to dynamic generation.`);
 
-            // Fallback: Generate a clean dynamic title if absolutely no record exists
             return await generateDefaultSEO(req.query);
         },
         constants.GET_SUCCESS,
@@ -140,46 +149,31 @@ async function generateDefaultSEO(queryParams) {
 }
 
 
-export function get_seo_footer(req, res) {
+export async function get_seo_footer(req, res) {
     return validations.validateSchema(
         req,
         res,
         null,
         async () => {
-            let data = await dao.getRows({
-                tableName: model_values.seo_data_mapping.tableName,
-                include: [{
-                    model: db[constants.model_values.product_category.tableName],
-                    attributes: ['name'],
+            let data = await db.seoMappings.findAll({
+                where: {
+                    seo_title: { [Op.ne]: null }
                 },
-                    {
-                        model: db[constants.model_values.vehicle_type.tableName],
-                        attributes: ['name'],
-                    }, {
-                        model: db[constants.model_values.brand.tableName],
-                        attributes: ['name'],
-                    }, {
-                        model: db[constants.model_values.brand_model.tableName],
-                        attributes: ['name'],
-                    },
-                ],
+                attributes: ['id', 'seo_title', 'url_text', 'canonical_url'],
                 raw: true
-            })
+            });
             let result = {}
             for (let i = 0; i < data.length; i++) {
                 let d = data[i];
-                if (d.seo_title) {
-                    if (!result[d.seo_title]) {
-                        result[d.seo_title] = [];
-
-                    }
-                    result[d.seo_title].push(d)
+                if (!result[d.seo_title]) {
+                    result[d.seo_title] = [];
                 }
+                result[d.seo_title].push(d);
             }
             return result
         },
-        constants.CREATION_SUCCESS,
-        messages.blogs_author.create
+        constants.GET_SUCCESS,
+        messages.blogs_author.get
     );
 };
 

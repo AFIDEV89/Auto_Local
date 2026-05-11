@@ -35,6 +35,20 @@ balonkun-backend.zip
 balonkun-web.zip
 prod-db.sql.gz
 
-# Sub-repository internal git (if you want to ignore them)
+# Sub-repository internal git
 # balonkun-web/balonkun-web/.git
 # balonkun-backend/balonkun-backend/.git
+
+# Temporary and Audit Files
+**/*.md
+!**/README.md
+**/scratch/
+**/audit_*.json
+**/final_inventory_report.md
+**/*.csv
+**/mapping_preview_*.md
+**/mapping_preview.md
+**/seat_cover_designs.md
+**/testimonials_audit.md
+**/2w_hierarchy.md
+**/4w_hierarchy.md

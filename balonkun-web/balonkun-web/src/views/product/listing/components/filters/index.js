@@ -46,7 +46,12 @@ const Filters = ({
         {
           list.map((listItem, index) => {
 
-            const options = listItem.list.map(item => {
+            const options = listItem.list.filter(item => {
+              if (listItem.title === "Product Categories" && item.title === "Audio & Security") {
+                return false;
+              }
+              return true;
+            }).map(item => {
 
               const isValidBrand =
                 listItem.title === "Vehicle Brands" && !!vehicleTypes.length

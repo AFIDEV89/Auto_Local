@@ -290,7 +290,11 @@ const ProductListing = ({
   }, [searchParams]);
 
   const fetchSEOData = () => {
-    if (selectedFilters && selectedFilters["Product Categories"]?.length === 1) {
+    if (selectedFilters && (
+      selectedFilters["Product Categories"]?.length === 1 || 
+      selectedFilters["Vehicle Brands"]?.length === 1 || 
+      selectedFilters["Vehicle Models"]?.length === 1
+    )) {
       dispatch(actions.getSEOData({
         selectedFilters
       }, (res) => {
@@ -301,9 +305,11 @@ const ProductListing = ({
           seo_page_description: res.seo_page_description,
           canonical_url: res.canonical_url
         });
+        /* 
         if (res?.canonical_url && res.canonical_url !== seoURL) {
           navigate(`/products/${res.canonical_url}`);
         }
+        */
       }))
     } else {
       setSeoData(null);
@@ -455,6 +461,18 @@ const ProductListing = ({
                 </Box>
               </Box>
             </>}
+
+            {seoData && seoData.seo_page_title && !seoData.category_text && (
+              <Box className="px-3 mb-6">
+                <h1 className="text-2xl md:text-4xl font-bold text-slate-800 tracking-tight mb-2">
+                  {seoData.seo_page_title}
+                </h1>
+                <div 
+                  className="h-1 w-24 rounded-full"
+                  style={{ background: '#ffb200' }}
+                ></div>
+              </Box>
+            )}
 
             {seoData && seoData.category_text && <Box className="seoBanner">
               <Box dangerouslySetInnerHTML={{ __html: seoData.category_text }} className="bannerConent" />

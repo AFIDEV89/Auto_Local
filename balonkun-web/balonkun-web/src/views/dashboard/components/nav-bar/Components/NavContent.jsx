@@ -9,8 +9,8 @@ import { ROUTES } from "../../../../../shared/constants";
 const NAV_ROUTES = {
   SEAT_COVERS: "/car-seat-covers",
   ACCESSORIES: "/car-accessories",
-  MATS: "/products?category=10",
-  AUDIO_SECURITY: "/products?category=12",
+  MATS: "/autoform-car-mats",
+  AUDIO_SECURITY: "/products?category=13",
   STORE_LOCATOR: ROUTES.STORE_LOCATOR,
   FRANCHISE: "/retail-franchise",
   CONTACT_US: "/contact-us",

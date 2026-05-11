@@ -74,14 +74,13 @@ const ProductDetail = () => {
 
   useEffect(() => {
     if (isProductFetched) {
-      // If product is from Mat category, do not open select vehicle modal
-      if (product?.category?.id !== 3 && (isNotSelectedVehicleDetails || !isValidProductForUser)) {
+      // Only open modal if no vehicle is selected at all
+      if (isNotSelectedVehicleDetails) {
         handleSelectVehicleModal(true);
       }
     }
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isNotSelectedVehicleDetails, isValidProductForUser, product]);
+  }, [isNotSelectedVehicleDetails, product]);
 
   return (
     <DetailComponent

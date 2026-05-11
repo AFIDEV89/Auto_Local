@@ -65,5 +65,6 @@ export const PAGE_ROUTES = [
   { path: ROUTES.STORE_LOCATOR, component: StoreLocatorComponent },
   { path: ROUTES.CATEGORY_LISTING, component: CategoryListingComponent },
   { path: "/not-found", component: NotFoundPage },
+  { path: "/:id", component: ProductsPageComponent },
   { path: "*", component: NotFoundPage }
 ];

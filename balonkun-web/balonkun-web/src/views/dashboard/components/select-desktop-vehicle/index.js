@@ -117,7 +117,7 @@ const SelectDesktopVehicle = () => {
   } = useGetBrandModel();
 
   const handleGoOnClick = useCallback(() => {
-    navigate(`${ROUTES.PRODUCT_LISTING}?vid=${vehicleTypeId || 0}&bid=${vehicleBrandId || 0}&mid=${vehicleBrandModelId || 0}&lid=${vehicleBrandModelId || 0}`);
+    navigate(`${ROUTES.PRODUCT_LISTING}?vid=${vehicleTypeId || 0}&bid=${vehicleBrandId || 0}&mid=${vehicleBrandModelId || 0}&lid=${vehicleBrandModelId || 0}&pcid=10`);
   }, [
     navigate,
     vehicleTypeId,
