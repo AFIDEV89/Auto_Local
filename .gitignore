@@ -39,3 +39,35 @@ prod-db.sql.gz
 # balonkun-web/balonkun-web/.git
 # balonkun-backend/balonkun-backend/.git
 
+# --- COMPREHENSIVE CLEANUP RULES ---
+
+# Documentation and Temporary Data
+**/*.docx
+**/*.html
+**/*.py
+**/*.txt
+**/*.csv
+**/*.md
+!**/README.md
+
+# Audit and Scratch Files
+**/scratch/
+**/audit_*.js
+**/audit_*.json
+**/test_*.js
+**/temp_*.js
+
+# Specific Backend Root Cleanup
+# Ignore all JS files in the backend root except index.js
+balonkun-backend/balonkun-backend/*.js
+!balonkun-backend/balonkun-backend/index.js
+
+# Ignore all JSON files in the backend root except package.json and firebase.json
+balonkun-backend/balonkun-backend/*.json
+!balonkun-backend/balonkun-backend/package.json
+!balonkun-backend/balonkun-backend/firebase.json
+
+# Logs and DB
+**/*.log
+**/*.sqlite
+**/*.db
